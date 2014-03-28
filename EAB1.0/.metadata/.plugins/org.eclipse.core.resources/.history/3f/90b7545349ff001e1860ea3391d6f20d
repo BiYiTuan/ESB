@@ -1,0 +1,21 @@
+package eab.console.business
+{
+	public class EABConsoleServiceLocator
+	{
+		private static var instance : EABConsoleServiceLocator;
+		
+		public function EABConsoleServiceLocator()
+		{
+		}
+	
+		public static function getInstance() : ServiceLocator
+		{
+         if ( instance == null )
+         {
+            instance = new EABConsoleServiceLocator();
+         }
+            
+         return instance;
+      }
+	}
+}

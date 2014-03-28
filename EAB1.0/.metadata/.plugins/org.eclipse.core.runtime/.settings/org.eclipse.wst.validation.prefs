@@ -1,0 +1,15 @@
+#Thu Apr 29 15:30:13 CST 2010
+vals/org.eclipse.wst.xsd.core.xsd/global=FF02162org.eclipse.wst.xsd.core.internal.validation.eclipse.Validator
+override=true
+USER_MANUAL_PREFERENCE=enabledManualValidatorListorg.eclipse.jst.j2ee.internal.validation.UIApplicationClientValidator;org.eclipse.jst.j2ee.internal.jca.validation.UIConnectorValidator;org.eclipse.jst.j2ee.internal.ejb.workbench.validation.UIEjbValidator;org.eclipse.jst.j2ee.internal.classpathdep.ClasspathDependencyValidator;org.eclipse.jst.jsf.ui.internal.validation.JSFValidator;org.eclipse.jst.jsf.validation.internal.appconfig.AppConfigValidator;org.eclipse.wst.common.componentcore.internal.ModuleCoreValidator;org.eclipse.jst.j2ee.internal.validation.UIEarValidator;org.eclipse.jpt.core.internal.validation.JpaValidator;org.eclipse.wst.wsi.ui.internal.WSIMessageValidator;org.eclipse.jst.j2ee.internal.web.validation.UIWarValidator;
+vals/org.eclipse.wst.wsdl.validation.wsdl/global=FF02158org.eclipse.wst.wsdl.validation.internal.eclipse.Validator
+vals/org.eclipse.wst.xml.core.xml/global=FF03
+suspend=false
+stateTS=0
+eclipse.preferences.version=1
+vf.version=3
+DELEGATES_PREFERENCE=delegateValidatorList
+saveAuto=false
+confirmDialog=true
+USER_PREFERENCE=saveAutomaticallyfalseprojectsCanOverridetruedisableAllValidationfalseversion1.2.0.v200806051402
+USER_BUILD_PREFERENCE=enabledBuildValidatorListorg.eclipse.jst.j2ee.internal.validation.UIApplicationClientValidator;org.eclipse.jst.j2ee.internal.jca.validation.UIConnectorValidator;org.eclipse.jst.j2ee.internal.ejb.workbench.validation.UIEjbValidator;org.eclipse.jst.j2ee.internal.classpathdep.ClasspathDependencyValidator;org.eclipse.jst.jsf.ui.internal.validation.JSFValidator;org.eclipse.jst.jsf.validation.internal.appconfig.AppConfigValidator;org.eclipse.wst.common.componentcore.internal.ModuleCoreValidator;org.eclipse.jst.j2ee.internal.validation.UIEarValidator;org.eclipse.jpt.core.internal.validation.JpaValidator;org.eclipse.wst.wsi.ui.internal.WSIMessageValidator;org.eclipse.jst.j2ee.internal.web.validation.UIWarValidator;

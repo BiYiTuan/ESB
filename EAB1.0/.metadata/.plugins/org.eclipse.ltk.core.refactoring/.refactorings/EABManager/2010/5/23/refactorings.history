@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;dao&apos; in &apos;eab.mananger.ProcessManager&apos; to &apos;eabDao&apos;&#x0D;&#x0A;- Original project: &apos;EABManager&apos;&#x0D;&#x0A;- Original element: &apos;eab.mananger.ProcessManager.dao&apos;&#x0D;&#x0A;- Renamed element: &apos;eab.mananger.ProcessManager.eabDao&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;dao&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;eab.mananger{ProcessManager.java[ProcessManager^dao" name="eabDao" references="true" setter="false" stamp="1275290409413" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditorNavigatorChild 
+	xmlns="eab.console.view.*" 
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:c="eab.control.controls.*" 
+	width="100%" 
+	height="100%"
+	label="ESB服务列表" 
+	borderStyle="none"
+	type="{EditorNavigatorChild.SERVICE_LIST_VIEW}"
+	creationComplete="serviceListViewModel.refresh(); init()">
+	<mx:Script>
+		<![CDATA[
+			import eab.console.model.EABConsoleModelLocator;
+			import eab.console.model.ServiceListModel;
+			import eab.console.viewhelper.ServiceListViewVH;
+			
+			import flash.events.ContextMenuEvent;
+			
+			[Bindable]
+			private var cm:ContextMenu;
+			
+			[Bindable]
+			private var serviceListViewModel:ServiceListModel = 
+				EABConsoleModelLocator.getInstance().getServiceListModel();
+				
+			private var serviceListVH :ServiceListViewVH = 
+				new ServiceListViewVH(this, ServiceListViewVH.VH_KEY);
+				
+			private function init():void{
+	             var cmiAdd:ContextMenuItem = new ContextMenuItem("注册服务", true);
+                 cmiAdd.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, serviceListVH.addService);
+                 
+	             var cmiDelete:ContextMenuItem = new ContextMenuItem("删除服务", true);
+                 cmiDelete.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, serviceListVH.deleteService);
+  
+                 cm = new ContextMenu();
+                 cm.hideBuiltInItems();
+                 cm.customItems = [cmiAdd, cmiDelete];
+                 cm.addEventListener(ContextMenuEvent.MENU_SELECT, serviceListVH.menuSelect);
+			}
+			
+			public override function refresh():void{
+				super.refresh();	
+				serviceListViewModel.refresh();			
+			}
+		]]>
+	</mx:Script>
+	<mx:Number id="lastRollOverIndex"/>
+	<mx:VBox x="0" y="0" width="100%" height="100%" borderStyle="none">
+		<mx:DataGrid width="100%" height="100%" id="serviceList" 
+			dataProvider="{serviceListViewModel.serviceList}" 
+			contextMenu="{cm}" itemRollOver="lastRollOverIndex=event.rowIndex">
+			<mx:columns>
+				<mx:DataGridColumn dataField="uniqueServiceName" headerText="服务名称"/>
+				<mx:DataGridColumn dataField="wrappedServiceURL" headerText="服务地址"/>
+				<mx:DataGridColumn headerText="服务类型">
+					<mx:itemRenderer>
+						<mx:Component>
+							<mx:Label width="100%" text="{data.protocol.type}"/>
+						</mx:Component>
+					</mx:itemRenderer>
+				</mx:DataGridColumn>
+			</mx:columns>
+		</mx:DataGrid>
+		<c:PagingBar id="pagingBar" width="100%" height="28"
+			countPerPage="{serviceListViewModel.countPerPage}" 
+			totalCount="{serviceListViewModel.serviceCount}" 
+			pageChanged="serviceListVH.pageChagedHandle(event)"/>
+	</mx:VBox>
+</EditorNavigatorChild>

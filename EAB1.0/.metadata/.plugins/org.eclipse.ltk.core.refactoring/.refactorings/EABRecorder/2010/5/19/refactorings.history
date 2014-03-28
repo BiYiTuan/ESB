@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;eab.logger.dao.HibernateUitl&apos; to &apos;HibernateUtil&apos;&#x0D;&#x0A;- Original project: &apos;EABRecorder&apos;&#x0D;&#x0A;- Original element: &apos;eab.logger.dao.HibernateUitl&apos;&#x0D;&#x0A;- Renamed element: &apos;eab.logger.dao.HibernateUtil&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;HibernateUitl&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;eab.logger.dao{HibernateUitl.java[HibernateUitl" matchStrategy="1" name="HibernateUtil" qualified="false" references="true" similarDeclarations="false" stamp="1273046043922" textual="false" version="1.0"/>
+</session>

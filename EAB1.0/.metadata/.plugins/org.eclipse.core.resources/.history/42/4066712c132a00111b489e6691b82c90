@@ -1,0 +1,5 @@
+package JMS;
+
+public class SimpleQueueSender {
+
+}

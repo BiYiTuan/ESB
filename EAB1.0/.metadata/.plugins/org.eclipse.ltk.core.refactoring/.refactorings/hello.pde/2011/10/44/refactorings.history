@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;hello.junit.Money&apos; to &apos;MoneyImplement&apos;&#x0D;&#x0A;- Original project: &apos;hello.pde&apos;&#x0D;&#x0A;- Original element: &apos;hello.junit.Money&apos;&#x0D;&#x0A;- Renamed element: &apos;hello.junit.MoneyImplement&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Money&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;hello.junit{Money.java[Money" matchStrategy="1" name="MoneyImplement" qualified="false" references="true" similarDeclarations="false" stamp="1319779338943" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Tree 
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	x="0" 
+	y="0" 
+	width="100%" 
+	height="100%" 
+	iconFunction="iconFun" 
+	doubleClickEnabled="true"
+	labelField="@name" 
+	dataProvider="{functionNavigatorModel.xmlListCollection}" 
+	doubleClick="functionNavigatorViewVH.tree_itemDoubleClick(event)" 
+	creationComplete="init()">
+	
+	<mx:Script>
+		<![CDATA[
+		import eab.console.model.EABConsoleModelLocator;
+		import eab.console.model.FunctionNavigatorModel;
+		import eab.console.viewhelper.FunctionNavigatorViewVH;
+		
+		[Bindable]
+		[Embed(source="../assets/icon/accordion/group.gif")]
+		private static var groupIcon:Class;
+		
+		[Bindable]
+		[Embed(source="../assets/icon/accordion/folder.gif")]
+		private static var folderIcon:Class;
+		
+		[Bindable]
+        [Embed(source="../assets/icon/accordion/file.gif")]
+        private static var fileIcon :Class;
+
+        [Bindable]
+        [Embed(source="../assets/icon/accordion/item.gif")]
+        private static var itemIcon :Class;        
+       	
+       	[Bindable]
+        private var functionNavigatorModel :FunctionNavigatorModel = 
+			EABConsoleModelLocator.getInstance().getFunctionNavigatorModel();
+        
+		private var functionNavigatorViewVH :FunctionNavigatorViewVH = 
+			new FunctionNavigatorViewVH(this, FunctionNavigatorViewVH.VH_KEY);
+			
+		private function iconFun(item:Object):Class{		
+			switch(String(item.@type)){
+				case "group":
+					return groupIcon;
+				case "folder":
+					return folderIcon;
+				case "item":
+					return itemIcon;
+				default:
+					return fileIcon;
+			}
+		}
+		
+		private function init():void{
+	    	for each(var item:XML in dataProvider)
+	    		expandChildrenOf(item,true);
+		}
+		]]>
+	</mx:Script>
+</mx:Tree>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="junit"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/jetty-6.1.14.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-client-6.1.14.jar"/>
+	<classpathentry kind="lib" path="lib/servicemix-jbi-3.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/servicemix-utils-1.1.0.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/EABEntity"/>
+	<classpathentry kind="lib" path="lib/geronimo-annotation_1.0_spec-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/servicemix-http-2009.01.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

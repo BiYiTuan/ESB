@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;EABRecorder&apos; to &apos;EABUtil&apos;&#x0D;&#x0A;- Original element: &apos;EABRecorder&apos;&#x0D;&#x0A;- Renamed element: &apos;EABRecorder&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;EABRecorder&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=EABRecorder" name="EABUtil" references="true" stamp="1273048029271" version="1.0"/>
+</session>

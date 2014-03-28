@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libraryInfos>
+<libraryInfo home="C:\jre1.5.0_20" version="1.5.0_20">
+<bootpath>
+<entry path="C:\jre1.5.0_20\lib\rt.jar"/>
+<entry path="C:\jre1.5.0_20\lib\i18n.jar"/>
+<entry path="C:\jre1.5.0_20\lib\sunrsasign.jar"/>
+<entry path="C:\jre1.5.0_20\lib\jsse.jar"/>
+<entry path="C:\jre1.5.0_20\lib\jce.jar"/>
+<entry path="C:\jre1.5.0_20\lib\charsets.jar"/>
+<entry path="C:\jre1.5.0_20\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\jre1.5.0_20\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\jre1.5.0_20\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="C:\Program Files\Java\jre6" version="1.6.0_25">
+<bootpath>
+<entry path="C:\Program Files\Java\jre6\lib\resources.jar"/>
+<entry path="C:\Program Files\Java\jre6\lib\rt.jar"/>
+<entry path="C:\Program Files\Java\jre6\lib\sunrsasign.jar"/>
+<entry path="C:\Program Files\Java\jre6\lib\jsse.jar"/>
+<entry path="C:\Program Files\Java\jre6\lib\jce.jar"/>
+<entry path="C:\Program Files\Java\jre6\lib\charsets.jar"/>
+<entry path="C:\Program Files\Java\jre6\lib\modules\jdk.boot.jar"/>
+<entry path="C:\Program Files\Java\jre6\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Program Files\Java\jre6\lib\ext"/>
+<entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\Program Files\Java\jre6\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="C:\Program Files\Java\jdk1.5.0_20" version="1.5.0_20">
+<bootpath>
+<entry path="C:\Program Files\Java\jdk1.5.0_20\jre\lib\rt.jar"/>
+<entry path="C:\Program Files\Java\jdk1.5.0_20\jre\lib\i18n.jar"/>
+<entry path="C:\Program Files\Java\jdk1.5.0_20\jre\lib\sunrsasign.jar"/>
+<entry path="C:\Program Files\Java\jdk1.5.0_20\jre\lib\jsse.jar"/>
+<entry path="C:\Program Files\Java\jdk1.5.0_20\jre\lib\jce.jar"/>
+<entry path="C:\Program Files\Java\jdk1.5.0_20\jre\lib\charsets.jar"/>
+<entry path="C:\Program Files\Java\jdk1.5.0_20\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Program Files\Java\jdk1.5.0_20\jre\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\Program Files\Java\jdk1.5.0_20\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>

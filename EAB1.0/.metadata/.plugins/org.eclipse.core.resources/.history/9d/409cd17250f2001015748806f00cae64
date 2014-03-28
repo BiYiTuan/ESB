@@ -1,0 +1,7 @@
+package org.apache.servicemix.jbi;
+
+import org.apache.servicemix.http.endpoints.DefaultHttpConsumerMarshaler;
+
+public class HTTPMarshaler extends DefaultHttpConsumerMarshaler {
+
+}

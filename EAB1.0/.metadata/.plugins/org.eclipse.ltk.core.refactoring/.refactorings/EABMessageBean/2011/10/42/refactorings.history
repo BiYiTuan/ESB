@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 2 elements from project &apos;EABMessageBean&apos;&#x0D;&#x0A;- Original project: &apos;EABMessageBean&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     EABMessageBean/src/org.apache.servicemix.jbi&#x0D;&#x0A;     org.apache.servicemix.jbi.HttpConsumerMarshaler.java" description="Delete elements" element1="/src&lt;org.apache.servicemix.jbi" element2="/src&lt;org.apache.servicemix" element3="/src&lt;org.apache" element4="/src&lt;org" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1318146988809" subPackages="false" version="1.0"/>
+</session>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="false" version="1">
+  <includeClasses>
+    <classEntry path="eab.control.scheduling.scheduleClasses.utils.Selection"/>
+    <classEntry path="eab.control.scheduling.timelineClasses.SimpleTimeDescriptor"/>
+    <classEntry path="eab.control.scheduling.scheduleClasses.layout.ILayoutProvider"/>
+    <classEntry path="eab.control.scheduling.scheduleClasses.utils.GraphicUtils"/>
+    <classEntry path="eab.control.scheduling.util.DateUtil"/>
+    <classEntry path="eab.control.skins.SliderThumbNoGripHighlightSkin"/>
+    <classEntry path="eab.control.scheduling.timelineClasses.SimpleTimelineEntryRenderer"/>
+    <classEntry path="eab.control.scheduling.timelineClasses.TimelineLayoutItem"/>
+    <classEntry path="eab.control.skins.EnhancedButtonSkin"/>
+    <classEntry path="eab.control.scheduling.scheduleClasses.viewers.EntryViewer"/>
+    <classEntry path="eab.control.scheduling.timelineClasses.ITimelineEntryRenderer"/>
+    <classEntry path="eab.control.skins.SliderHighlightSkin"/>
+    <classEntry path="eab.control.mdi.effects.effectsLib.MDIRelationalEffects"/>
+    <classEntry path="eab.control.scheduling.timelineClasses.TimelineViewer"/>
+    <classEntry path="eab.control.skins.SliderThumbHighlightSkin"/>
+    <classEntry path="eab.control.scheduling.timelineClasses.TimelineLayout"/>
+    <classEntry path="eab.control.scheduling.scheduleClasses.viewers.IHorizontalLinesViewer"/>
+    <classEntry path="eab.control.skins.TabPopUpButtonSkin"/>
+    <classEntry path="eab.control.scheduling.timelineClasses.ITimeDescriptor"/>
+    <classEntry path="eab.control.scheduling.timelineClasses.TimeRangeDescriptorUtil"/>
+    <classEntry path="eab.control.scheduling.scheduleClasses.viewers.VerticalLinesViewer"/>
+    <classEntry path="eab.control.scheduling.scheduleClasses.viewers.IVerticalLinesViewer"/>
+    <classEntry path="eab.control.scheduling.scheduleClasses.viewers.HorizontalLinesViewer"/>
+    <classEntry path="eab.control.scheduling.scheduleClasses.renderers.BackgroundLayoutItemRenderer"/>
+    <classEntry path="eab.control.scheduling.scheduleClasses.viewers.BackgroundViewer"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

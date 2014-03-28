@@ -1,0 +1,52 @@
+package eab.console.business
+{
+	import flash.utils.Dictionary;
+	
+	import mx.rpc.remoting.RemoteObject;
+	
+	public class EABConsoleServiceLocator
+	{
+		private static var instance : EABConsoleServiceLocator;
+		
+		private var services : Dictionary = new Dictionary();
+		
+		public function EABConsoleServiceLocator()
+		{
+		}
+	
+		public static function getInstance() : EABConsoleServiceLocator
+		{
+			if ( instance == null )
+			{
+				instance = new EABConsoleServiceLocator();
+			}
+			
+			return instance;
+		}
+		
+//		public function EABConsoleServiceLocator() 
+//		{   
+//			if ( instance != null )
+//			{
+//				throw new EABFrameworkError( EABFrameworkMessageCodes.SINGLETON_EXCEPTION, "EABConsoleServiceLocator" );
+//			}
+//            
+//			instance = this;
+//		}
+		
+		public function GetRemoteObject(name : String) : RemoteObject
+		{         if ( service == null )
+         {
+            
+         }
+         
+         return service;
+			var destination : String = services[name];
+			
+			if(destination == null)
+			{
+				throw new EABFrameworkError(EABFrameworkMessageCodes.REMOTE_OBJECT_NOT_FOUND, name );
+			}			
+		}
+	}
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="lastImportURL" value="http://172.19.52.254/TempInterface/MetadataImportService.asmx"/>
+	<section name="JUnitWizards">
+		<item key="NewTestCaseCreationWizardPage2.CREATE_FINAL_METHOD_STUBS" value="false"/>
+		<item key="NewTestCaseCreationWizardPage2.USE_TASKMARKER" value="false"/>
+		<item key="NewTestCaseCreationWizardPage.USE_SETUP" value="true"/>
+		<item key="NewTestCaseCreationWizardPage.USE_TEARDOWNCLASS" value="false"/>
+		<item key="NewTestCaseCreationWizardPage.USE_TEARDOWN" value="true"/>
+		<item key="NewTestCaseCreationWizardPage.USE_CONSTRUCTOR" value="false"/>
+		<item key="NewTestCaseCreationWizardPage.USE_SETUPCLASS" value="false"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.junit.ui.CompareResultDialog">
+		<item key="DIALOG_X_ORIGIN" value="354"/>
+		<item key="DIALOG_FONT_NAME" value="1|微软雅黑|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|0|3|2|1|34|微软雅黑"/>
+		<item key="DIALOG_HEIGHT" value="318"/>
+		<item key="DIALOG_Y_ORIGIN" value="227"/>
+		<item key="DIALOG_WIDTH" value="740"/>
+	</section>
+	<section name="ImportTestRunSessionFromURLAction">
+		<item key="DIALOG_X_ORIGIN" value="215"/>
+		<item key="DIALOG_HEIGHT" value="213"/>
+		<item key="DIALOG_FONT_NAME" value="1|微软雅黑|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|0|3|2|1|34|微软雅黑"/>
+		<item key="DIALOG_Y_ORIGIN" value="354"/>
+		<item key="DIALOG_WIDTH" value="937"/>
+	</section>
+</section>

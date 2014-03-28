@@ -1,0 +1,29 @@
+package Client;
+
+import java.rmi.*;
+import java.util.*;
+import javax.naming.*;
+
+/**
+ * A client that invokes a remote method
+ * @author wangfan
+ *
+ */
+
+public class WarehouseClient {
+	public static void main (String[] args)throws NamingException, RemoteException{
+		
+	  Context namingContext = new InitialContext();
+	  
+		System.out.println("RMI registry Binding:");
+		Enumeration<NameClassPair>e = namingContext.list("rmi://localhost/");
+		while (e.hasMoreElements())
+			System.out.println(e.nextElement().getName();
+			
+			String url = "rmi:localhost/central_warehouse";
+			
+			
+		
+	}
+
+}

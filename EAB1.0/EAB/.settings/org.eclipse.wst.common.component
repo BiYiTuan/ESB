@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+<wb-module deploy-name="EAB">
+				<wb-resource deploy-path="/" source-path="/WebContent"/>
+<wb-resource deploy-path="/" source-path="/WebContent"/>
+<wb-resource deploy-path="/" source-path="/WebContent"/>
+<wb-resource deploy-path="/" source-path="/flex_src"/>
+<dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/EABManager/EABManager">
+<dependency-type>uses</dependency-type>
+</dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/EABUtil/EABUtil">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/EABProxy/EABProxy">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/EABEntity/EABEntity">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+<property name="java-output-path" value="WebContent/WEB-INF/classes"/>
+        <property name="context-root" value="EAB"/>
+</wb-module>
+</project-modules>

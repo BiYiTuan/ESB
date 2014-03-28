@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flexLibProperties version="1">
+<includeClasses>
+<classEntry path="eab.framework.control.OrDesignerEventDispatcher"/>
+<classEntry path="eab.framework.view.ViewLocator"/>
+<classEntry path="eab.framework.business.RemoteObjects"/>
+<classEntry path="eab.framework.vo.IValueObject"/>
+<classEntry path="eab.framework.business.ServiceLocator"/>
+<classEntry path="eab.framework.view.ViewHelper"/>
+<classEntry path="eab.framework.other.OrDesignerError"/>
+<classEntry path="eab.framework.commands.MacroCommand"/>
+<classEntry path="eab.framework.business.IServices"/>
+<classEntry path="eab.framework.model.IModelLocator"/>
+<classEntry path="eab.framework.commands.SequenceCommand"/>
+<classEntry path="eab.framework.control.OrDesignerEvent"/>
+<classEntry path="eab.framework.other.OrDesignerMessageCodes"/>
+<classEntry path="eab.framework.commands.IODResponder"/>
+<classEntry path="eab.framework.control.FrontController"/>
+<classEntry path="eab.framework.commands.AODResponderCommand"/>
+<classEntry path="eab.framework.business.WebServices"/>
+<classEntry path="eab.framework.business.AbstractServices"/>
+<classEntry path="eab.framework.commands.AODCommand"/>
+<classEntry path="eab.framework.commands.IODCommand"/>
+</includeClasses>
+<includeResources>
+<resourceEntry destPath="local/en_US/OrDesignerMessages.properties" sourcePath="local/en_US/OrDesignerMessages.properties"/>
+</includeResources>
+<namespaceManifests/>
+</flexLibProperties>

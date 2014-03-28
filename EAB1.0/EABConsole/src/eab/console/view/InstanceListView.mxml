@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditorNavigatorChild 
+	xmlns="eab.console.view.*" 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	xmlns:c="eab.control.controls.*"
+	xmlns:v="eab.console.view.*" 
+	width="100%" 
+	height="100%"
+	label="ESB流程监控" 
+	borderStyle="none"
+	type="{EditorNavigatorChild.INSTANCE_LIST_VIEW}"
+	creationComplete="instanceListModel.refresh(); init()">
+	<mx:Script>
+		<![CDATA[
+			import mx.formatters.DateFormatter;
+			import eab.console.model.EABConsoleModelLocator;
+			import eab.console.model.InstanceListModel;
+			import eab.console.viewhelper.InstanceListViewVH;
+			
+			[Bindable]
+			private var cm:ContextMenu;
+			
+			[Bindable]
+			private var instanceListModel:InstanceListModel = 
+				EABConsoleModelLocator.getInstance().getInstanceListModel();
+				
+			private var instanceListVH :InstanceListViewVH = 
+				new InstanceListViewVH(this, InstanceListViewVH.VH_KEY);
+			
+			private function init():void{
+	             var cmiDelete:ContextMenuItem = new ContextMenuItem("删除流程实例", true);
+                 cmiDelete.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, instanceListVH.deleteInstance);
+  
+                 cm = new ContextMenu();
+                 cm.hideBuiltInItems();
+                 cm.customItems = [cmiDelete];
+                 cm.addEventListener(ContextMenuEvent.MENU_SELECT, instanceListVH.menuSelect);
+			}
+				
+			public override function refresh():void{
+				super.refresh();	
+				instanceListModel.refresh();			
+			}
+		]]>
+	</mx:Script>
+	<mx:Number id="lastRollOverIndex"/>
+	<mx:VBox x="0" y="0" width="100%" height="100%" borderStyle="none">
+		<mx:DataGrid width="100%" height="100%" id="instanceList" dataProvider="{instanceListModel.instanceList}" 
+			doubleClickEnabled="true" doubleClick="instanceListVH.doubleClickHandle(event)"
+			contextMenu="{cm}" itemRollOver="lastRollOverIndex=event.rowIndex">
+			<mx:columns>
+				<mx:DataGridColumn headerText="ID" dataField="id" width="80"/>
+				<mx:DataGridColumn headerText="流程名称">
+					<mx:itemRenderer>
+						<mx:Component>
+							<mx:Label width="100%" text="{removeParenthsis(String(data.process.processType))}">
+								<mx:Script>
+									<![CDATA[
+										private function removeParenthsis(str:String):String{	
+											return str.substr(str.indexOf("}") + 1);										
+										}
+									]]>
+								</mx:Script>
+							</mx:Label>
+						</mx:Component>
+					</mx:itemRenderer>
+				</mx:DataGridColumn>
+				<mx:DataGridColumn headerText="状态" width="50">
+					<mx:itemRenderer>
+						<mx:Component>
+							<v:InstanceStatusRenderView stateValue="{data.state}" scopeDatas="{data.rootScope.datas}"/>
+						</mx:Component>
+					</mx:itemRenderer>
+				</mx:DataGridColumn>
+				<mx:DataGridColumn headerText="发起时间">
+					<mx:itemRenderer>
+						<mx:Component>
+							<v:DateRenderView dateObj="{data.creatTime}"/>
+						</mx:Component>
+					</mx:itemRenderer>
+				</mx:DataGridColumn>
+				<mx:DataGridColumn dataField="lastActiveTime" headerText="结束时间">
+					<mx:itemRenderer>
+						<mx:Component>
+							<v:DateRenderView dateObj="{(Number(data.state) >= 30) ? data.lastActiveTime : null}"/>
+						</mx:Component>
+					</mx:itemRenderer>
+				</mx:DataGridColumn>
+				<mx:DataGridColumn headerText="当前任务">
+					<mx:itemRenderer>
+						<mx:Component>
+							<v:InstanceCurrentActionRenderView stateValue="{data.state}" scopeDatas="{data.rootScope.datas}"/>
+						</mx:Component>
+					</mx:itemRenderer>
+				</mx:DataGridColumn>
+			</mx:columns>
+		</mx:DataGrid>
+		<c:PagingBar id="pagingBar" width="100%" height="28"
+			countPerPage="{instanceListModel.countPerPage}" 
+			totalCount="{instanceListModel.instanceCount}" 
+			pageChanged="instanceListVH.pageChagedHandle(event)"/>
+	</mx:VBox>
+</EditorNavigatorChild>

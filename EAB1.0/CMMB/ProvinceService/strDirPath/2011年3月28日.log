@@ -1,0 +1,40 @@
+/*************记录开始---2011/3/28 17:39:47*************/
+GetServiceUrl出错!
+/*************记录结束---2011/3/28 17:39:47*************/
+/*************记录开始---2011/3/28 17:39:47*************/
+System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.RBTree`1.get_Item(Int32 index)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 ProvinceService.GetServiceUrl(String strServiceName, RequestHead requestHeadInfo) 位置 f:\Code\EAB1.0\CMMB\ProvinceService\App_Code\ProvinceService.cs:行号 150
+/*************记录结束---2011/3/28 17:39:47*************/
+/*************记录开始---2011/3/28 17:40:01*************/
+调用DeviceInterface.GetDeviceTypes 出错！
+/*************记录结束---2011/3/28 17:40:01*************/
+/*************记录开始---2011/3/28 17:40:01*************/
+System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 ProvinceService.GetDeviceList(GetDeviceListRequest request) 位置 f:\Code\EAB1.0\CMMB\ProvinceService\App_Code\ProvinceService.cs:行号 176
+/*************记录结束---2011/3/28 17:40:01*************/
+/*************记录开始---2011/3/28 17:40:50*************/
+GetServiceUrl出错!
+/*************记录结束---2011/3/28 17:40:50*************/
+/*************记录开始---2011/3/28 17:40:51*************/
+System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.RBTree`1.get_Item(Int32 index)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 ProvinceService.GetServiceUrl(String strServiceName, RequestHead requestHeadInfo) 位置 f:\Code\EAB1.0\CMMB\ProvinceService\App_Code\ProvinceService.cs:行号 150
+/*************记录结束---2011/3/28 17:40:51*************/
+/*************记录开始---2011/3/28 17:43:34*************/
+没有找到对应服务!，SQL： select service_url from eab_service where service_name='ProvinceData'
+/*************记录结束---2011/3/28 17:43:34*************/
+/*************记录开始---2011/3/28 17:43:36*************/
+GetServiceUrl出错!
+/*************记录结束---2011/3/28 17:43:36*************/
+/*************记录开始---2011/3/28 17:43:36*************/
+System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.RBTree`1.get_Item(Int32 index)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 ProvinceService.GetServiceUrl(String strServiceName, RequestHead requestHeadInfo) 位置 f:\Code\EAB1.0\CMMB\ProvinceService\App_Code\ProvinceService.cs:行号 154
+/*************记录结束---2011/3/28 17:43:36*************/

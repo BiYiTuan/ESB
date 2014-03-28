@@ -1,0 +1,43 @@
+package eab.console.business
+{
+	import eab.framework.other.EABFrameworkError;
+	import eab.framework.other.EABFrameworkMessageCodes;
+	
+	import mx.rpc.remoting.RemoteObject;
+	
+	public class EABConsoleServiceLocator
+	{
+		private static var instance : EABConsoleServiceLocator;
+		
+		private var services : Dictionary = new Dictionary();
+		
+		public function EABConsoleServiceLocator()
+		{
+		}
+	
+		public static function getInstance() : EABConsoleServiceLocator
+		{
+			if ( instance == null )
+			{
+				instance = new EABConsoleServiceLocator();
+			}
+			
+			return instance;
+		}
+		
+		public function EABConsoleServiceLocator() 
+		{   
+			if ( instance != null )
+			{
+				throw new EABFrameworkError( EABFrameworkMessageCodes.SINGLETON_EXCEPTION, "EABConsoleServiceLocator" );
+			}
+            
+			instance = this;
+		}
+		
+		public function GetRemoteObject(name : String) : RemoteObject
+		{
+			
+		}
+	}
+}

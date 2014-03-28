@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 2 package(s) to &apos;EABEntity/src&apos;&#x0D;&#x0A;- Original project: &apos;EABManager&apos;&#x0D;&#x0A;- Destination element: &apos;EABEntity/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     EABManager/src/eab.entity.ode&#x0D;&#x0A;     EABManager/src/eab.entity" description="Move packages" destination="=EABEntity/src" element1="/src&lt;eab.entity.ode" element2="/src&lt;eab.entity" flags="589830" fragments="2" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1276227125206" version="1.0"/>
+</session>

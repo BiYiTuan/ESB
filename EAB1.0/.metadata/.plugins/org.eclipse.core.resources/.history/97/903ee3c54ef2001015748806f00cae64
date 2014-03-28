@@ -1,0 +1,6 @@
+package org.apache.servicemix.jbi;
+
+public interface HttpConsumerMarshaler {
+
+
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="false" version="1">
+  <includeClasses>
+    <classEntry path="eab.control.scheduling.scheduleClasses.layout.ILayoutProvider"/>
+    <classEntry path="eab.control.scheduling.util.DateUtil"/>
+    <classEntry path="eab.control.skins.SliderThumbNoGripHighlightSkin"/>
+    <classEntry path="eab.control.scheduling.timelineClasses.TimelineLayoutItem"/>
+    <classEntry path="eab.control.skins.EnhancedButtonSkin"/>
+    <classEntry path="eab.control.skins.SliderHighlightSkin"/>
+    <classEntry path="eab.control.mdi.effects.effectsLib.MDIRelationalEffects"/>
+    <classEntry path="eab.control.scheduling.timelineClasses.TimelineViewer"/>
+    <classEntry path="eab.control.skins.SliderThumbHighlightSkin"/>
+    <classEntry path="eab.control.skins.TabPopUpButtonSkin"/>
+    <classEntry path="eab.control.scheduling.scheduleClasses.renderers.BackgroundLayoutItemRenderer"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

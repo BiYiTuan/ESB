@@ -1,0 +1,19 @@
+package eab.manager;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class ServiceManagerTestTest {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@Test
+	public void testTestUpdateService() {
+		fail("Not yet implemented");
+	}
+
+}

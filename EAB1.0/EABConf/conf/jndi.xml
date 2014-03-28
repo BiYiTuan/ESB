@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- START SNIPPET: jndi -->
+<beans xmlns:jencks="http://jencks.org/2.0" 
+       xmlns:amq="http://activemq.apache.org/schema/core"
+       xmlns:amqra="http://activemq.apache.org/schema/ra"
+       xmlns:util="http://www.springframework.org/schema/util">
+
+  <bean id="jndi" depends-on="broker"
+        class="org.apache.xbean.spring.jndi.SpringInitialContextFactory" 
+        factory-method="makeInitialContext"
+        singleton="true">
+    <property name="entries" ref="jndiEntries" />
+  </bean>    
+
+  <!-- DBCP Data Source -->
+  <!--
+  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+    <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+    <property name="url" value="jdbc:mysql://172.19.52.254/eabtest"/>
+    <property name="username" value="root"/>
+    <property name="password" value="123"/>
+    <property name="poolPreparedStatements" value="true"/>
+  </bean>
+  -->
+
+  <!-- C3P0 Data Source -->
+  <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+    <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+    <property name="jdbcUrl" value="jdbc:mysql://172.19.52.254/eabtest"/>
+    <property name="user" value="root"/>
+    <property name="password" value="123"/>
+    <property name="minPoolSize" value="3"/>
+    <property name="maxPoolSize" value="32"/>
+    <property name="maxStatements" value="0"/>
+    <property name="maxIdleTime" value="30000"/>
+    <property name="idleConnectionTestPeriod" value="28000"/>
+  </bean>
+  
+  <!-- Proxool Data Source -->
+  <!--
+  <bean id="dataSource" class="org.logicalcobwebs.proxool.ProxoolDataSource">  
+    <property name="driver" value="com.mysql.jdbc.Driver"/>  
+    <property name="driverUrl" value="jdbc:mysql://172.19.52.254/eabtest"/>  
+    <property name="user" value="root"/>
+    <property name="password" value="123"/>
+    <property name="alias" value="spring"/>
+    <property name="prototypeCount" value="5"/>
+    <property name="maximumConnectionCount" value="100"/>
+    <property name="minimumConnectionCount" value="10"/>
+    <property name="trace" value="false"/>
+    <property name="verbose" value="true"/>
+  </bean>
+  -->
+
+  <util:map id="jndiEntries">
+	
+    <!-- DataSource -->
+    <entry key="java:comp/env/datasource" value-ref="dataSource" />
+    
+    <!-- wsn2005 jms connection factory -->
+    <entry key="java:comp/env/jms/wsnotificationCF">
+      <amq:connectionFactory brokerURL="${activemq.url}" />
+    </entry>
+
+    <!-- transaction manager -->
+    <entry key="javax.transaction.TransactionManager" value-ref="transactionManager" />
+    <entry key="java:comp/env/smx/TransactionManager" value-ref="transactionManager" />
+    
+    <!-- bootstrap context -->
+    <entry key="java:comp/env/smx/BootstrapContext" value-ref="bootstrapContext" />
+    
+    <!-- connection context -->
+    <entry key="java:comp/env/smx/ConnectionManager" value-ref="connectionManager" />
+    
+    <!-- Authentication service -->
+    <entry key="java:comp/env/smx/AuthenticationService" value-ref="authenticationService" />
+    
+    <!-- Keystore manager -->
+    <entry key="java:comp/env/smx/KeystoreManager" value-ref="keystoreManager" />
+  </util:map>
+  
+  <!-- A managed JMS ConnectionFactory for ActiveMQ -->
+  <amqra:managedConnectionFactory 
+          id="activemqMCF"
+          resourceAdapter="#activemqRA" />
+  <amqra:resourceAdapter 
+          id="activemqRA"
+          serverUrl="vm://localhost"/>
+  <jencks:connectionFactory 
+          id="activemqCF"
+          managedConnectionFactory="#activemqMCF"
+          connectionManager="#connectionManager" />
+        
+</beans>
+<!-- END SNIPPET: jndi -->

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml">
+	<mx:Script>
+		<![CDATA[
+		
+			public static const SERVICE_LIST_VIEW : String = "Service_List_View_Type";
+			
+			public static const INSTANCE_LIST_VIEW : String = "Instance_List_View_Type";
+			
+			public static const FLOW_LIST_VIEW : String = "Flow_List_View_Type";
+			
+			public static const LOG_LIST_VIEW : String = "Log_List_View_Type";
+			
+			public static const INSTANCE_MONITOR_VIEW : String = "Instance_Monitor_View_Type";
+			
+			public static const PROTOCOL_FILES_VIEW : String = "ProtocolFiles_View_Type";
+			
+			public static const PROTOCOL_LIST_VIEW : String = "ProtocolList_View_Type";
+			
+			public static const FLOW_EDIT_VIEW : String = "Flow_Edit_View_Type";
+
+			[Bindable]
+			public var type:String;
+	
+			[Bindable]
+			public var instanceID :String;
+	
+			public function refresh():void{				
+			}
+		]]>
+	</mx:Script>	
+</mx:Canvas>

@@ -1,0 +1,1659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="87" version="2.0">
+<workbenchAdvisor/>
+<window height="428" maximized="true" width="1280" x="12" y="-2">
+<fastViewData fastViewLocation="1024">
+<orientation position="512" view="org.eclipse.wst.server.ui.ServersView"/>
+<orientation position="512" view="org.eclipse.debug.ui.ExpressionView"/>
+<orientation position="512" view="org.eclipse.debug.ui.DebugView"/>
+<orientation position="512" view="org.eclipse.debug.ui.MemoryView"/>
+<orientation position="512" view="org.eclipse.pde.runtime.LogView"/>
+<orientation position="512" view="org.eclipse.ui.views.ProgressView"/>
+<orientation position="512" view="org.eclipse.search.ui.views.SearchView"/>
+<orientation position="512" view="org.eclipse.ui.views.ContentOutline"/>
+<orientation position="512" view="org.eclipse.ui.console.ConsoleView"/>
+<orientation position="512" view="org.eclipse.jdt.ui.ProjectsView"/>
+<orientation position="512" view="org.eclipse.jdt.ui.SourceView"/>
+<orientation position="512" view="org.eclipse.debug.ui.BreakpointView"/>
+<orientation position="512" view="org.eclipse.ant.ui.views.AntView"/>
+<orientation position="512" view="org.eclipse.ui.views.ProblemView"/>
+</fastViewData>
+<perspectiveBar>
+<itemSize x="330"/>
+</perspectiveBar>
+<coolbarLayout locked="0">
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="152" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="FlexPrettyPrintCommand.toolbars.sampleToolbar" itemType="typeToolBarContribution" x="131" y="22"/>
+<coolItem id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.adobe.flexbuilder.flashbridge.actionSet" itemType="typeToolBarContribution" x="85" y="22"/>
+<coolItem id="com.altova.XMLSpy.actionSet.NewFile" itemType="typeToolBarContribution" x="79" y="23"/>
+<coolItem id="com.altova.xmlspyforeclipse.XMLSPYEditor_XML" itemType="typePlaceholder" x="584" y="22"/>
+<coolItem id="com.altova.xmlspyforeclipse.XMLSPYEditor_XSD" itemType="typePlaceholder" x="630" y="22"/>
+<coolItem id="com.altova.xmlspyforeclipse.XMLSpyEditor_ZIP" itemType="typePlaceholder" x="369" y="22"/>
+<coolItem id="com.google.gdt.eclipse.suite.actionSet" itemType="typeToolBarContribution" x="85" y="23"/>
+<coolItem id="com.instantiations.designer.core.guiEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.instantiations.designer.gwt.actionset" itemType="typeToolBarContribution" x="62" y="23"/>
+<coolItem id="com.instantiations.j2ee.actionset" itemType="typeToolBarContribution" x="39" y="23"/>
+<coolItem id="com.python.pydev.debug.actionSet" itemType="typeToolBarContribution" x="62" y="23"/>
+<coolItem id="com.python.pydev.navigate.actionSet" itemType="typeToolBarContribution" x="39" y="23"/>
+<coolItem id="com.swtdesigner.actionset" itemType="typeToolBarContribution" x="52" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="124" y="22"/>
+<coolItem id="org.eclipse.gmf.Cimero2ToolBar" itemType="typeToolBarContribution" x="227" y="23"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="75" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.PropertiesFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jst.j2ee.J2eeMainActionSet" itemType="typeToolBarContribution" x="96" y="23"/>
+<coolItem id="org.eclipse.mylyn.java.actionSet.browsing" itemType="typeToolBarContribution" x="39" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="98" y="22"/>
+<coolItem id="org.eclipse.stp.im.resource.actionSet" itemType="typeToolBarContribution" x="39" y="23"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="39" y="22"/>
+<coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" itemType="typeToolBarContribution" x="39" y="23"/>
+<coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="39" y="23"/>
+<coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="183" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.pde.ui.buildEditor" itemType="typeToolBarContribution" x="39" y="22"/>
+<coolItem id="org.eclipse.pde.ui.manifestEditor" itemType="typePlaceholder" x="39" y="22"/>
+<coolItem id="org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor" itemType="typeToolBarContribution" x="101" y="22"/>
+<coolItem id="org.eclipse.ant.ui.internal.editor.AntEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.compare.CompareEditor" itemType="typePlaceholder" x="85" y="22"/>
+<coolItem id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" itemType="typeToolBarContribution" x="101" y="22"/>
+<coolItem id="com.adobe.flexbuilder.editors.css.editors.CSSEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.server.ui.editor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1279002484607" focus="true" label="Workspace - Java">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
+<part id="20"/>
+<part id="21"/>
+<part id="22"/>
+<part id="23"/>
+<part id="24"/>
+<part id="25"/>
+<part id="26"/>
+<part id="27"/>
+<part id="28"/>
+<part id="29"/>
+<part id="30"/>
+<part id="31"/>
+<part id="32"/>
+<part id="33"/>
+<part id="34"/>
+<part id="35"/>
+<part id="36"/>
+<part id="37"/>
+<part id="38"/>
+<part id="39"/>
+<part id="40"/>
+<part id="41"/>
+<part id="42"/>
+<part id="43"/>
+<part id="44"/>
+<part id="45"/>
+<part id="46"/>
+<part id="47"/>
+<part id="48"/>
+<part id="49"/>
+<part id="50"/>
+<part id="51"/>
+<part id="52"/>
+<part id="53"/>
+<part id="54"/>
+<part id="55"/>
+<part id="56"/>
+<part id="57"/>
+<part id="58"/>
+<part id="59"/>
+<part id="60"/>
+<part id="61"/>
+<part id="62"/>
+<part id="63"/>
+<part id="64"/>
+<part id="65"/>
+<part id="66"/>
+<part id="67"/>
+<part id="68"/>
+<part id="69"/>
+<part id="70"/>
+<part id="71"/>
+<part id="72"/>
+<part id="73"/>
+<part id="74"/>
+<part id="75"/>
+<part id="76"/>
+<part id="77"/>
+<part id="78"/>
+<part id="79"/>
+<part id="80"/>
+<part id="81"/>
+<part id="82"/>
+<part id="83"/>
+<part id="84"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="AbstractServices.as" partName="AbstractServices.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/business/AbstractServices.as" title="AbstractServices.as" tooltip="EABFramework/src/eab/framework/business/AbstractServices.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/business/AbstractServices.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="1" selectionOffset="1286" selectionTopPixel="340"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="HTTPServices.as" partName="HTTPServices.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/business/HTTPServices.as" title="HTTPServices.as" tooltip="EABFramework/src/eab/framework/business/HTTPServices.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/business/HTTPServices.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="686" selectionTopPixel="240"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="IServiceLocator.as" partName="IServiceLocator.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/business/IServiceLocator.as" title="IServiceLocator.as" tooltip="EABFramework/src/eab/framework/business/IServiceLocator.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/business/IServiceLocator.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="20" selectionOffset="1577" selectionTopPixel="500"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="IServices.as" partName="IServices.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/business/IServices.as" title="IServices.as" tooltip="EABFramework/src/eab/framework/business/IServices.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/business/IServices.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="RemoteObjects.as" partName="RemoteObjects.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/business/RemoteObjects.as" title="RemoteObjects.as" tooltip="EABFramework/src/eab/framework/business/RemoteObjects.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/business/RemoteObjects.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="569" selectionTopPixel="1352"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ServiceLocator.as" partName="ServiceLocator.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/business/ServiceLocator.as" title="ServiceLocator.as" tooltip="EABFramework/src/eab/framework/business/ServiceLocator.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/business/ServiceLocator.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="858" selectionTopPixel="300"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="WebServices.as" partName="WebServices.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/business/WebServices.as" title="WebServices.as" tooltip="EABFramework/src/eab/framework/business/WebServices.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/business/WebServices.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="570" selectionTopPixel="300"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="EABCommand.as" partName="EABCommand.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/commands/EABCommand.as" title="EABCommand.as" tooltip="EABFramework/src/eab/framework/commands/EABCommand.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/commands/EABCommand.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="122" selectionTopPixel="0"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="EABResponderCommand.as" partName="EABResponderCommand.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/commands/EABResponderCommand.as" title="EABResponderCommand.as" tooltip="EABFramework/src/eab/framework/commands/EABResponderCommand.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/commands/EABResponderCommand.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="19" selectionOffset="51" selectionTopPixel="0"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="EABFrameworkEvent.as" partName="EABFrameworkEvent.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/control/EABFrameworkEvent.as" title="EABFrameworkEvent.as" tooltip="EABFramework/src/eab/framework/control/EABFrameworkEvent.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/control/EABFrameworkEvent.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="17" selectionOffset="745" selectionTopPixel="0"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ICommand.as" partName="ICommand.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/commands/ICommand.as" title="ICommand.as" tooltip="EABFramework/src/eab/framework/commands/ICommand.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/commands/ICommand.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="IResponder.as" partName="IResponder.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/commands/IResponder.as" title="IResponder.as" tooltip="EABFramework/src/eab/framework/commands/IResponder.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/commands/IResponder.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="1191" selectionTopPixel="292"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="MacroCommand.as" partName="MacroCommand.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/commands/MacroCommand.as" title="MacroCommand.as" tooltip="EABFramework/src/eab/framework/commands/MacroCommand.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/commands/MacroCommand.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3317" selectionTopPixel="212"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="SequenceCommand.as" partName="SequenceCommand.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/commands/SequenceCommand.as" title="SequenceCommand.as" tooltip="EABFramework/src/eab/framework/commands/SequenceCommand.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/commands/SequenceCommand.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="15" selectionOffset="2322" selectionTopPixel="1872"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="EABFrameworkEventDispatcher.as" partName="EABFrameworkEventDispatcher.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/control/EABFrameworkEventDispatcher.as" title="EABFrameworkEventDispatcher.as" tooltip="EABFramework/src/eab/framework/control/EABFrameworkEventDispatcher.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/control/EABFrameworkEventDispatcher.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="27" selectionOffset="1752" selectionTopPixel="480"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="FrontController.as" partName="FrontController.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/control/FrontController.as" title="FrontController.as" tooltip="EABFramework/src/eab/framework/control/FrontController.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/control/FrontController.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7243" selectionTopPixel="2220"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="IModelLocator.as" partName="IModelLocator.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/model/IModelLocator.as" title="IModelLocator.as" tooltip="EABFramework/src/eab/framework/model/IModelLocator.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/model/IModelLocator.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="1" selectionOffset="1377" selectionTopPixel="332"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="EABFrameworkError.as" partName="EABFrameworkError.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/other/EABFrameworkError.as" title="EABFrameworkError.as" tooltip="EABFramework/src/eab/framework/other/EABFrameworkError.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/other/EABFrameworkError.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="4" selectionOffset="889" selectionTopPixel="132"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="EABFrameworkMessageCodes.as" partName="EABFrameworkMessageCodes.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/other/EABFrameworkMessageCodes.as" title="EABFrameworkMessageCodes.as" tooltip="EABFramework/src/eab/framework/other/EABFrameworkMessageCodes.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/other/EABFrameworkMessageCodes.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1049" selectionTopPixel="0"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ViewHelper.as" partName="ViewHelper.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/view/ViewHelper.as" title="ViewHelper.as" tooltip="EABFramework/src/eab/framework/view/ViewHelper.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/view/ViewHelper.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2115" selectionTopPixel="660"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ViewLocator.as" partName="ViewLocator.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/view/ViewLocator.as" title="ViewLocator.as" tooltip="EABFramework/src/eab/framework/view/ViewLocator.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/view/ViewLocator.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="11" selectionOffset="2439" selectionTopPixel="612"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="IValueObject.as" partName="IValueObject.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABFramework/src/eab/framework/vo/IValueObject.as" title="IValueObject.as" tooltip="EABFramework/src/eab/framework/vo/IValueObject.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABFramework/src/eab/framework/vo/IValueObject.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="12" selectionOffset="558" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WSDLProtocolParser.java" partName="WSDLProtocolParser.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABUtil/src/eab/parser/WSDLProtocolParser.java" title="WSDLProtocolParser.java" tooltip="EABUtil/src/eab/parser/WSDLProtocolParser.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABUtil/src/eab/parser/WSDLProtocolParser.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="20" selectionOffset="3024" selectionTopPixel="1920"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EABSessionFactory.java" partName="EABSessionFactory.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABEntity/src/eab/dao/EABSessionFactory.java" title="EABSessionFactory.java" tooltip="EABEntity/src/eab/dao/EABSessionFactory.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABEntity/src/eab/dao/EABSessionFactory.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="543" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="WSDLProtocol.hbm.xml" partName="WSDLProtocol.hbm.xml" path="D:/ESB Install/EAB1.0/EAB1.0/EABEntity/src/eab/entity/WSDLProtocol.hbm.xml" title="WSDLProtocol.hbm.xml" tooltip="EABEntity/src/eab/entity/WSDLProtocol.hbm.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABEntity/src/eab/entity/WSDLProtocol.hbm.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ODEInstance.java" partName="ODEInstance.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABEntity/src/eab/entity/ode/ODEInstance.java" title="ODEInstance.java" tooltip="EABEntity/src/eab/entity/ode/ODEInstance.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABEntity/src/eab/entity/ode/ODEInstance.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1225" selectionTopPixel="844"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ODEInstanceDao.java" partName="ODEInstanceDao.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABEntity/src/eab/entity/ode/ODEInstanceDao.java" title="ODEInstanceDao.java" tooltip="EABEntity/src/eab/entity/ode/ODEInstanceDao.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABEntity/src/eab/entity/ode/ODEInstanceDao.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="8" selectionOffset="702" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ODEScope.java" partName="ODEScope.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABEntity/src/eab/entity/ode/ODEScope.java" title="ODEScope.java" tooltip="EABEntity/src/eab/entity/ode/ODEScope.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABEntity/src/eab/entity/ode/ODEScope.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="695"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SoapMessageDao.java" partName="SoapMessageDao.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABEntity/src/eab/logger/dao/SoapMessageDao.java" title="SoapMessageDao.java" tooltip="EABEntity/src/eab/logger/dao/SoapMessageDao.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABEntity/src/eab/logger/dao/SoapMessageDao.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="670" selectionTopPixel="120"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SoapMessageLog.java" partName="SoapMessageLog.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABEntity/src/eab/logger/dao/SoapMessageLog.java" title="SoapMessageLog.java" tooltip="EABEntity/src/eab/logger/dao/SoapMessageLog.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABEntity/src/eab/logger/dao/SoapMessageLog.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="1337" selectionTopPixel="924"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="SoapMessageLog.hbm.xml" partName="SoapMessageLog.hbm.xml" path="D:/ESB Install/EAB1.0/EAB1.0/EABEntity/src/eab/logger/dao/SoapMessageLog.hbm.xml" title="SoapMessageLog.hbm.xml" tooltip="EABEntity/src/eab/logger/dao/SoapMessageLog.hbm.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABEntity/src/eab/logger/dao/SoapMessageLog.hbm.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EABFlow.java" partName="EABFlow.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABEntity/src/eab/entity/EABFlow.java" title="EABFlow.java" tooltip="EABEntity/src/eab/entity/EABFlow.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABEntity/src/eab/entity/EABFlow.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="733" selectionTopPixel="540"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EABFlowEditorDao.java" partName="EABFlowEditorDao.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABEntity/src/eab/entity/EABFlowEditorDao.java" title="EABFlowEditorDao.java" tooltip="EABEntity/src/eab/entity/EABFlowEditorDao.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABEntity/src/eab/entity/EABFlowEditorDao.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="17" selectionOffset="399" selectionTopPixel="240"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EABFlowEditor.java" partName="EABFlowEditor.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABEntity/src/eab/entity/EABFlowEditor.java" title="EABFlowEditor.java" tooltip="EABEntity/src/eab/entity/EABFlowEditor.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABEntity/src/eab/entity/EABFlowEditor.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="12" selectionOffset="503" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServiceManager.java" partName="ServiceManager.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABManager/src/eab/mananger/ServiceManager.java" title="ServiceManager.java" tooltip="EABManager/src/eab/mananger/ServiceManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABManager/src/eab/mananger/ServiceManager.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="1485" selectionTopPixel="300"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SoapMessageLogger.java" partName="SoapMessageLogger.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABMessageBean/src/eab/logger/SoapMessageLogger.java" title="SoapMessageLogger.java" tooltip="EABMessageBean/src/eab/logger/SoapMessageLogger.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABMessageBean/src/eab/logger/SoapMessageLogger.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="269" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SoapMessageMarshaler.java" partName="SoapMessageMarshaler.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABMessageBean/src/eab/marshaler/SoapMessageMarshaler.java" title="SoapMessageMarshaler.java" tooltip="EABMessageBean/src/eab/marshaler/SoapMessageMarshaler.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABMessageBean/src/eab/marshaler/SoapMessageMarshaler.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="3" selectionOffset="1538" selectionTopPixel="900"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LogMessageBean.java" partName="LogMessageBean.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABMessageBean/src/eab/beans/LogMessageBean.java" title="LogMessageBean.java" tooltip="EABMessageBean/src/eab/beans/LogMessageBean.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABMessageBean/src/eab/beans/LogMessageBean.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1133" selectionTopPixel="166"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EditManager.java" partName="EditManager.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABManager/src/eab/mananger/EditManager.java" title="EditManager.java" tooltip="EABManager/src/eab/mananger/EditManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABManager/src/eab/mananger/EditManager.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="1114" selectionTopPixel="780"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EABFlowDao.java" partName="EABFlowDao.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABEntity/src/eab/entity/EABFlowDao.java" title="EABFlowDao.java" tooltip="EABEntity/src/eab/entity/EABFlowDao.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABEntity/src/eab/entity/EABFlowDao.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2342" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EABService.java" partName="EABService.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABEntity/src/eab/entity/EABService.java" title="EABService.java" tooltip="EABEntity/src/eab/entity/EABService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABEntity/src/eab/entity/EABService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="74" selectionOffset="213" selectionTopPixel="64"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EABServiceDao.java" partName="EABServiceDao.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABEntity/src/eab/entity/EABServiceDao.java" title="EABServiceDao.java" tooltip="EABEntity/src/eab/entity/EABServiceDao.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABEntity/src/eab/entity/EABServiceDao.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WSDLProtocol.java" partName="WSDLProtocol.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABEntity/src/eab/entity/WSDLProtocol.java" title="WSDLProtocol.java" tooltip="EABEntity/src/eab/entity/WSDLProtocol.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABEntity/src/eab/entity/WSDLProtocol.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="12" selectionOffset="483" selectionTopPixel="64"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="EABFlow.hbm.xml" partName="EABFlow.hbm.xml" path="D:/ESB Install/EAB1.0/EAB1.0/EABEntity/src/eab/entity/EABFlow.hbm.xml" title="EABFlow.hbm.xml" tooltip="EABEntity/src/eab/entity/EABFlow.hbm.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABEntity/src/eab/entity/EABFlow.hbm.xml"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="ODEProcess.hbm.xml" partName="ODEProcess.hbm.xml" path="D:/ESB Install/EAB1.0/EAB1.0/EABEntity/src/eab/entity/ode/ODEProcess.hbm.xml" title="ODEProcess.hbm.xml" tooltip="EABEntity/src/eab/entity/ode/ODEProcess.hbm.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABEntity/src/eab/entity/ode/ODEProcess.hbm.xml"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="hibernate.cfg.xml" partName="hibernate.cfg.xml" path="D:/ESB Install/EAB1.0/EAB1.0/EABEntity/src/hibernate.cfg.xml" title="hibernate.cfg.xml" tooltip="EABEntity/src/hibernate.cfg.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABEntity/src/hibernate.cfg.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JbiBpelFileBuilder.java" partName="JbiBpelFileBuilder.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABManager/src/eab/deploy/JbiBpelFileBuilder.java" title="JbiBpelFileBuilder.java" tooltip="EABManager/src/eab/deploy/JbiBpelFileBuilder.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABManager/src/eab/deploy/JbiBpelFileBuilder.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="286" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JbiSaBuilder.java" partName="JbiSaBuilder.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABManager/src/eab/deploy/zip/JbiSaBuilder.java" title="JbiSaBuilder.java" tooltip="EABManager/src/eab/deploy/zip/JbiSaBuilder.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABManager/src/eab/deploy/zip/JbiSaBuilder.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="17" selectionOffset="824" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Publisher.java" partName="Publisher.java" path="D:/ESB Install/EAB1.0/EAB1.0/JMSRunner/src/JMSPackage/Publisher.java" title="Publisher.java" tooltip="JMSRunner/src/JMSPackage/Publisher.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JMSRunner/src/JMSPackage/Publisher.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="17" selectionOffset="135" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Consumer.java" partName="Consumer.java" path="D:/ESB Install/EAB1.0/EAB1.0/JMSRunner/src/JMSPackage/Consumer.java" title="Consumer.java" tooltip="JMSRunner/src/JMSPackage/Consumer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JMSRunner/src/JMSPackage/Consumer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="966" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Listener.java" partName="Listener.java" path="D:/ESB Install/EAB1.0/EAB1.0/JMSRunner/src/JMSPackage/Listener.java" title="Listener.java" tooltip="JMSRunner/src/JMSPackage/Listener.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JMSRunner/src/JMSPackage/Listener.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="852" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InstanceManager.java" partName="InstanceManager.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABManager/src/eab/mananger/InstanceManager.java" title="InstanceManager.java" tooltip="EABManager/src/eab/mananger/InstanceManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABManager/src/eab/mananger/InstanceManager.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="1482" selectionTopPixel="2160"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProcessManager.java" partName="ProcessManager.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABManager/src/eab/mananger/ProcessManager.java" title="ProcessManager.java" tooltip="EABManager/src/eab/mananger/ProcessManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABManager/src/eab/mananger/ProcessManager.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="19" selectionOffset="5126" selectionTopPixel="3166"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InstanceManagementPortTypeProxy.java" partName="InstanceManagementPortTypeProxy.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABProxy/src/org/apache/www/ode/pmapi/InstanceManagementPortTypeProxy.java" title="InstanceManagementPortTypeProxy.java" tooltip="EABProxy/src/org/apache/www/ode/pmapi/InstanceManagementPortTypeProxy.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABProxy/src/org/apache/www/ode/pmapi/InstanceManagementPortTypeProxy.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2323" selectionTopPixel="1200"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InstanceManagementPortType.java" partName="InstanceManagementPortType.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABProxy/src/org/apache/www/ode/pmapi/InstanceManagementPortType.java" title="InstanceManagementPortType.java" tooltip="EABProxy/src/org/apache/www/ode/pmapi/InstanceManagementPortType.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABProxy/src/org/apache/www/ode/pmapi/InstanceManagementPortType.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="14" selectionOffset="543" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProcessManagementPortTypeProxy.java" partName="ProcessManagementPortTypeProxy.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABProxy/src/org/apache/www/ode/pmapi/ProcessManagementPortTypeProxy.java" title="ProcessManagementPortTypeProxy.java" tooltip="EABProxy/src/org/apache/www/ode/pmapi/ProcessManagementPortTypeProxy.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABProxy/src/org/apache/www/ode/pmapi/ProcessManagementPortTypeProxy.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="188" selectionOffset="5147" selectionTopPixel="931"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProcessManagementService.java" partName="ProcessManagementService.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABProxy/src/org/apache/www/ode/pmapi/ProcessManagementService.java" title="ProcessManagementService.java" tooltip="EABProxy/src/org/apache/www/ode/pmapi/ProcessManagementService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABProxy/src/org/apache/www/ode/pmapi/ProcessManagementService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="474" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProcessManagementServiceLocator.java" partName="ProcessManagementServiceLocator.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABProxy/src/org/apache/www/ode/pmapi/ProcessManagementServiceLocator.java" title="ProcessManagementServiceLocator.java" tooltip="EABProxy/src/org/apache/www/ode/pmapi/ProcessManagementServiceLocator.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABProxy/src/org/apache/www/ode/pmapi/ProcessManagementServiceLocator.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1026" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InstanceManagementBindingStub.java" partName="InstanceManagementBindingStub.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABProxy/src/org/apache/www/ode/pmapi/InstanceManagementBindingStub.java" title="InstanceManagementBindingStub.java" tooltip="EABProxy/src/org/apache/www/ode/pmapi/InstanceManagementBindingStub.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABProxy/src/org/apache/www/ode/pmapi/InstanceManagementBindingStub.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="4" selectionOffset="22668" selectionTopPixel="5460"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestMain.java" partName="TestMain.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABProxy/src/eab/proxy/test/TestMain.java" title="TestMain.java" tooltip="EABProxy/src/eab/proxy/test/TestMain.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABProxy/src/eab/proxy/test/TestMain.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3348" selectionTopPixel="931"/>
+</editor>
+<editor id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="pmapi.wsdl" partName="pmapi.wsdl" path="D:/ESB Install/EAB1.0/EAB1.0/EABProxy/src/eab/proxy/test/pmapi.wsdl" title="pmapi.wsdl" tooltip="EABProxy/src/eab/proxy/test/pmapi.wsdl" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABProxy/src/eab/proxy/test/pmapi.wsdl"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ManagementFault.java" partName="ManagementFault.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABProxy/src/org/apache/www/ode/pmapi/ManagementFault.java" title="ManagementFault.java" tooltip="EABProxy/src/org/apache/www/ode/pmapi/ManagementFault.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABProxy/src/org/apache/www/ode/pmapi/ManagementFault.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="12" selectionOffset="866" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TScopeStatus.java" partName="TScopeStatus.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABProxy/src/org/apache/www/ode/pmapi/types/TScopeStatus.java" title="TScopeStatus.java" tooltip="EABProxy/src/org/apache/www/ode/pmapi/types/TScopeStatus.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABProxy/src/org/apache/www/ode/pmapi/types/TScopeStatus.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2658" selectionTopPixel="840"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProcessManagementPortType.java" partName="ProcessManagementPortType.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABProxy/src/org/apache/www/ode/pmapi/ProcessManagementPortType.java" title="ProcessManagementPortType.java" tooltip="EABProxy/src/org/apache/www/ode/pmapi/ProcessManagementPortType.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABProxy/src/org/apache/www/ode/pmapi/ProcessManagementPortType.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="180" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProcessManagementBindingStub.java" partName="ProcessManagementBindingStub.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABProxy/src/org/apache/www/ode/pmapi/ProcessManagementBindingStub.java" title="ProcessManagementBindingStub.java" tooltip="EABProxy/src/org/apache/www/ode/pmapi/ProcessManagementBindingStub.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABProxy/src/org/apache/www/ode/pmapi/ProcessManagementBindingStub.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="12" selectionOffset="10581" selectionTopPixel="2160"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ListType.java" partName="ListType.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABProxy/src/org/apache/www/ode/pmapi/ListType.java" title="ListType.java" tooltip="EABProxy/src/org/apache/www/ode/pmapi/ListType.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABProxy/src/org/apache/www/ode/pmapi/ListType.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="12" selectionOffset="2560" selectionTopPixel="1671"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InstanceManagementServiceLocator.java" partName="InstanceManagementServiceLocator.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABProxy/src/org/apache/www/ode/pmapi/InstanceManagementServiceLocator.java" title="InstanceManagementServiceLocator.java" tooltip="EABProxy/src/org/apache/www/ode/pmapi/InstanceManagementServiceLocator.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABProxy/src/org/apache/www/ode/pmapi/InstanceManagementServiceLocator.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3066" selectionTopPixel="900"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EABFile.java" partName="EABFile.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABUtil/src/eab/util/EABFile.java" title="EABFile.java" tooltip="EABUtil/src/eab/util/EABFile.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABUtil/src/eab/util/EABFile.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="1" selectionOffset="1439" selectionTopPixel="1106"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FileOperator.java" partName="FileOperator.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABUtil/src/eab/util/FileOperator.java" title="FileOperator.java" tooltip="EABUtil/src/eab/util/FileOperator.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABUtil/src/eab/util/FileOperator.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="885" selectionTopPixel="186"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StaticInitialize.java" partName="StaticInitialize.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABUtil/src/eab/util/StaticInitialize.java" title="StaticInitialize.java" tooltip="EABUtil/src/eab/util/StaticInitialize.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABUtil/src/eab/util/StaticInitialize.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="16" selectionOffset="220" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HelloAgent.java" partName="HelloAgent.java" path="D:/ESB Install/EAB1.0/EAB1.0/HelloMBean/src/MBean/HelloAgent.java" title="HelloAgent.java" tooltip="HelloMBean/src/MBean/HelloAgent.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HelloMBean/src/MBean/HelloAgent.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="388" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HelloMBean.java" partName="HelloMBean.java" path="D:/ESB Install/EAB1.0/EAB1.0/HelloMBean/src/MBean/HelloMBean.java" title="HelloMBean.java" tooltip="HelloMBean/src/MBean/HelloMBean.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/HelloMBean/src/MBean/HelloMBean.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProtocolManager.java" partName="ProtocolManager.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABManager/src/eab/mananger/ProtocolManager.java" title="ProtocolManager.java" tooltip="EABManager/src/eab/mananger/ProtocolManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABManager/src/eab/mananger/ProtocolManager.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1568" selectionTopPixel="426"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="bean-xbean.xml" partName="bean-xbean.xml" path="D:/ESB Install/EAB1.0/EAB1.0/EABManager/template/service/async/bean-xbean.xml" title="bean-xbean.xml" tooltip="EABManager/template/service/async/bean-xbean.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABManager/template/service/async/bean-xbean.xml"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="eip-xbean.xml" partName="eip-xbean.xml" path="D:/ESB Install/EAB1.0/EAB1.0/EABManager/template/service/async/eip-xbean.xml" title="eip-xbean.xml" tooltip="EABManager/template/service/async/eip-xbean.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABManager/template/service/async/eip-xbean.xml"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="eip-xbean.xml" partName="eip-xbean.xml" path="D:/ESB Install/EAB1.0/EAB1.0/EABManager/template/service/sync/eip-xbean.xml" title="eip-xbean.xml" tooltip="EABManager/template/service/sync/eip-xbean.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABManager/template/service/sync/eip-xbean.xml"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="http-xbean.xml" partName="http-xbean.xml" path="D:/ESB Install/EAB1.0/EAB1.0/EABManager/template/service/sync/http-xbean.xml" title="http-xbean.xml" tooltip="EABManager/template/service/sync/http-xbean.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABManager/template/service/sync/http-xbean.xml"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="sa-jbi.xml" partName="sa-jbi.xml" path="D:/ESB Install/EAB1.0/EAB1.0/EABManager/template/service/sync/sa-jbi.xml" title="sa-jbi.xml" tooltip="EABManager/template/service/sync/sa-jbi.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABManager/template/service/sync/sa-jbi.xml"/>
+</editor>
+<editor id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="ServiceWrap.wsdl" partName="ServiceWrap.wsdl" path="D:/ESB Install/EAB1.0/EAB1.0/EABManager/template/service/sync/ServiceWrap.wsdl" title="ServiceWrap.wsdl" tooltip="EABManager/template/service/sync/ServiceWrap.wsdl" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABManager/template/service/sync/ServiceWrap.wsdl"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="http-xbean.xml" partName="http-xbean.xml" path="D:/ESB Install/EAB1.0/EAB1.0/EABManager/template/service/async/http-xbean.xml" title="http-xbean.xml" tooltip="EABManager/template/service/async/http-xbean.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABManager/template/service/async/http-xbean.xml"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="sa-jbi.xml" partName="sa-jbi.xml" path="D:/ESB Install/EAB1.0/EAB1.0/EABManager/template/service/async/sa-jbi.xml" title="sa-jbi.xml" tooltip="EABManager/template/service/async/sa-jbi.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABManager/template/service/async/sa-jbi.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TVariableInfo.java" partName="TVariableInfo.java" path="D:/ESB Install/EAB1.0/EAB1.0/EABProxy/src/org/apache/www/ode/pmapi/types/TVariableInfo.java" title="TVariableInfo.java" tooltip="EABProxy/src/org/apache/www/ode/pmapi/types/TVariableInfo.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABProxy/src/org/apache/www/ode/pmapi/types/TVariableInfo.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="LogListView.mxml" partName="LogListView.mxml" path="D:/ESB Install/EAB1.0/EAB1.0/EABConsole/src/eab/console/view/LogListView.mxml" title="LogListView.mxml" tooltip="EABConsole/src/eab/console/view/LogListView.mxml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABConsole/src/eab/console/view/LogListView.mxml"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="EABConsoleModelLocator.as" partName="EABConsoleModelLocator.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABConsole/src/eab/console/model/EABConsoleModelLocator.as" title="EABConsoleModelLocator.as" tooltip="EABConsole/src/eab/console/model/EABConsoleModelLocator.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABConsole/src/eab/console/model/EABConsoleModelLocator.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="12" selectionOffset="3743" selectionTopPixel="2200"/>
+</editor>
+<editor activePart="true" focus="true" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="AttributeViewModel.as" partName="AttributeViewModel.as" path="D:/ESB Install/EAB1.0/EAB1.0/EABConsole/src/eab/console/model/AttributeViewModel.as" title="AttributeViewModel.as" tooltip="EABConsole/src/eab/console/model/AttributeViewModel.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/EABConsole/src/eab/console/model/AttributeViewModel.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="9" selectionOffset="832" selectionTopPixel="0"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.wst.server.ui.ServersView" partName="Servers">
+<viewState CommonNavigator.LINKING_ENABLED="0"/>
+</view>
+<view id="org.eclipse.debug.ui.ExpressionView" partName="Expressions">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
+<view id="com.adobe.flexbuilder.as.editor.asdocviewer" partName="ASDoc">
+<viewState/>
+</view>
+<view id="com.adobe.flexbuilder.dcrad.views.DataServicesView" partName="数据/服务">
+<viewState/>
+</view>
+<view id="com.adobe.flexbuilder.packageexplorer" partName="包资源管理器">
+<viewState LINK_NAVIGATOR_TO_EDITOR="0" fpeIsFlat="0" fpeSortBy="1" sorter="1">
+<fpeExpanded>&#x0A;<fpeElement fpePath="/EABManager"/>
+<fpeElement fpePath="/EABManager/SA"/>
+<fpeElement fpePath="/EABMessageBean"/>
+<fpeElement fpePath="/EABMessageBean/bin"/>
+<fpeElement fpePath="/EABMessageBean/bin/eab"/>
+<fpeElement fpePath="/HelloAnt"/>
+<fpeElement fpePath="/HelloAnt/src"/>
+<fpeElement fpePath="/HelloAnt/src/testAnt"/>
+<fpeElement fpePath="/Servers"/>
+<fpeElement fpePath="/Servers/Tomcat v6.0 Server at localhost (2)-config"/>
+<fpeElement fpePath="/WebserviceTest"/>
+<fpeElement fpePath="/WebserviceTest/build"/>
+<fpeElement fpePath="/WebserviceTest/build/classes"/>
+<fpeElement fpePath="/WebserviceTest/build/classes/ws"/>
+<fpeElement fpePath="/WebserviceTest/src"/>
+<fpeElement fpePath="/WebserviceTest/src/ws"/>
+<fpeElement fpePath="/WebserviceTest/WebContent"/>
+<fpeElement fpePath="/WebserviceTest/WebContent/META-INF"/>
+<fpeElement fpePath="/WebserviceTest/WebContent/WEB-INF"/>
+<fpeElement fpePath="/WebserviceTest/WebContent/WEB-INF/CalculatorService"/>
+<fpeElement fpePath="/WebserviceTest/WebContent/WEB-INF/CalculatorService/ws"/>
+<fpeElement fpePath="/WebserviceTest/WebContent/WEB-INF/lib"/>
+<fpeElement fpePath="/WebserviceTest/WebContent/wsdl"/>
+</fpeExpanded>
+<fpeSelection>&#x0A;<fpeElement fpePath="/HelloAnt/src/testAnt/helloworld.java"/>
+</fpeSelection>
+<filters>&#x0A;<filter element="*.class" isEnabled="false"/>
+<filter element="RemoteSystemsConnections" isEnabled="true"/>
+<filter element="RemoteSystemsTempFiles" isEnabled="true"/>
+<filter element=".*" isEnabled="false"/>
+<filter element="*.class" isEnabled="false"/>
+<filter element="*.class" isEnabled="false"/>
+<filter element="RemoteSystemsConnections" isEnabled="true"/>
+<filter element="RemoteSystemsTempFiles" isEnabled="true"/>
+<filter element=".*" isEnabled="false"/>
+<filter element="*.class" isEnabled="false"/>
+</filters>
+<expanded>&#x0A;<element path="/EABManager"/>
+<element path="/EABManager/SA"/>
+<element path="/EABMessageBean"/>
+<element path="/EABMessageBean/bin"/>
+<element path="/EABMessageBean/bin/eab"/>
+<element path="/HelloAnt"/>
+<element path="/HelloAnt/src"/>
+<element path="/HelloAnt/src/testAnt"/>
+<element path="/Servers"/>
+<element path="/Servers/Tomcat v6.0 Server at localhost (2)-config"/>
+<element path="/WebserviceTest"/>
+<element path="/WebserviceTest/build"/>
+<element path="/WebserviceTest/build/classes"/>
+<element path="/WebserviceTest/build/classes/ws"/>
+<element path="/WebserviceTest/src"/>
+<element path="/WebserviceTest/src/ws"/>
+<element path="/WebserviceTest/WebContent"/>
+<element path="/WebserviceTest/WebContent/META-INF"/>
+<element path="/WebserviceTest/WebContent/WEB-INF"/>
+<element path="/WebserviceTest/WebContent/WEB-INF/CalculatorService"/>
+<element path="/WebserviceTest/WebContent/WEB-INF/CalculatorService/ws"/>
+<element path="/WebserviceTest/WebContent/WEB-INF/lib"/>
+<element path="/WebserviceTest/WebContent/wsdl"/>
+</expanded>
+<selection>&#x0A;<element path="/HelloAnt/src/testAnt/helloworld.java"/>
+</selection>
+</viewState>
+</view>
+<view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Type Hierarchy">
+<viewState hidefields="false" hidelocaltypes="false" hidenonpublic="false" hidestatic="false" input="=EABProxy/src&lt;org.apache.www.ode.pmapi.types{TDeploymentInfo.java[TDeploymentInfo" link_editors="0" mv_vertical_scroll="0" orientation="3" qualified_names="0" ratio="350" selection="=EABProxy/src&lt;org.apache.www.ode.pmapi.types{TDeploymentInfo.java[TDeploymentInfo" showinherited="false" sortbydefiningtype="false" vertical_scroll="0" view="2" workingSetName=""/>
+</view>
+<view id="org.eclipse.jdt.junit.ResultView" partName="JUnit">
+<viewState failuresOnly="false" layout="1" orientation="2" ratio="682" scroll="false" time="true"/>
+</view>
+<view id="org.eclipse.ui.views.ProgressView" partName="Progress">
+<viewState/>
+</view>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.ProjectsView" partName="Projects">
+<viewState org.eclipse.jdt.ui.browsing.projectstoeditor="1" workingSetName="">
+<customFilters userDefinedPatternsEnabled="false">&#x0A;<xmlDefinedFilters>&#x0A;<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter2" isEnabled="true"/>
+<child filterId="jdt.external.source.project.filter" isEnabled="true"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter2" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.ProjectsView.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.ProjectsView.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.ProjectsView.LibraryFilter" isEnabled="false"/>
+</xmlDefinedFilters>
+</customFilters>
+<selectedElements>&#x0A;<selectedElement selectedElementPath="=EABManager/src"/>
+</selectedElements>
+</viewState>
+</view>
+<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
+<viewState configured="true" group_libraries="1" layout="2" linkWithEditor="1" rootMode="2" sortWorkingSets="false" workingSetName="">
+<localWorkingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.OthersWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1319780467765_2" label="Other Projects" name="Other Projects">
+<item elementID="=EAB" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=EABEntity" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=EABManager" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=EABMessageBean" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=EABProxy" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=EABRunner" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=EABUtil" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=HelloAnt" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=JMSProject" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=MultiThread" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=WebserviceTest" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/EABConsole" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/EABControl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/EABFramework" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/EABOutline" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Protocol" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/RemoteSystemsTempFiles" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Servers" type="4"/>
+</workingSet>
+</localWorkingSetManager>
+<activeWorkingSet workingSetName="Other Projects"/>
+<customFilters userDefinedPatternsEnabled="false">
+<xmlDefinedFilters>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+<child filterId="jdt.external.source.project.filter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsConnections" isEnabled="true"/>
+<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsTempFiles" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
+<child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
+<view id="com.adobe.flexbuilder.monitors.network.view.NetworkMonitorView" partName="网络监视器">
+<viewState>
+<column number="0" width="20"/>
+<column number="1" width="100"/>
+<column number="2" width="100"/>
+<column number="3" width="80"/>
+<column number="4" width="90"/>
+<column number="5" width="100"/>
+<column number="6" width="80"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState/>
+</view>
+<view id="org.eclipse.ant.ui.views.AntView" partName="Ant">
+<viewState>
+<filterInternalTargets value="false"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>&#x0A;<category IMemento.internal.id="Warnings (100 of 516 items)"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="77" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="210" org.eclipse.ui.ide.resourceField="165" org.eclipse.ui.ide.severityAndDescriptionField="507"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+</views>
+<perspectives activePart="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspective editorAreaTrimState="1" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="com.adobe.flexbuilder.debug.ui.perspectives.FlexDebugPerspectiveFactory" id="com.adobe.flexbuilder.debug.ui.perspectives.debug" label="Flash 调试"/>
+<alwaysOnActionSet id="com.swtdesigner.actionset"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.profileActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.zzz.editors.common.ui.project.publish"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.editorcore.modeswitch"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.as.editor.ui.NavigationActions"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.dcrad.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.debug.ui.VariableView"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="com.adobe.flexbuilder.editors.mxml.components.ComponentsView"/>
+<show_view_action id="com.adobe.flexbuilder.editors.mxml.inspector.view.PropertiesView"/>
+<show_view_action id="com.adobe.flexbuilder.editors.mxml.states.StatesView"/>
+<show_view_action id="com.adobe.flexbuilder.navigator"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.mxml.ui.wizards.NewMXMLApplication"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.mxml.ui.wizards.NewMXMLComponent"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.mxml.ui.wizards.NewMXMLModule"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.actionscript.wizards.NewActionScriptFile.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.actionscript.classWizard.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.actionscript.interfaceWizard.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.css.wizards.NewCSSFile"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.common.ui.project.wizards.newproject"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.common.ui.project.wizards.NewActionScriptProjectWizard"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.common.ui.project.wizards.FlexLibraryProjectWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<perspective_action id="com.adobe.flexbuilder.editors.mxml.ui.perspectives.development"/>
+<perspective_action id="com.adobe.flexbuilder.debug.ui.perspectives.debug"/>
+<perspective_action id="com.adobe.flash.profiler.ui.ProfilingPerspective"/>
+<view id="org.eclipse.debug.ui.BreakpointView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.debug.ui.ExpressionView"/>
+<fastViewBars>&#x0A;<fastViewBar fastViewLocation="1024" id="org.eclipse.debug.internal.ui.ConsoleFolderView" orientation="256" selectedTabId="org.eclipse.wst.server.ui.ServersView" style="1">&#x0A;<fastViews>&#x0A;<view id="org.eclipse.ui.views.ProblemView" ratio="0.3"/>
+<view id="org.eclipse.wst.server.ui.ServersView" ratio="0.2996346"/>
+<view id="org.eclipse.search.ui.views.SearchView" ratio="0.3"/>
+<view id="org.eclipse.debug.ui.VariableView" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.ui.internal.ViewStack@1f78716">&#x0A;<folder activePageID="com.adobe.flexbuilder.navigator" appearance="2" expanded="2">&#x0A;<page content="com.adobe.flexbuilder.navigator" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1074" ratioRight="358" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1f78716">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.24772568" ratioLeft="354" ratioRight="1075" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1f78716"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.698044" ratioLeft="571" ratioRight="247" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder appearance="2" expanded="0">&#x0A;<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.wst.server.ui.ServersView" label="LabelNotFound"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.VariableView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1516207" ratio="0.6878173" ratioLeft="542" ratioRight="246" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@ba6589" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.debug.internal.ui.DebugPerspectiveFactory" id="org.eclipse.debug.ui.DebugPerspective" label="Debug"/>
+<alwaysOnActionSet id="com.swtdesigner.actionset"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.wst.jsdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.editorcore.modeswitch"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.debug.ui.VariableView"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="com.adobe.rds.client.debugger.ui.CFMLOutputBufferView"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.datatools.sqltools.result.resultView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.jdt.debug.ui.DisplayView"/>
+<perspective_action id="com.adobe.flexbuilder.editors.mxml.ui.perspectives.development"/>
+<perspective_action id="com.adobe.flexbuilder.debug.ui.perspectives.debug"/>
+<perspective_action id="org.eclipse.datatools.sqltools.sqleditor.perspectives.EditorPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.wst.jsdt.ui.JavaPerspective"/>
+<view id="org.eclipse.wst.server.ui.ServersView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.debug.ui.VariableView"/>
+<fastViewBars>&#x0A;<fastViewBar fastViewLocation="131072" id="org.eclipse.debug.internal.ui.OutlineFolderView" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">&#x0A;<fastViews>&#x0A;<view id="org.eclipse.ui.views.ContentOutline" ratio="0.2995984"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="1024" id="org.eclipse.debug.internal.ui.ConsoleFolderView" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">&#x0A;<fastViews>&#x0A;<view id="org.eclipse.ui.console.ConsoleView" ratio="0.60170525"/>
+<view id="org.eclipse.ui.views.TaskList" ratio="0.3"/>
+<view id="org.eclipse.ui.views.ProgressView" ratio="0.3"/>
+<view id="org.eclipse.search.ui.views.SearchView:1" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="com.adobe.rds.client.debugger.ui.CFMLOutputBufferView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1074" ratioRight="358" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.591687" ratioLeft="484" ratioRight="334" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="0">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<page content="org.eclipse.search.ui.views.SearchView:1" label="LabelNotFound"/>
+<page content="com.google.gwt.eclipse.DevModeView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="org.eclipse.datatools.sqltools.result.resultView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
+<page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@132098f" ratio="0.4117647" ratioLeft="259" ratioRight="370" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.wst.server.ui.ServersView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.wst.server.ui.ServersView" label="Servers"/>
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.80220646" ratioLeft="1018" ratioRight="251" relationship="2" relative="org.eclipse.ui.internal.ViewStack@132098f">&#x0A;<folder appearance="2" expanded="0">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.1601467" ratioLeft="131" ratioRight="687" relationship="4" relative="org.eclipse.ui.internal.ViewStack@132098f"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="716" ratioRight="716" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor descriptor="com.adobe.flexbuilder.editors.mxml.ui.perspectives.development" id="JavaFlex" label="JavaFlex"/>
+<alwaysOnActionSet id="com.swtdesigner.actionset"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.profileActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.zzz.editors.common.ui.project.publish"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.editorcore.modeswitch"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.dcrad.actionSet"/>
+<show_view_action id="com.adobe.flexbuilder.editors.mxml.components.ComponentsView"/>
+<show_view_action id="com.adobe.flexbuilder.editors.mxml.inspector.view.PropertiesView"/>
+<show_view_action id="com.adobe.flexbuilder.editors.mxml.states.StatesView"/>
+<show_view_action id="com.adobe.flexbuilder.navigator"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.mxml.ui.wizards.NewMXMLApplication"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.mxml.ui.wizards.NewMXMLComponent"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.mxml.ui.wizards.NewMXMLModule"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.actionscript.wizards.NewActionScriptFile.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.actionscript.classWizard.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.actionscript.interfaceWizard.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.css.wizards.NewCSSFile"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.common.ui.project.wizards.newproject"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.common.ui.project.wizards.NewActionScriptProjectWizard"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.common.ui.project.wizards.FlexLibraryProjectWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<perspective_action id="com.adobe.flexbuilder.editors.mxml.ui.perspectives.development"/>
+<perspective_action id="com.adobe.flexbuilder.debug.ui.perspectives.debug"/>
+<perspective_action id="com.adobe.flash.profiler.ui.ProfilingPerspective"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.wst.server.ui.ServersView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.jdt.junit.ResultView"/>
+<view id="org.eclipse.ui.views.ProgressView"/>
+<view id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.ui.internal.ViewStack@1cc87e3">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1074" ratioRight="358" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1cc87e3">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.3033885" ratioLeft="385" ratioRight="884" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1cc87e3"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@b10995" ratio="0.7533156" ratioLeft="852" ratioRight="279" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="com.adobe.flexbuilder.editors.mxml.states.StatesView" appearance="2" expanded="2">&#x0A;<page content="com.adobe.flexbuilder.editors.mxml.states.StatesView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@4487e2" ratio="0.33377308" ratioLeft="253" ratioRight="505" relationship="4" relative="org.eclipse.ui.internal.ViewStack@b10995">&#x0A;<folder activePageID="org.eclipse.search.ui.views.SearchView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.jdt.ui.TypeHierarchy" label="Type Hierarchy"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<page content="com.adobe.flexbuilder.mxml.editor.components.ComponentsView" label="LabelNotFound"/>
+<page content="com.adobe.flexbuilder.editors.mxml.inspector.view.PropertiesView" label="LabelNotFound"/>
+<page content="com.adobe.flexbuilder.editors.mxml.components.ComponentsView" label="LabelNotFound"/>
+<page content="com.adobe.flexbuilder.packageexplorer" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@d9d34d" ratio="0.7787286" ratioLeft="637" ratioRight="181" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.wst.server.ui.ServersView" label="Servers"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="JUnit"/>
+<page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
+<page content="com.altova.xmlspyforeclipse.ValidationOutput" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="outlineHolder" ratio="0.49934298" ratioLeft="380" ratioRight="381" relationship="4" relative="org.eclipse.ui.internal.ViewStack@1cc87e3">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="com.adobe.flexbuilder.navigator" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@bfe387" ratio="0.6226913" ratioLeft="472" ratioRight="286" relationship="4" relative="outlineHolder">&#x0A;<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.jdt.internal.ui.browsing.JavaBrowsingPerspectiveFactory" id="org.eclipse.jdt.ui.JavaBrowsingPerspective" label="Java Browsing"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="com.swtdesigner.actionset"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.editorcore.modeswitch"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.java.actionSet.browsing"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.ProjectsView"/>
+<show_view_action id="org.eclipse.jdt.ui.PackagesView"/>
+<show_view_action id="org.eclipse.jdt.ui.TypesView"/>
+<show_view_action id="org.eclipse.jdt.ui.MembersView"/>
+<show_view_action id="org.eclipse.jdt.ui.SourceView"/>
+<show_view_action id="org.eclipse.jdt.ui.JavadocView"/>
+<show_view_action id="org.eclipse.ui.texteditor.TemplatesView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewEnumCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewAnnotationCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSnippetFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewJavaWorkingSetWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<fastViews>&#x0A;<view id="org.eclipse.jdt.ui.ProjectsView" ratio="0.299581"/>
+</fastViews>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow maximized="org.eclipse.ui.internal.ViewStack@132098f">&#x0A;<info folder="true" part="org.eclipse.ui.internal.ViewStack@13bc53f">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.jdt.ui.ProjectsView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@f84892" ratio="0.7683695" ratioLeft="1098" ratioRight="331" relationship="2" relative="org.eclipse.ui.internal.ViewStack@13bc53f">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.jdt.ui.MembersView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.TypesView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.PackagesView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="left" ratio="0.4082192" ratioLeft="447" ratioRight="648" relationship="2" relative="org.eclipse.ui.internal.ViewStack@13bc53f">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1074" ratioRight="358" relationship="2" relative="left">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="358" ratioRight="1074" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.71246004" ratioLeft="446" ratioRight="180" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="com.swtdesigner.actionset"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.editorcore.modeswitch"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.jdt.ui.SourceView"/>
+<show_view_action id="org.eclipse.jdt.ui.JavadocView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.texteditor.TemplatesView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="com.instantiations.designer.core.StructureView"/>
+<show_view_action id="com.instantiations.designer.core.PaletteView"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<show_in_time id="org.eclipse.team.ui.GenericHistoryView" time="1323756557618"/>
+<show_in_time id="org.eclipse.ui.views.ContentOutline" time="1321948760407"/>
+<show_in_time id="org.eclipse.jdt.ui.PackageExplorer" time="1322640429623"/>
+<show_in_time id="org.eclipse.ui.navigator.ProjectExplorer" time="1322631999557"/>
+<show_in_time id="com.adobe.flexbuilder.packageexplorer" time="1323305209849"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewEnumCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewAnnotationCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSnippetFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewJavaWorkingSetWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
+<new_wizard_action id="org.eclipse.mylyn.tasks.ui.wizards.new.repository.task"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<perspective_action id="org.eclipse.wst.jsdt.ui.JavaPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<view id="org.eclipse.ui.views.ProgressView"/>
+<view id="org.eclipse.wst.server.ui.ServersView"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
+<view id="com.adobe.flexbuilder.packageexplorer"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<fastViewBars>
+<fastViewBar fastViewLocation="131072" id="right" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
+<fastViews>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.2996716"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="16384" id="org.eclipse.ui.internal.ViewStack@132098f" orientation="256" selectedTabId="org.eclipse.wst.server.ui.ServersView" style="0">
+<fastViews>
+<view id="org.eclipse.debug.ui.VariableView" ratio="0.3"/>
+<view id="org.eclipse.debug.ui.BreakpointView" ratio="0.3"/>
+<view id="org.eclipse.debug.ui.DebugView" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@3f6285" orientation="256" selectedTabId="org.eclipse.ant.ui.views.AntView" style="0">
+<fastViews>
+<view id="org.eclipse.ant.ui.views.AntView" ratio="0.3995128"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>
+<mainWindow>
+<info folder="true" part="left">
+<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="com.instantiations.designer.core.StructureView" label="LabelNotFound"/>
+<page content="com.instantiations.designer.core.PaletteView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1074" ratioRight="358" relationship="2" relative="left">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.21893004" ratioLeft="266" ratioRight="949" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.77383864" ratioLeft="633" ratioRight="185" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.search.ui.views.SearchView:1" label="LabelNotFound"/>
+<page content="com.adobe.flexbuilder.as.editor.CallHierarchyView" label="LabelNotFound"/>
+<page content="org.eclipse.team.ui.GenericHistoryView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@755b22" ratio="0.7729358" ratioLeft="674" ratioRight="198" relationship="2" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="right" ratio="0.3508772" ratioLeft="240" ratioRight="444" relationship="4" relative="org.eclipse.ui.internal.ViewStack@755b22">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@16c6a89" ratio="0.73838633" ratioLeft="604" ratioRight="214" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.SourceView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@3f6285" ratio="0.6748166" ratioLeft="552" ratioRight="266" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@121f86" ratio="0.6748166" ratioLeft="552" ratioRight="266" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@10e83aa" ratio="0.698044" ratioLeft="571" ratioRight="247" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.pde.runtime.LogView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@294c59" ratio="0.84229827" ratioLeft="689" ratioRight="129" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
+<page content="org.eclipse.wst.server.ui.ServersView" label="Servers"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<page content="com.adobe.flexbuilder.packageexplorer" label="包资源管理器"/>
+<page content="org.eclipse.debug.ui.MemoryView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="com.adobe.flexbuilder.mxml.editor.ui.perspectives.DevelopmentPerspectiveFactory" id="com.adobe.flexbuilder.editors.mxml.ui.perspectives.development" label="Flash"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="com.swtdesigner.actionset"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.editorcore.modeswitch"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.profileActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.debug.ui.flexDebuggingActionSet"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.dcrad.actionSet"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.zzz.editors.common.ui.project.publish"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.as.editor.ui.NavigationActions"/>
+<show_view_action id="com.adobe.flexbuilder.mxml.editor.AppearanceView"/>
+<show_view_action id="com.adobe.flexbuilder.mxml.editor.components.ComponentsView"/>
+<show_view_action id="com.adobe.flexbuilder.packageexplorer"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="com.adobe.flexbuilder.mxml.editor.inspector.view.PropertiesView"/>
+<show_view_action id="com.adobe.flexbuilder.mxml.editor.states.StatesViewer"/>
+<show_view_action id="com.adobe.flexbuilder.dcrad.views.DataServicesView"/>
+<new_wizard_action id="com.adobe.flexbuilder.editorcore.ui.project.wizards.newproject"/>
+<new_wizard_action id="com.adobe.flexbuilder.project.ui.wizards.FlexLibraryProjectWizard"/>
+<new_wizard_action id="com.adobe.flexbuilder.flashbridge.NewFlashProProjectWizard"/>
+<new_wizard_action id="com.adobe.flexbuilder.project.ui.wizards.NewActionScriptProjectWizard"/>
+<new_wizard_action id="com.adobe.flexbuilder.mxml.editor.ui.wizards.NewMXMLApplication"/>
+<new_wizard_action id="com.adobe.flexbuilder.mxml.editor.ui.wizards.NewMXMLComponent"/>
+<new_wizard_action id="com.adobe.flexbuilder.mxml.editor.ui.wizards.NewMXMLItemRenderer"/>
+<new_wizard_action id="com.adobe.flexbuilder.mxml.editor.ui.wizards.NewMXMLModule"/>
+<new_wizard_action id="com.adobe.flexbuilder.mxml.editor.ui.wizards.NewMXMLSkin"/>
+<new_wizard_action id="com.adobe.flexbuilder.as.editor.wizards.NewActionScriptFile.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.as.editor.classWizard.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.as.editor.interfaceWizard.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.css.editor.wizards.NewCSSFile"/>
+<new_wizard_action id="com.adobe.flexbuilder.as.editor.flexUnitClassWizard.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.as.editor.flexUnitTestSuiteClassWizard.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.as.editor.packageWizard.flex"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<perspective_action id="com.adobe.flexbuilder.editors.mxml.ui.perspectives.development"/>
+<perspective_action id="com.adobe.flexbuilder.debug.ui.perspectives.debug"/>
+<perspective_action id="com.adobe.flash.profiler.ui.ProfilingPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="com.adobe.flexbuilder.packageexplorer"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="com.adobe.flexbuilder.dcrad.views.DataServicesView"/>
+<view id="com.adobe.flexbuilder.monitors.network.view.NetworkMonitorView"/>
+<view id="com.adobe.flexbuilder.as.editor.asdocviewer"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.ui.internal.ViewStack@f1603a">&#x0A;<folder activePageID="com.adobe.flexbuilder.packageexplorer" appearance="2" expanded="2">&#x0A;<page content="com.adobe.flexbuilder.packageexplorer" label="包资源管理器"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.74958676" ratioLeft="907" ratioRight="303" relationship="2" relative="org.eclipse.ui.internal.ViewStack@f1603a">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.214342" ratioLeft="272" ratioRight="997" relationship="2" relative="org.eclipse.ui.internal.ViewStack@f1603a"/>
+<info folder="true" part="statesViewHolder" ratio="0.6497934" ratioLeft="629" ratioRight="339" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="com.adobe.flexbuilder.mxml.editor.states.StatesViewer" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="propertiesHolder" ratio="0.24758843" ratioLeft="77" ratioRight="234" relationship="4" relative="statesViewHolder">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="com.adobe.flexbuilder.mxml.editor.inspector.view.PropertiesView" label="LabelNotFound"/>
+<page content="com.adobe.flexbuilder.mxml.editor.AppearanceView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="bottomLayout" ratio="0.7762836" ratioLeft="635" ratioRight="183" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="com.adobe.flexbuilder.dcrad.views.DataServicesView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="com.adobe.flexbuilder.dcrad.views.DataServicesView" label="数据/服务"/>
+<page content="com.adobe.flexbuilder.monitors.network.view.NetworkMonitorView" label="网络监视器"/>
+<page content="com.adobe.flexbuilder.as.editor.asdocviewer" label="ASDoc"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="outlineHolder" ratio="0.49839228" ratioLeft="155" ratioRight="156" relationship="4" relative="org.eclipse.ui.internal.ViewStack@f1603a">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="com.adobe.flexbuilder.mxml.editor.components.ComponentsView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EABUtil/src/eab/util/EABFile.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EABUtil/src/eab/util/FileOperator.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EABUtil/src/eab/util/StaticInitialize.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EABProxy/src/org/apache/www/ode/pmapi/types/TVariableInfo.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EABUtil/src/eab/util/EABPath.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EABUtil/src/eab/util/ZipCompressor.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JMSControl/src/JMS/DebugSubscriber.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/HelloMBean/src/MBean/Hello.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/EABFramework/src/eab/framework/business/AbstractServices.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EABManager/src/eab/deploy/JbiBpelFileBuilder.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/EABFramework/src/eab/framework/business/HTTPServices.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/EABFramework/src/eab/framework/business/WebServices.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/Servers/Tomcat v6.0 Server at localhost (2)-config/jms-activemq.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/HelloAnt/src/testAnt/helloworld.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/EABUtil/src/eab/util/EABPath.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/EABFramework/src/eab/framework/business/IServiceLocator.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/EABFramework/src/eab/framework/business/AbstractServices.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" path="/EABConsole/src/eab/console/view/LogListView.mxml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.mxml.editor.MXMLCodeEditor" path="/EABConsole/src/eab/console/view/LogListView.mxml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/EABConsole/src/eab/console/model/EABConsoleModelLocator.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/EABConsole/src/eab/console/model/AttributeViewModel.as"/>
+</editors>
+<item historyLabel="EABFile.java" index="0">
+<position info="not_deleted" x="402" y="0"/>
+</item>
+<item historyLabel="TVariableInfo.java" index="3">
+<position info="not_deleted" x="5" y="0"/>
+</item>
+<item historyLabel="FileOperator.java" index="1">
+<position info="not_deleted" x="181" y="6"/>
+</item>
+<item historyLabel="EABPath.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="FileOperator.java" index="1">
+<position info="not_deleted" x="181" y="6"/>
+</item>
+<item historyLabel="StaticInitialize.java" index="2">
+<position info="not_deleted" x="249" y="11"/>
+</item>
+<item historyLabel="FileOperator.java" index="1">
+<position info="not_deleted" x="181" y="6"/>
+</item>
+<item historyLabel="StaticInitialize.java" index="2">
+<position info="not_deleted" x="249" y="11"/>
+</item>
+<item historyLabel="FileOperator.java" index="1">
+<position info="not_deleted" x="709" y="0"/>
+</item>
+<item historyLabel="EABFile.java" index="0">
+<position info="not_deleted" x="1439" y="1"/>
+</item>
+<item historyLabel="EABPath.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="FileOperator.java" index="1">
+<position info="not_deleted" x="2758" y="16"/>
+</item>
+<item historyLabel="EABPath.java" index="4">
+<position info="not_deleted" x="91" y="18"/>
+</item>
+<item historyLabel="FileOperator.java" index="1">
+<position info="not_deleted" x="885" y="0"/>
+</item>
+<item historyLabel="ZipCompressor.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="StaticInitialize.java" index="2">
+<position info="not_deleted" x="220" y="16"/>
+</item>
+<item historyLabel="ZipCompressor.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="DebugSubscriber.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Hello.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="DebugSubscriber.java" index="6">
+<position info="not_deleted" x="2615" y="0"/>
+</item>
+<item historyLabel="AbstractServices.as" index="8">
+<position info="not_deleted" x="298" y="16"/>
+</item>
+<item historyLabel="JbiBpelFileBuilder.java" index="9">
+<position info="not_deleted" x="1469" y="5"/>
+</item>
+<item historyLabel="HTTPServices.as" index="10">
+<position info="not_deleted" x="633" y="15"/>
+</item>
+<item historyLabel="WebServices.as" index="11">
+<position info="not_deleted" x="2666" y="0"/>
+</item>
+<item historyLabel="jms-activemq.xml" index="12"/>
+<item historyLabel="helloworld.java" index="13">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="WebServices.as" index="11">
+<position info="not_deleted" x="570" y="0"/>
+</item>
+<item historyLabel="HTTPServices.as" index="10">
+<position info="not_deleted" x="2760" y="6"/>
+</item>
+<item historyLabel="WebServices.as" index="11">
+<position info="not_deleted" x="990" y="0"/>
+</item>
+<item historyLabel="HTTPServices.as" index="10">
+<position info="not_deleted" x="2760" y="6"/>
+</item>
+<item historyLabel="EABPath.java" index="14">
+<position info="not_deleted" x="91" y="18"/>
+</item>
+<item historyLabel="HTTPServices.as" index="10">
+<position info="not_deleted" x="2703" y="0"/>
+</item>
+<item historyLabel="IServiceLocator.as" index="15">
+<position info="not_deleted" x="1577" y="20"/>
+</item>
+<item historyLabel="HTTPServices.as" index="10">
+<position info="not_deleted" x="1195" y="0"/>
+</item>
+<item historyLabel="AbstractServices.as" index="16">
+<position info="not_deleted" x="1286" y="1"/>
+</item>
+<item historyLabel="WebServices.as" index="11">
+<position info="not_deleted" x="570" y="0"/>
+</item>
+<item historyLabel="LogListView.mxml" index="17">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="LogListView.mxml" index="18">
+<position info="not_deleted" x="195" y="1"/>
+</item>
+<item historyLabel="LogListView.mxml" index="18">
+<position info="not_deleted" x="2214" y="0"/>
+</item>
+<item historyLabel="HTTPServices.as" index="10">
+<position info="not_deleted" x="686" y="0"/>
+</item>
+<item historyLabel="WebServices.as" index="11">
+<position info="not_deleted" x="570" y="0"/>
+</item>
+<item historyLabel="AbstractServices.as" index="16">
+<position info="not_deleted" x="1286" y="1"/>
+</item>
+<item historyLabel="HTTPServices.as" index="10">
+<position info="not_deleted" x="686" y="0"/>
+</item>
+<item historyLabel="LogListView.mxml" index="17">
+<position info="not_deleted" x="1935" y="9"/>
+</item>
+<item historyLabel="LogListView.mxml" index="18">
+<position info="not_deleted" x="2057" y="0"/>
+</item>
+<item historyLabel="LogListView.mxml" index="18">
+<position info="not_deleted" x="1851" y="97"/>
+</item>
+<item historyLabel="LogListView.mxml" index="18">
+<position info="not_deleted" x="647" y="15"/>
+</item>
+<item historyLabel="EABConsoleModelLocator.as" index="19">
+<position info="not_deleted" x="3743" y="12"/>
+</item>
+<item historyLabel="LogListView.mxml" index="17">
+<position info="not_deleted" x="647" y="15"/>
+</item>
+<item active="true" historyLabel="AttributeViewModel.as" index="20">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@132098f"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="right"/>
+</trimArea>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@3f6285"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="AttributeViewModel.as" tooltip="EABConsole/src/eab/console/model/AttributeViewModel.as">
+<persistable path="/EABConsole/src/eab/console/model/AttributeViewModel.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="EABConsoleModelLocator.as" tooltip="EABConsole/src/eab/console/model/EABConsoleModelLocator.as">
+<persistable path="/EABConsole/src/eab/console/model/EABConsoleModelLocator.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" name="LogListView.mxml" tooltip="EABConsole/src/eab/console/view/LogListView.mxml">
+<persistable path="/EABConsole/src/eab/console/view/LogListView.mxml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="helloworld.java" tooltip="HelloAnt/src/testAnt/helloworld.java">
+<persistable path="/HelloAnt/src/testAnt/helloworld.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="servicewrap-BC-FileVerifyService-sa.zip" tooltip="EABManager/SA/servicewrap-BC-FileVerifyService-sa.zip">
+<persistable path="/EABManager/SA/servicewrap-BC-FileVerifyService-sa.zip"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Hello.java" tooltip="HelloMBean/src/MBean/Hello.java">
+<persistable path="/HelloMBean/src/MBean/Hello.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DebugSubscriber.java" tooltip="JMSControl/src/JMS/DebugSubscriber.java">
+<persistable path="/JMSControl/src/JMS/DebugSubscriber.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ZipCompressor.java" tooltip="EABUtil/src/eab/util/ZipCompressor.java">
+<persistable path="/EABUtil/src/eab/util/ZipCompressor.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EABPath.java" tooltip="EABUtil/src/eab/util/EABPath.java">
+<persistable path="/EABUtil/src/eab/util/EABPath.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TVariableInfo.java" tooltip="EABProxy/src/org/apache/www/ode/pmapi/types/TVariableInfo.java">
+<persistable path="/EABProxy/src/org/apache/www/ode/pmapi/types/TVariableInfo.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="sa-jbi.xml" tooltip="EABManager/template/service/async/sa-jbi.xml">
+<persistable path="/EABManager/template/service/async/sa-jbi.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="http-xbean.xml" tooltip="EABManager/template/service/async/http-xbean.xml">
+<persistable path="/EABManager/template/service/async/http-xbean.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" name="ServiceWrap.wsdl" tooltip="EABManager/template/service/sync/ServiceWrap.wsdl">
+<persistable path="/EABManager/template/service/sync/ServiceWrap.wsdl"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="sa-jbi.xml" tooltip="EABManager/template/service/sync/sa-jbi.xml">
+<persistable path="/EABManager/template/service/sync/sa-jbi.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="http-xbean.xml" tooltip="EABManager/template/service/sync/http-xbean.xml">
+<persistable path="/EABManager/template/service/sync/http-xbean.xml"/>
+</file>
+</mruList>
+</workbench>

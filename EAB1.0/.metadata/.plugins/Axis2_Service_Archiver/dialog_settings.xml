@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.apache.axis2.tool.service.eclipse.ui.LibraryAddingPage">
+		<list key="LIB_NAMES">
+		</list>
+	</section>
+	<section name="org.apache.axis2.tool.service.eclipse.ui.ServiceXMLGenerationPage">
+		<item key="CLASSNAME" value=""/>
+		<item key="LOAD_ALL" value="false"/>
+		<item key="SERVICE_NAME" value="MyService"/>
+	</section>
+	<section name="org.apache.axis2.tool.service.eclipse.ui.ServiceArchiveOutputLocationPage">
+		<item key="OUT_LOCATION" value=""/>
+		<item key="OUT_NAME" value="SayHello"/>
+	</section>
+	<section name="org.apache.axis2.tool.service.eclipse.ui.ServiceXMLFileSelectionPage">
+		<item key="AUTO_GEN" value="false"/>
+		<item key="SERVICE_XML" value="d:\esb install\eab1.0\eab1.0\sayhello\src\resources\services.xml"/>
+	</section>
+	<section name="org.apache.axis2.tool.service.eclipse.ui.ClassFileLocationPage">
+		<item key="FILTER_BY_CLASSES" value="true"/>
+		<item key="CLASS_FILE_LOCATION" value="D:\ESB Install\EAB1.0\EAB1.0\SayHello\build\classes\org\tonyzhangcn\ws\sayhello"/>
+	</section>
+	<section name="org.apache.axis2.tool.service.eclipse.ui.WSDLFileSelectionPage">
+		<item key="WSDL_GEN" value="true"/>
+		<item key="SKIP_WSDL" value="true"/>
+		<item key="SELECT_WSDL" value="false"/>
+		<item key="WSDL_FILE_NAME" value="D:\ESB Install\EAB1.0\EAB1.0\SayHello\src\SayHello.wsdl"/>
+	</section>
+</section>

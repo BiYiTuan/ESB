@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.xmind.ui.export.image">
+		<item value="C:\Documents and Settings\fangjt\桌面\new\Service Flow Modeling Method.png|C:\Documents and Settings\fangjt\桌面\new\Relationships.png|C:\Documents and Settings\fangjt\桌面\new\Callback Matrix.png|C:\Documents and Settings\fangjt\桌面\new\Parameter Relation Matrix.png|C:\Documents and Settings\fangjt\桌面\new\Keywords.png" key="PATH_HISTORY"/>
+		<item value="image/png" key="FORMAT"/>
+	</section>
+	<section name="org.xmind.ui.popupDialog">
+		<item value="746" key="org.xmind.ui.internal.notes.NotesPopupDIALOG_X_ORIGIN"/>
+		<item value="207" key="org.xmind.ui.internal.notes.NotesPopupDIALOG_HEIGHT"/>
+		<item value="406" key="org.xmind.ui.internal.notes.NotesPopupDIALOG_WIDTH"/>
+		<item value="328" key="org.xmind.ui.internal.notes.NotesPopupDIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.xmind.ui.newWizard">
+	</section>
+	<section name="org.xmind.ui.PageSetupDialog">
+		<item value="false" key="noBackground"/>
+		<item value="59" key="DIALOG_Y_ORIGIN"/>
+		<item value="false" key="noBorder"/>
+		<item value="352" key="DIALOG_X_ORIGIN"/>
+	</section>
+</section>

@@ -1,0 +1,23 @@
+/*************记录开始---2011/4/15 18:36:42*************/
+open数据库失败
+/*************记录结束---2011/4/15 18:36:42*************/
+/*************记录开始---2011/4/15 18:53:04*************/
+open数据库失败
+/*************记录结束---2011/4/15 18:53:04*************/
+/*************记录开始---2011/4/15 18:53:29*************/
+调用DeviceInterface.GetDeviceTypes 出错！
+/*************记录结束---2011/4/15 18:53:29*************/
+/*************记录开始---2011/4/15 18:53:30*************/
+System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 SubPlatformWebService.getDeviceList(getDeviceListRequest request) 位置 f:\Code\EAB1.0\CMMB\SubPlatformWebService\App_Code\SubPlatformWebService.cs:行号 184
+/*************记录结束---2011/4/15 18:53:30*************/
+/*************记录开始---2011/4/15 18:55:19*************/
+open数据库失败
+/*************记录结束---2011/4/15 18:55:19*************/
+/*************记录开始---2011/4/15 18:55:36*************/
+调用DeviceInterface.GetDeviceParameterValue 出错！
+/*************记录结束---2011/4/15 18:55:36*************/
+/*************记录开始---2011/4/15 18:55:39*************/
+System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 SubPlatformWebService.getDeviceParameterValue(getParamValueRequest request) 位置 f:\Code\EAB1.0\CMMB\SubPlatformWebService\App_Code\SubPlatformWebService.cs:行号 231
+/*************记录结束---2011/4/15 18:55:39*************/

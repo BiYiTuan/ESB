@@ -1,0 +1,32 @@
+1263286418883	Move folder
+1263286445086	Delete element
+1263286470180	Move compilation units
+1263286473773	Delete element
+1263287042738	Delete element
+1263287046426	Delete element
+1263289034898	Delete element
+1263351658338	Delete element
+1263352505113	Rename compilation unit 'Protocol.java'
+1263364439756	Rename type 'EABService'
+1263367089208	Move compilation units
+1263367096504	Delete element
+1263368267247	Move compilation unit
+1263368371949	Delete element
+1263368970492	Rename package 'eab.manager.service'
+1263368993492	Rename package 'eab.manager.util'
+1263369004398	Rename package 'eab.manager.service.bpel'
+1263369013867	Rename package 'eab.manager.service.protocol'
+1263369235944	Rename type 'JBIDeployer'
+1263369250553	Rename type 'JBISimpleServiceWrapper'
+1263369259272	Rename type 'JBIWrapper'
+1263369404130	Rename type 'JbiDeployer'
+1263369418536	Rename type 'JbiWrapper'
+1263370370171	Rename type 'JbiBpelWrapper'
+1263370386140	Rename type 'JbiSoapWrapper'
+1263371647460	Move compilation unit
+1263371713678	Rename type 'BPELConverter'
+1263371725443	Rename type 'EABProperties'
+1263371736506	Delete element
+1263373861551	Move compilation unit
+1263373865348	Delete element
+1263374509195	Rename type 'JbiSaopDeployer'

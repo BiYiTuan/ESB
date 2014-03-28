@@ -1,0 +1,9 @@
+package eab.console.business
+{
+	public class EABConsoleServiceLocator
+	{
+		public function EABConsoleServiceLocator()
+		{
+		}
+	}
+}

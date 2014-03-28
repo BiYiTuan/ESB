@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flexLibProperties version="1">
+<includeClasses>
+<classEntry path="eab.framework.view.ViewLocator"/>
+<classEntry path="eab.framework.business.RemoteObjects"/>
+<classEntry path="eab.framework.vo.IValueObject"/>
+<classEntry path="eab.framework.business.ServiceLocator"/>
+<classEntry path="eab.framework.view.ViewHelper"/>
+<classEntry path="eab.framework.commands.MacroCommand"/>
+<classEntry path="eab.framework.business.IServices"/>
+<classEntry path="eab.framework.model.IModelLocator"/>
+<classEntry path="eab.framework.commands.SequenceCommand"/>
+<classEntry path="eab.framework.control.FrontController"/>
+<classEntry path="eab.framework.business.HTTPServices"/>
+<classEntry path="eab.framework.business.IServiceLocator"/>
+<classEntry path="eab.framework.business.WebServices"/>
+<classEntry path="eab.framework.business.AbstractServices"/>
+</includeClasses>
+<includeResources/>
+<namespaceManifests/>
+</flexLibProperties>

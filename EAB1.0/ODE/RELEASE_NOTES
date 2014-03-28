@@ -1,0 +1,21 @@
+========================
+Apache ODE Release Notes
+========================
+
+Apache ODE 1.3.3 is a security release for the process deployment web
+service, which was sensible to deployment messages with forged names.
+It also includes a few bug fixes and improvements.
+
+Apache ODE 1.3.3 requires Java 1.5.x. The WAR distribution can run in
+most J2EE servlet container. The JBI distribution should be able to
+run in any JBI container but has only been tested with ServiceMix
+3.1 so far. See the BUILDING file if you want to build your own
+distribution from the source release.
+
+Changes:
+-------
+
+See our Jira for more information:
+
+https://issues.apache.org/jira/secure/IssueNavigator.jspa?reset=true&&pid=12310270&status=5&status=6&fixfor=12313905&sorter/field=priority&sorter/order=DESC
+

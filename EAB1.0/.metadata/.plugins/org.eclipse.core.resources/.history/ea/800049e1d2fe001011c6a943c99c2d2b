@@ -1,0 +1,5 @@
+package com.hoo.service;
+
+public class HelloWorldClient {
+
+}

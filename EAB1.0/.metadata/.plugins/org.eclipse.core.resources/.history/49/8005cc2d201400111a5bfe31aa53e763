@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flexProperties enableServiceManager="false" flexServerFeatures="6" flexServerType="8" flexWarLocation="D:/ESB Install/adobe/blazeds/blazeds-turnkey-3.2.0.3978/blazeds.war" serverContextRoot="/WebContent" serverRoot="D:/ESB Install/EAB1.0/EAB1.0/BlazeApp/WebContent" serverRootURL="http://localhost:8080/BlazeApp" toolCompile="true" useServerFlexSDK="false" version="2"/>

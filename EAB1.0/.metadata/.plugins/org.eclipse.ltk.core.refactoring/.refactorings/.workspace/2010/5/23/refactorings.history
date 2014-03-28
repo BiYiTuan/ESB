@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;EABConsole/src/eab/console/view/BpelDiagramCanvas.as&apos;" deleteContents="false" description="Delete resource &apos;EABConsole/src/eab/console/view/BpelDiagramCanvas.as&apos;" element1="/EABConsole/src/eab/console/view/BpelDiagramCanvas.as" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1275294985870"/>
+</session>

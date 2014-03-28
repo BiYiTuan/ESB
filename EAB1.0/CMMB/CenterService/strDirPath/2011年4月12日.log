@@ -1,0 +1,70 @@
+/*************记录开始---2011/4/12 19:14:22*************/
+调用DeviceInterface.NotifyDataInfo 出错！
+/*************记录结束---2011/4/12 19:14:22*************/
+/*************记录开始---2011/4/12 19:14:22*************/
+System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未将对象引用设置到对象的实例。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ServiceStubTestHost.Form1.ShowNotifyDataIndo(notifyDataInfoRequest notifyDataInfo)
+   在 ServiceStubTestHost.ServiceStub.notifyDataInfo(notifyDataInfoRequest request)
+   在 SyncInvokenotifyDataInfo(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet))。
+/*************记录结束---2011/4/12 19:14:22*************/
+/*************记录开始---2011/4/12 19:14:27*************/
+调用DeviceInterface.NotifyDataInfo 出错！
+/*************记录结束---2011/4/12 19:14:27*************/
+/*************记录开始---2011/4/12 19:14:27*************/
+System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未将对象引用设置到对象的实例。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ServiceStubTestHost.Form1.ShowNotifyDataIndo(notifyDataInfoRequest notifyDataInfo)
+   在 ServiceStubTestHost.ServiceStub.notifyDataInfo(notifyDataInfoRequest request)
+   在 SyncInvokenotifyDataInfo(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet))。
+/*************记录结束---2011/4/12 19:14:27*************/
+/*************记录开始---2011/4/12 19:14:56*************/
+调用DeviceInterface.NotifyDataInfo 出错！
+/*************记录结束---2011/4/12 19:14:56*************/
+/*************记录开始---2011/4/12 19:14:56*************/
+System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未将对象引用设置到对象的实例。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ServiceStubTestHost.Form1.ShowNotifyDataIndo(notifyDataInfoRequest notifyDataInfo)
+   在 ServiceStubTestHost.ServiceStub.notifyDataInfo(notifyDataInfoRequest request)
+   在 SyncInvokenotifyDataInfo(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet))。
+/*************记录结束---2011/4/12 19:14:56*************/
+/*************记录开始---2011/4/12 19:14:57*************/
+调用DeviceInterface.NotifyDataInfo 出错！
+/*************记录结束---2011/4/12 19:14:57*************/
+/*************记录开始---2011/4/12 19:14:57*************/
+System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未将对象引用设置到对象的实例。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ServiceStubTestHost.Form1.ShowNotifyDataIndo(notifyDataInfoRequest notifyDataInfo)
+   在 ServiceStubTestHost.ServiceStub.notifyDataInfo(notifyDataInfoRequest request)
+   在 SyncInvokenotifyDataInfo(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet))。
+/*************记录结束---2011/4/12 19:14:57*************/
+/*************记录开始---2011/4/12 19:16:53*************/
+调用DeviceInterface.NotifyDataInfo 出错！
+/*************记录结束---2011/4/12 19:16:53*************/
+/*************记录开始---2011/4/12 19:16:54*************/
+System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 未将对象引用设置到对象的实例。 (错误详细信息等于 很可能由 IncludeExceptionDetailInFaults=true 创建的 ExceptionDetail，其值为:
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ServiceStubTestHost.Form1.ShowNotifyDataIndo(notifyDataInfoRequest notifyDataInfo)
+   在 ServiceStubTestHost.ServiceStub.notifyDataInfo(notifyDataInfoRequest request)
+   在 SyncInvokenotifyDataInfo(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet))。
+/*************记录结束---2011/4/12 19:16:54*************/

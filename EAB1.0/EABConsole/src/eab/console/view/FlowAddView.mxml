@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	layout="absolute" 
+	width="450" 
+	height="300" 
+	title="编辑流程" 
+	showCloseButton="true" 
+	close="closeWindow()" creationComplete="init()">
+	<mx:Metadata>
+		[Event(name="flowAdd", type="eab.framework.control.EABFrameworkEvent")]
+	</mx:Metadata>
+	<mx:Script>
+		<![CDATA[
+			import eab.console.business.EABConsoleServiceLocator;
+			import eab.console.model.EABConsoleModelLocator;
+			import eab.framework.control.EABFrameworkEvent;
+			
+			import mx.controls.Alert;
+			import mx.events.CloseEvent;
+			import mx.managers.PopUpManager;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import mx.rpc.remoting.RemoteObject;
+			import mx.utils.XMLUtil;		
+			
+			[Bindable]
+			public var tempFlowList :Array;
+		
+			private function addFlowHandle():void{				
+				switch(openModelGroup.selection.id){
+					case "newFlow":
+						if(flowName.text.length == 0){
+							Alert.show("请输入流程名称！", "流程名称未知", Alert.YES);
+							return;
+						}
+						var ro : RemoteObject = EABConsoleServiceLocator.getInstance().GetRemoteObject("edit");
+						ro.isFlowExists(flowName.text);
+						ro.addEventListener(ResultEvent.RESULT, checkFlowNameResult);
+						ro.addEventListener(FaultEvent.FAULT, fault);		
+						break;
+					case "localFlowFile":
+						// read local file
+						break;
+					case "savedFlowFile":	
+						// read saved file
+						break;
+				}		
+			}	
+			
+			private function init():void
+			{
+				var ro :RemoteObject = EABConsoleServiceLocator.getInstance().GetRemoteObject("edit");
+				ro.loadTempFlows();
+				ro.addEventListener(ResultEvent.RESULT, getTempFlowsResult);
+				ro.addEventListener(FaultEvent.FAULT, fault);
+			}			
+			
+			private function getTempFlowsResult(event :ResultEvent):void{
+				if(event.result != null)
+					tempFlowList = event.result.valueOf();
+			}
+			
+			private function checkFlowNameResult(event :ResultEvent):void{
+				var isNameExist :Boolean = event.result.valueOf();
+				
+				if(isNameExist){
+					Alert.show("流程名称已经存在，是否打开选定的流程？", "流程已经存在！", Alert.YES | Alert.NO, null,
+						handleNameExistsChoose, null, Alert.NO);
+				}				
+				else{
+					var ro :RemoteObject = EABConsoleServiceLocator.getInstance().GetRemoteObject("edit");
+					ro.getEmptyFlowViewFile();
+					ro.addEventListener(ResultEvent.RESULT, getEmptyFlowFileResult);
+					ro.addEventListener(FaultEvent.FAULT, fault);
+				}
+			}
+			
+			private function handleNameExistsChoose(event:CloseEvent):void{		
+				switch(event.detail){
+					case Alert.YES:
+						break;
+					case Alert.NO:
+					default:
+						break;
+				}
+			}
+			
+			private function getEmptyFlowFileResult(event :ResultEvent):void{
+				var obj : Object = new Object();
+				
+				obj.flowData = event.result.valueOf();
+				obj.flowName = flowName.text;
+										
+				this.dispatchEvent(new EABFrameworkEvent("flowAdd", obj));				
+				closeWindow();
+			}
+			
+	 		private function fault(event :FaultEvent):void{
+	        	Alert.show("Remote invoke error: "+event.message);
+	        }  
+			
+			private function closeWindow():void{
+				PopUpManager.removePopUp(this);
+			}
+		]]>
+	</mx:Script>
+	<mx:RadioButtonGroup id="openModelGroup"/>
+	<mx:VBox width="100%" height="100%" verticalGap="18" horizontalAlign="right" verticalAlign="middle">
+		<mx:VBox width="90%">
+			<mx:RadioButton id="newFlow" groupName="openModelGroup" label="新建流程" selected="true"/>
+			<mx:HBox width="100%">
+				<mx:Label text="流程名称:"/>
+				<mx:TextInput id="flowName" width="90%"/>
+			</mx:HBox>
+		</mx:VBox>
+		<mx:VBox width="90%">
+			<mx:RadioButton id="localFlowFile" groupName="openModelGroup" label="打开本地文件" selected="false"/>
+			<mx:HBox width="100%">
+				<mx:Label text="文件路径:"/>
+				<mx:TextInput id="flowFilePath" width="90%"/>
+			</mx:HBox>
+		</mx:VBox>
+		<mx:VBox width="90%">
+			<mx:RadioButton id="savedFlowFile" groupName="openModelGroup" label="打开已存储的流程文件" selected="false"/>
+			<mx:HBox width="100%">
+				<mx:Label text="流程名称:"/>
+				<mx:ComboBox id="savedFlowName" dataProvider="{tempFlowList}" labelField="flowName" width="90%"/>
+			</mx:HBox>
+		</mx:VBox>
+		<mx:HBox width="100%" horizontalAlign="center">
+			<mx:Button label="确定" click="addFlowHandle()"/>
+			<mx:Button label="取消" click="closeWindow()"/>
+		</mx:HBox>
+	</mx:VBox>
+</mx:TitleWindow>

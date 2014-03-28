@@ -1,0 +1,17 @@
+package JMSPackage;
+
+import javax.jms.Message;   
+import javax.jms.MessageProducer;  
+
+public class JMSTest {  
+ 
+    public void testJMS() throws Exception{  
+        ApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"spring/applicationContext-jms.xml"});  
+  
+        Publisher producer = (Publisher) context.getBean("ossRequest");  
+        Publisher.send("<m t=/"8600/" a=/"10000001/" st=/"2009-07-16 15:42:39/">/n" +  
+                "/t<e id=/"10000/" type=/"1000/"/>/n" +  
+                "</m>");  
+        //消费消息   
+    }  
+}  

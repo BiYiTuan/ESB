@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://CMMB.ESBService.namespace" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://CMMB.ESBService.namespace" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://CMMB.ESBService.namespace/Imports">
+      <xsd:import schemaLocation="http://localhost:8731/CenterService?xsd=xsd0" namespace="http://CMMB/schema/DataTypes" />
+      <xsd:import schemaLocation="http://localhost:8731/CenterService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8731/CenterService?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDeviceTypesRequest">
+    <wsdl:part xmlns:q1="http://CMMB/schema/DataTypes" name="RequestHead" element="q1:RequestHead" />
+  </wsdl:message>
+  <wsdl:message name="GetDeviceTypesResponse">
+    <wsdl:part xmlns:q2="http://CMMB/schema/DataTypes" name="DeviceTypeList" element="q2:DeviceTypeList" />
+  </wsdl:message>
+  <wsdl:message name="DeviceInterface_GetDeviceTypes_FaultMessage_FaultMessage">
+    <wsdl:part xmlns:q3="http://CMMB/schema/DataTypes" name="detail" element="q3:FaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="GetDeviceParameterDefinitionRequest">
+    <wsdl:part xmlns:q4="http://CMMB/schema/DataTypes" name="RequestHead" element="q4:RequestHead" />
+    <wsdl:part xmlns:q5="http://CMMB/schema/DataTypes" name="DeviceTypeCode" element="q5:DeviceTypeCode" />
+  </wsdl:message>
+  <wsdl:message name="GetDeviceParameterDefinitionResponse">
+    <wsdl:part xmlns:q6="http://CMMB/schema/DataTypes" name="DeviceParameterList" element="q6:DeviceParameterList" />
+  </wsdl:message>
+  <wsdl:message name="DeviceInterface_GetDeviceParameterDefinition_FaultMessage_FaultMessage">
+    <wsdl:part xmlns:q7="http://CMMB/schema/DataTypes" name="detail" element="q7:FaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="NotifyDataInfo">
+    <wsdl:part xmlns:q8="http://CMMB/schema/DataTypes" name="RequestHead" element="q8:RequestHead" />
+    <wsdl:part xmlns:q9="http://CMMB/schema/DataTypes" name="NotifyData" element="q9:NotifyData" />
+  </wsdl:message>
+  <wsdl:message name="GetManufacturerInfoRequest">
+    <wsdl:part xmlns:q10="http://CMMB/schema/DataTypes" name="RequestHead" element="q10:RequestHead" />
+  </wsdl:message>
+  <wsdl:message name="GetManufacturerInfoResponse">
+    <wsdl:part xmlns:q11="http://CMMB/schema/DataTypes" name="ManufacturerInfoList" element="q11:ManufacturerInfoList" />
+  </wsdl:message>
+  <wsdl:message name="DeviceInterface_GetManufacturerInfo_FaultMessage_FaultMessage">
+    <wsdl:part xmlns:q12="http://CMMB/schema/DataTypes" name="detail" element="q12:FaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="GetMonitorObjStatusRequest">
+    <wsdl:part xmlns:q13="http://CMMB/schema/DataTypes" name="RequestHead" element="q13:RequestHead" />
+    <wsdl:part xmlns:q14="http://CMMB/schema/DataTypes" name="MonitorObjCode" element="q14:MonitorObjCode" />
+  </wsdl:message>
+  <wsdl:message name="GetMonitorObjStatusResponse">
+    <wsdl:part name="response" element="response" />
+  </wsdl:message>
+  <wsdl:message name="MonitorObjInterface_GetMonitorObjStatus_FaultMessage_FaultMessage">
+    <wsdl:part xmlns:q15="http://CMMB/schema/DataTypes" name="detail" element="q15:FaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="SendMTAMessage">
+    <wsdl:part xmlns:q16="http://CMMB/schema/DataTypes" name="RequestHead" element="q16:RequestHead" />
+    <wsdl:part xmlns:q17="http://CMMB/schema/DataTypes" name="MTAMessageData" element="q17:MTAMessageData" />
+  </wsdl:message>
+  <wsdl:message name="GetMTAExtendableDefRequest">
+    <wsdl:part xmlns:q18="http://CMMB/schema/DataTypes" name="RequestHead" element="q18:RequestHead" />
+  </wsdl:message>
+  <wsdl:message name="GetMTAExtendableDefResponse">
+    <wsdl:part xmlns:q19="http://CMMB/schema/DataTypes" name="MTADataExtensionDef" element="q19:MTADataExtensionDef" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceInterface_GetMTAExtendableDef_FaultMessage_FaultMessage">
+    <wsdl:part xmlns:q20="http://CMMB/schema/DataTypes" name="detail" element="q20:FaultMessage" />
+  </wsdl:message>
+  <wsdl:portType name="DeviceInterface">
+    <wsdl:operation name="GetDeviceTypes">
+      <wsdl:input wsaw:Action="GetDeviceTypes" name="GetDeviceTypesRequest" message="tns:GetDeviceTypesRequest" />
+      <wsdl:output wsaw:Action="http://CMMB.ESBService.namespace/DeviceInterface/GetDeviceTypesResponse" name="GetDeviceTypesResponse" message="tns:GetDeviceTypesResponse" />
+      <wsdl:fault wsaw:Action="GetDeviceTypes" name="FaultMessage" message="tns:DeviceInterface_GetDeviceTypes_FaultMessage_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceParameterDefinition">
+      <wsdl:input wsaw:Action="GetDeviceParameterDefinition" name="GetDeviceParameterDefinitionRequest" message="tns:GetDeviceParameterDefinitionRequest" />
+      <wsdl:output wsaw:Action="http://CMMB.ESBService.namespace/DeviceInterface/GetDeviceParameterDefinitionResponse" name="GetDeviceParameterDefinitionResponse" message="tns:GetDeviceParameterDefinitionResponse" />
+      <wsdl:fault wsaw:Action="GetDeviceParameterDefinition" name="FaultMessage" message="tns:DeviceInterface_GetDeviceParameterDefinition_FaultMessage_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyDataInfo">
+      <wsdl:input wsaw:Action="NotifyDataInfo" name="NotifyDataInfo" message="tns:NotifyDataInfo" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManufacturerInfo">
+      <wsdl:input wsaw:Action="GetManufacturerInfo" name="GetManufacturerInfoRequest" message="tns:GetManufacturerInfoRequest" />
+      <wsdl:output wsaw:Action="http://CMMB.ESBService.namespace/DeviceInterface/GetManufacturerInfoResponse" name="GetManufacturerInfoResponse" message="tns:GetManufacturerInfoResponse" />
+      <wsdl:fault wsaw:Action="GetManufacturerInfo" name="FaultMessage" message="tns:DeviceInterface_GetManufacturerInfo_FaultMessage_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MonitorObjInterface">
+    <wsdl:operation name="GetMonitorObjStatus">
+      <wsdl:input wsaw:Action="GetMonitorObjStatus" name="GetMonitorObjStatusRequest" message="tns:GetMonitorObjStatusRequest" />
+      <wsdl:output wsaw:Action="http://CMMB.ESBService.namespace/MonitorObjInterface/GetMonitorObjStatusResponse" name="GetMonitorObjStatusResponse" message="tns:GetMonitorObjStatusResponse" />
+      <wsdl:fault wsaw:Action="GetMonitorObjStatus" name="FaultMessage" message="tns:MonitorObjInterface_GetMonitorObjStatus_FaultMessage_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MaintenanceInterface">
+    <wsdl:operation name="SendMTAMessage">
+      <wsdl:input wsaw:Action="SendMTAMessage" name="SendMTAMessage" message="tns:SendMTAMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMTAExtendableDef">
+      <wsdl:input wsaw:Action="GetMTAExtendableDef" name="GetMTAExtendableDefRequest" message="tns:GetMTAExtendableDefRequest" />
+      <wsdl:output wsaw:Action="http://CMMB.ESBService.namespace/MaintenanceInterface/GetMTAExtendableDefResponse" name="GetMTAExtendableDefResponse" message="tns:GetMTAExtendableDefResponse" />
+      <wsdl:fault wsaw:Action="GetMTAExtendableDef" name="FaultMessage" message="tns:MaintenanceInterface_GetMTAExtendableDef_FaultMessage_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
