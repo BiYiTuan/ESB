@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Panel 
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:v="eab.console.view.*"  
+	layout="absolute" 
+	width="100%" 
+	height="100%" 
+	headerHeight="20"
+	borderThicknessTop="2" 
+	borderThicknessLeft="2" 
+	borderThicknessRight="2" 
+	backgroundAlpha="0.7" 
+	creationComplete="init()">
+	<mx:Script>
+		<![CDATA[
+			import eab.console.model.EABConsoleModelLocator;
+			import eab.console.state.*;
+			import eab.console.other.Localizator;
+			import eab.console.control.EABConsoleController;
+			
+			import mx.effects.WipeRight;
+			import mx.managers.ToolTipManager;
+			
+			private var frontController :EABConsoleController = new EABConsoleController();
+
+			private function init():void{
+				this.title = Localizator.getInstance().getText("console.title");
+				
+				initToolTip();
+				
+				EABConsoleModelLocator.getInstance().getFigureCanvasStateDomain().setFCActiveState(new SelectionState());
+				EABConsoleModelLocator.getInstance().setEABConsole(this);
+			}
+			
+			private function initToolTip() :void{
+				var wiperight:WipeRight=new WipeRight();
+				wiperight.duration=600;
+				wiperight.repeatCount=1;
+				ToolTipManager.showEffect=wiperight;
+			}
+		]]>
+	</mx:Script>	
+	<mx:VBox width="100%" height="100%">
+		<v:DesignerMenuBar id="designerMenuBar" width="100%"/>
+		<v:DesignerToolBar id="designerToolBar" width="100%"/>		
+		<mx:HDividedBox height="95%" width="100%">
+			<mx:Panel width="15%" height="100%" borderStyle="solid" headerHeight="0"
+				borderThicknessTop="2" 	borderThicknessLeft="2" borderThicknessRight="2" backgroundAlpha="0.5">
+				<v:FunctionNavigator id="functionNavigator"/>
+			</mx:Panel>
+			<mx:Panel width="70%" height="100%" borderStyle="solid" headerHeight="0"
+				borderThicknessTop="2" 	borderThicknessLeft="2" borderThicknessRight="2" backgroundAlpha="0.5">
+				<v:EditorNavigator id="figureEditorNavigator"/>
+			</mx:Panel>
+			<mx:VDividedBox width="15%" height="100%">
+				<mx:Panel width="100%" height="50%" borderStyle="solid" headerHeight="0"
+					borderThicknessTop="2" 	borderThicknessLeft="2" borderThicknessRight="2" backgroundAlpha="0.5">
+					<v:FigureAttributeNavigator id="figureAttributeNav"/>
+				</mx:Panel>
+				<mx:Panel width="100%" height="50%" borderStyle="solid" headerHeight="0"
+					borderThicknessTop="2" 	borderThicknessLeft="2" borderThicknessRight="2" backgroundAlpha="0.5">
+					<v:SystemNotifyViewNavigator id="sysemNofigyNav"/>
+				</mx:Panel>
+			</mx:VDividedBox>
+		</mx:HDividedBox>	
+	</mx:VBox>
+</mx:Panel>

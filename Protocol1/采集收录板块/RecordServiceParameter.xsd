@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by  () -->
+<xs:schema xmlns:tns="http://JSTV/RecordSystem/Parameter/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:MED="http://JSTV/MediaEntityDefinition/" targetNamespace="http://JSTV/RecordSystem/Parameter/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://JSTV/MediaEntityDefinition/" schemaLocation="../媒体对象/EntityDefinition.xsd"/>
+	<xs:element name="UserInfo">
+		<xs:annotation>
+			<xs:documentation>用户信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="UserCode" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>用户编码</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="UserName" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>用户名</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QueryAction">
+		<xs:annotation>
+			<xs:documentation>查询动作定义</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PageInfo" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PageSize" type="xs:long"/>
+							<xs:element name="CurrentPage" type="xs:long"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Operate" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>nextpage,prepage,lastpage,firstpage,default</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Options" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ResponseColumn" type="xs:string" maxOccurs="unbounded"/>
+							<xs:element name="OrderType" type="xs:string" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Options">
+		<xs:annotation>
+			<xs:documentation>排序选项</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ResponseColumn" type="xs:string" maxOccurs="unbounded"/>
+				<xs:element name="OrderType" type="xs:string" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PageInfo">
+		<xs:annotation>
+			<xs:documentation>分页信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CurrentPage" type="xs:long"/>
+				<xs:element name="CurrentCount" type="xs:long"/>
+				<xs:element name="TotalCount" type="xs:long" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TaskAddRequest">
+		<xs:annotation>
+			<xs:documentation>添加约传任务请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Tasks" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TaskID" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>任务ID,唯一标识</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="TaskName" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>任务名称</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="StartTime" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>任务开始时间</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="EndTime" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>任务结束时间</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="FileType" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>采集的素材格式，枚举值：
+mpeg 2 I 30M、
+
+mpeg 2 I 50M等</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="ChannelID" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>频道ID,用于标明MPTS流中的节目流</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="SignalSource" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>采集信号源，枚举值</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="RecDevice" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>指定采集设备类型
+收录服务器,VTR等</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="Memo" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="tns:UserInfo"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TaskAddResponse">
+		<xs:annotation>
+			<xs:documentation>添加约传任务返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Results" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TaskID" type="xs:string"/>
+							<xs:element name="Status" type="xs:long">
+								<xs:annotation>
+									<xs:documentation>0 申请成功  1 无可用资源  2 审查退回 3 其他错误</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="Message" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TaskCancelRequest">
+		<xs:annotation>
+			<xs:documentation>取消约传任务请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Tasks">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TaskID" type="xs:string" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="tns:UserInfo"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TaskCancelResponse">
+		<xs:annotation>
+			<xs:documentation>取消约传任务返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Results" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TaskID" type="xs:string"/>
+							<xs:element name="Status" type="xs:long">
+								<xs:annotation>
+									<xs:documentation>0 成功 1失败</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="Message" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TaskQueryRequest">
+		<xs:annotation>
+			<xs:documentation>查询约传任务请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="QueryKeys">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:choice>
+								<xs:element name="TaskID" type="xs:string" maxOccurs="unbounded"/>
+								<xs:element name="TaskDate" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:documentation>发布日期，预播日期，播出日期等</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="Start" type="xs:string"/>
+											<xs:element name="End" type="xs:string"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:choice>
+							<xs:element name="TaskName" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="SourceSystemID" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>收录任务发起系统ID</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="UserCode" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="tns:UserInfo"/>
+				<xs:element ref="tns:QueryAction"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TaskQueryResponse">
+		<xs:annotation>
+			<xs:documentation>查询约传任务应答</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ItemObject" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TaskID" type="xs:string"/>
+							<xs:element name="TaskName" type="xs:string"/>
+							<xs:element name="SignalSource" type="xs:string"/>
+							<xs:element name="ChannelID" type="xs:string"/>
+							<xs:element name="StartTime" type="xs:string"/>
+							<xs:element name="EndTime" type="xs:string"/>
+							<xs:element name="UserCode" type="xs:string"/>
+							<xs:element name="TaskState" type="xs:long">
+								<xs:annotation>
+									<xs:documentation>0 等待; 1 收录中;2 收录失败; 3  收录完成</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="TaskStateDesc" type="xs:string"/>
+							<xs:element name="Memo" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="tns:Options"/>
+				<xs:element ref="tns:PageInfo"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

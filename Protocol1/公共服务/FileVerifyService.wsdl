@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by  () -->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:y="http://JSTV/PublicService/FileVerifyService/" xmlns:ns="http://JSTV/MediaEntityDefinition/" xmlns:ns1="http://JSTV/PublicService/Parameter/" targetNamespace="http://JSTV/PublicService/FileVerifyService/">
+	<types>
+		<xs:schema xmlns:tns="http://JSTV/PublicService/Parameter/">
+			<xs:import namespace="http://JSTV/PublicService/Parameter/" schemaLocation="PublicServiceParameter.xsd"/>
+		</xs:schema>
+	</types>
+	<message name="FileVerifyRequestMessage">
+		<part name="FileVerifyRequest" element="ns1:FileVerifyRequest"/>
+	</message>
+	<portType name="FileVerifyPortType">
+		<operation name="verify">
+			<input message="y:FileVerifyRequestMessage"/>
+		</operation>
+	</portType>
+	<binding name="FileVerifyBinding" type="y:FileVerifyPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="verify">
+			<input>
+				<soap:body use="literal"/>
+			</input>
+		</operation>
+	</binding>
+	<service name="FileVerifyService">
+		<port name="FileVerifyPort" binding="y:FileVerifyBinding">
+			<soap:address location="No Target Adress"/>
+		</port>
+	</service>
+</definitions>

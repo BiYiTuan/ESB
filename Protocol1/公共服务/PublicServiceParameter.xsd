@@ -1,0 +1,1060 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by  () -->
+<xs:schema xmlns:tns="http://JSTV/PublicService/Parameter/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:MED="http://JSTV/MediaEntityDefinition/" xmlns:PSP="http://JSTV/PaySystem/Parameter" targetNamespace="http://JSTV/PublicService/Parameter/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://JSTV/MediaEntityDefinition/" schemaLocation="../媒体对象\EntityDefinition.xsd"/>
+	<xs:import namespace="http://JSTV/PaySystem/Parameter" schemaLocation="..\计费系统\PayServiceParameter.xsd"/>
+	<xs:complexType name="AttributesItemType">
+		<xs:sequence>
+			<xs:element name="AttributesItem" type="xs:string" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GroupInfoType">
+		<xs:annotation>
+			<xs:documentation>归属组对象（包括：频道 栏目 版次等）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="GroupType" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>归属组类型，枚举值：频道；栏目；版次</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GroupCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>归属组编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ItemGroup" type="tns:GroupInfoType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="CommonRequest">
+		<xs:annotation>
+			<xs:documentation>通用请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="UserCode" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>用户编码</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="UserName" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>用户名</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="SourceID" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>文件源系统ID</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QueryAction">
+		<xs:annotation>
+			<xs:documentation>查询动作定义</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PageInfo" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PageSize" type="xs:long"/>
+							<xs:element name="CurrentPage" type="xs:long"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Operate" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>nextpage,prepage,lastpage,firstpage,default</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Options" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ResponseColumn" type="xs:string" maxOccurs="unbounded"/>
+							<xs:element name="OrderType" type="xs:string" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Options">
+		<xs:annotation>
+			<xs:documentation>排序选项</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ResponseColumn" type="xs:string" maxOccurs="unbounded"/>
+				<xs:element name="OrderType" type="xs:string" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ResponseInfo">
+		<xs:annotation>
+			<xs:documentation>同步回调返回信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Status" type="xs:long">
+					<xs:annotation>
+						<xs:documentation>结果 0表示成功 非0表示失败，具体的失败数值由各个业务系统协商</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Comment" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>文字说明</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PageInfo">
+		<xs:annotation>
+			<xs:documentation>分页信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CurrentPage" type="xs:long"/>
+				<xs:element name="CurrentCount" type="xs:long"/>
+				<xs:element name="TotalCount" type="xs:long" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EntityInfo">
+		<xs:annotation>
+			<xs:documentation>文件元数据对象</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="EntityGuid" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>实体唯一标识  固定编码+随机编码</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ProgramCode" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>节目代码：素材导入允许该元素可选，如果是播出入库，则该元素是必选</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="EntityName" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>实体名称</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="EntityType" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>类型（素材/成品节目/播出节目）</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ContentFile" type="MED:FileItemType">
+					<xs:annotation>
+						<xs:documentation>文件实体元数据</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="TotalLength" type="xs:long">
+					<xs:annotation>
+						<xs:documentation>素材长度</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Version" type="xs:long" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>版本</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ImportAllowRequest">
+		<xs:annotation>
+			<xs:documentation>导入允许服务请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>导入允许服务的输入参数</xs:documentation>
+			</xs:annotation>
+			<xs:sequence>
+				<xs:element ref="tns:CommonRequest"/>
+				<xs:element ref="tns:EntityInfo"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ImportAllowAsynRequest">
+		<xs:annotation>
+			<xs:documentation>导入允许异步回调数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="tns:EntityInfo" minOccurs="0"/>
+				<xs:element ref="tns:ResponseInfo"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ImportRequest">
+		<xs:annotation>
+			<xs:documentation>元数据导入请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>媒资板块入库服务的输入参数</xs:documentation>
+			</xs:annotation>
+			<xs:sequence>
+				<xs:element name="ContentInfo">
+					<xs:annotation>
+						<xs:documentation>内容信息</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ContentEntity" type="MED:AVMaterialEntity">
+								<xs:annotation>
+									<xs:documentation>资源实体参数</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="DataSetType" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>资料集</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DataSetID" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>资料集标识</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Title" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>资料集名称</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Remark" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>资料集描述</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="tns:CommonRequest"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ImportResponse">
+		<xs:annotation>
+			<xs:documentation>元数据导入返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>入库服务的输出参数</xs:documentation>
+			</xs:annotation>
+			<xs:sequence>
+				<xs:element name="Results">
+					<xs:annotation>
+						<xs:documentation>入库请求提交结果集</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ContentNumber" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>入库请求序列</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="Result" type="xs:integer">
+								<xs:annotation>
+									<xs:documentation>入库请求提交结果： 0表示成功 非0表示失败</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="Comment" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>文字描述</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FileVerifyRequest">
+		<xs:annotation>
+			<xs:documentation>文件校验请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MediaVerify" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>媒体效验方式:默认MD5</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="none"/>
+							<xs:enumeration value="createmd5only"/>
+							<xs:enumeration value="checkmd5code"/>
+							<xs:enumeration value="CRCmodel"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Target" type="MED:FileItemType">
+					<xs:annotation>
+						<xs:documentation>需要校验的目标文件</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="tns:ResponseInfo"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FileVerifyAsynRequest">
+		<xs:annotation>
+			<xs:documentation>文件校验异步返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="tns:ResponseInfo"/>
+				<xs:element name="FileVerifyInfo" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="FileName" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>文件绝对路径含文件名</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="VerifyCode" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>验证码</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="Status" type="xs:long">
+								<xs:annotation>
+									<xs:documentation>验证结果 0表示成功 非0表示失败</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ExportAllowRequest">
+		<xs:annotation>
+			<xs:documentation>导出服务的请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="tns:CommonRequest"/>
+				<xs:element ref="tns:EntityInfo"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ExportAllowAsynRequest">
+		<xs:annotation>
+			<xs:documentation>导出服务的异步回调数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ContentEntity" type="MED:AVMaterialEntity"/>
+				<xs:element ref="tns:ResponseInfo"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReceiveSynUserRequest">
+		<xs:annotation>
+			<xs:documentation>用来接收统一认证系统传来的人员信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PSP:Department" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReceiveSynUserResponse">
+		<xs:annotation>
+			<xs:documentation>用来接收统一认证系统传来的人员信息后，返回执行结果</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Result" type="xs:int">
+					<xs:annotation>
+						<xs:documentation>0表示成功 非0表示失败</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PlayListImportRequest">
+		<xs:annotation>
+			<xs:documentation>节目单入库请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ItemObject" type="MED:PlayListEntity" maxOccurs="unbounded"/>
+				<xs:element name="ControlAction" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>入库操作动作，枚举值：Insert、Update、Delete</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="tns:CommonRequest"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PlayListImportResponse">
+		<xs:annotation>
+			<xs:documentation>节目单入库返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ImportResults" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PlayListID" type="xs:long"/>
+							<xs:element name="Status" type="xs:long">
+								<xs:annotation>
+									<xs:documentation>0表示成功 非0表示失败</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="ErrorMsg" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PgmListQueryRequest">
+		<xs:annotation>
+			<xs:documentation>播出系统节目单查询请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="QueryKeys">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ChannelID" type="xs:string"/>
+							<xs:element name="PgmListDate">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Start" type="xs:string"/>
+										<xs:element name="End" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="tns:CommonRequest"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PgmListQueryResponse">
+		<xs:annotation>
+			<xs:documentation>播出系统节目单查询返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ProgramList" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SectionInfo">
+								<xs:complexType>
+									<xs:attribute name="ChannelID" type="xs:string" use="required"/>
+									<xs:attribute name="Date" type="xs:string" use="required"/>
+									<xs:attribute name="SecGuid" type="xs:string" use="required"/>
+									<xs:attribute name="SecName" type="xs:string" use="required"/>
+									<xs:attribute name="SecBeginTime" type="xs:int" use="required"/>
+									<xs:attribute name="SecEndTime" type="xs:int" use="required"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ProgramItem" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ClipItem" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="Name" type="xs:string" use="required"/>
+												<xs:attribute name="Som" type="xs:long" use="required"/>
+												<xs:attribute name="Eom" type="xs:long" use="required"/>
+												<xs:attribute name="ProgramCode" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="Date" type="xs:string" use="required"/>
+									<xs:attribute name="Time" type="xs:string" use="required"/>
+									<xs:attribute name="PlayMode" type="xs:string" use="required"/>
+									<xs:attribute name="Som" type="xs:long" use="required"/>
+									<xs:attribute name="Duration" type="xs:long" use="required"/>
+									<xs:attribute name="Name" type="xs:string" use="required"/>
+									<xs:attribute name="SecGuid" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PlayListQueryRequest">
+		<xs:annotation>
+			<xs:documentation>节目单查询请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="QueryKeys">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PlaylistDate" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>发布日期，预播日期，播出日期、最后修改日期、创建日期等</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DateType" type="xs:string"/>
+										<xs:element name="Start" type="xs:string"/>
+										<xs:element name="End" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="AssociateOperator" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>相关人员</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="OperatorType" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>枚举值，包括类型有：串联单编单人员、审查审查人等</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OperatorCode" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>人员编码</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="PlayListTitle" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="PlayListStatus" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>节目单，播出单状态，审查状态，播出状态</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="StatusType" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>枚举值：播出状态、审查状态</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="StatusValue" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="GroupInfo" type="tns:GroupInfoType" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>归属信息包括：频道 栏目 版次或部门 科组 等</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="tns:QueryAction"/>
+				<xs:element ref="tns:CommonRequest"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PlayListQueryResponse">
+		<xs:annotation>
+			<xs:documentation>节目单查询返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ItemObject" type="MED:PlayListEntity" maxOccurs="unbounded"/>
+				<xs:element ref="tns:PageInfo"/>
+				<xs:element ref="tns:Options" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PlayListContentQueryRequest">
+		<xs:annotation>
+			<xs:documentation>节目单内容查询请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PlayLists">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PlayListID" type="xs:long" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>节目单唯一ID值</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="tns:CommonRequest"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PlayListContentQueryResponse">
+		<xs:annotation>
+			<xs:documentation>节目单内容查询返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ItemObject" type="MED:PlayListEntity" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ScriptImportRequest">
+		<xs:annotation>
+			<xs:documentation>文稿入库请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ItemObject" type="MED:ScriptEntity" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>导入文稿对象集</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ControlAction" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>入库操作动作，枚举值：Insert、Update、Delete</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="tns:CommonRequest"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ScriptImportResponse">
+		<xs:annotation>
+			<xs:documentation>文稿入库返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ImportResults" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ScriptID" type="xs:string"/>
+							<xs:element name="Status" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>0表示成功 非0表示失败</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="ErrorMsg" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ScriptQueryRequest">
+		<xs:annotation>
+			<xs:documentation>文稿查询请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="QueryKeys">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:choice>
+								<xs:element name="ScriptID" type="xs:string" maxOccurs="unbounded"/>
+								<xs:element name="ScriptDate" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:documentation>发布日期，预播日期，播出日期等</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="DateType" type="xs:string"/>
+											<xs:element name="Start" type="xs:string"/>
+											<xs:element name="End" type="xs:string"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:choice>
+							<xs:element name="PgmCode" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="ScriptTitle" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="ScriptType" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>稿件类型：选题稿件、通稿、栏目稿件</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="TypeID" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>枚举值：选题、通稿、栏目稿件等</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="TypeName" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ScriptSource" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>稿件来源：地方台稿件、路透稿件</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="SourceCode" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>枚举值：地方稿件、路透稿件</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="SourceName" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ScriptStatus" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>稿件状态，审查状态，播出状态</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="StatusType" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>枚举值：审查状态、播出状态等</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="StatusValue" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="AssociateOperator" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>相关人员</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="OperatorType" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>枚举值，包括类型有：作者、审查者等</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OperatorCode" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>人员编码</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="GroupInfo" type="tns:GroupInfoType" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>归属信息包括：频道 栏目 版次或部门 科组 等</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="tns:CommonRequest"/>
+				<xs:element ref="tns:QueryAction"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ScriptQueryResponse">
+		<xs:annotation>
+			<xs:documentation>文稿查询返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ItemObject" type="MED:ScriptEntity" maxOccurs="unbounded"/>
+				<xs:element ref="tns:PageInfo"/>
+				<xs:element ref="tns:Options" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MaterialQueryRequest">
+		<xs:annotation>
+			<xs:documentation>节目/素材查询请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="QueryKeys">
+					<xs:annotation>
+						<xs:documentation>查询关键字</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="FullTextSearchValue" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>全文检索条件</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="MaterialGUID" type="xs:string" minOccurs="0"/>
+							<xs:element name="MaterialDate" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>素材创建日期，素材采集日期等</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DateType" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>枚举值：素材创建日期，素材采集日期等</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Start" type="xs:string"/>
+										<xs:element name="End" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="MaterialName" type="xs:string" minOccurs="0"/>
+							<xs:element name="KeyWords" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>关键字</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="MaterialDescription" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>描述</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="SignalSourceType" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>信号源类型 枚举值：SDI信号、蓝光盘、录像机</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="AssociateOperator" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>相关人员</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="OperatorType" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>枚举值，包括类型有：上载人员、采集人员等</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OperatorCode" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>人员编码</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="GroupInfo" type="tns:GroupInfoType" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>归属信息包括：频道 栏目 版次或部门 科组 等</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="PgmCode" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>节目代码</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="OtherAttributeCondition" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>属性条件</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="AttributeID" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>属性ID</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Logic" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>逻辑，等于，大于，小于等，枚举见枚举的说明文档</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Value" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>属性的值，如果逻辑关系是BETWEEN等需要一个以上值的，各个值之间用逗号隔开。</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="tns:CommonRequest"/>
+				<xs:element ref="tns:QueryAction"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MaterialQueryResponse">
+		<xs:annotation>
+			<xs:documentation>节目/素材查询返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ItemObject" type="MED:AVMaterialEntityBasicType" maxOccurs="unbounded"/>
+				<xs:element ref="tns:PageInfo"/>
+				<xs:element ref="tns:Options" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MaterialDetailQueryRequest">
+		<xs:annotation>
+			<xs:documentation>节目/素材详细信息查询请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="tns:CommonRequest"/>
+				<xs:element name="MaterialGuid" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>素材ID</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ProgramCode" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>节目代码</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MaterialDetailQueryResponse">
+		<xs:annotation>
+			<xs:documentation>节目/素材详细信息查询返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MaterialDetail" type="MED:AVMaterialEntity">
+					<xs:annotation>
+						<xs:documentation>素材详细</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MaterialImportIntegrationRequest">
+		<xs:annotation>
+			<xs:documentation>入库复合服务请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="tns:CommonRequest"/>
+				<xs:element name="ContentInfo">
+					<xs:annotation>
+						<xs:documentation>内容信息</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ContentEntity" type="MED:AVMaterialEntity">
+								<xs:annotation>
+									<xs:documentation>资源实体参数</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="DataSetType" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>资料集</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DataSetID" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>资料集标识</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Title" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>资料集名称</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Remark" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>资料集描述</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MaterialImportIntegrationResponse">
+		<xs:annotation>
+			<xs:documentation>入库复合服务返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MeterialGUID" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>节目/素材唯一ID</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Result" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>入库集成服务调用返回状态:0表示成功 非0表示失败</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MaterialImportIntegrationAsynRequest">
+		<xs:annotation>
+			<xs:documentation>入库复合服务回调请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MeterialGUID" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>节目/素材唯一ID</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Result" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>入库集成服务调用返回状态:0表示成功，非0表示失败</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MaterialExportIntegrationRequest">
+		<xs:annotation>
+			<xs:documentation>出库复合服务请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="tns:CommonRequest"/>
+				<xs:element ref="tns:EntityInfo"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MaterialExportIntegrationResponse">
+		<xs:annotation>
+			<xs:documentation>出库复合服务返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MeterialGUID" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>素材/节目唯一ID</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Result" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>出库结果 0表示成功 非0表示失败</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MaterialExportIntegerationAsynRequest">
+		<xs:annotation>
+			<xs:documentation>出库复合服务回调请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MeterialGUID" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>素材/节目唯一ID</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Result" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>出库结果 0表示成功 非0表示失败</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

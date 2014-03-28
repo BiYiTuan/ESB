@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by  () -->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:y="http://JSTV/PublicService/ImportAllowService/" xmlns:ns="http://JSTV/PublicService/Parameter/" xmlns:ns1="http://JSTV/MediaEntityDefinition/" xmlns:ns2="http://JSTV/PaySystem/Parameter" targetNamespace="http://JSTV/PublicService/ImportAllowService/">
+	<types>
+		<xs:schema xmlns:ns1="http://JSTV/PublicService/Parameter/">
+			<xs:import namespace="http://JSTV/PublicService/Parameter/" schemaLocation="PublicServiceParameter.xsd"/>
+		</xs:schema>
+	</types>
+	<message name="ImportAllowRequestMessage">
+		<part name="ImportAllowRequest" element="ns:ImportAllowRequest"/>
+	</message>
+	<portType name="ImportAllowType">
+		<operation name="check">
+			<input message="y:ImportAllowRequestMessage"/>
+		</operation>
+	</portType>
+	<binding name="ImportAllowSoapBinding" type="y:ImportAllowType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="check">
+			<input>
+				<soap:body use="literal"/>
+			</input>
+		</operation>
+	</binding>
+	<service name="ImportAllowService">
+		<port name="ImportAllowPort" binding="y:ImportAllowSoapBinding">
+			<soap:address location="No Target Adress"/>
+		</port>
+	</service>
+</definitions>

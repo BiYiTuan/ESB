@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by any (Ru-Board) -->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:y="http://JSTV/NewsEditSystem/SceneLogService/" xmlns:ns="http://JSTV/MediaEntityDefinition/" xmlns:ns1="http://JSTV/NewsEditSystem/Parameter/" targetNamespace="http://JSTV/NewsEditSystem/SceneLogService/">
+	<types>
+		<xs:schema xmlns:tns="http://JSTV/NewsEditSystem/Parameter/">
+			<xs:import namespace="http://JSTV/NewsEditSystem/Parameter/" schemaLocation="NewsEditServiceParameter.xsd"/>
+		</xs:schema>
+	</types>
+	<message name="SceneLogImportRequestMessage">
+		<part name="SceneLogImportRequest" element="ns1:SceneLogImportRequest"/>
+	</message>
+	<message name="SceneLogImportResponseMessage">
+		<part name="SceneLogImportResponse" element="ns1:SceneLogImportResponse"/>
+	</message>
+	<portType name="SceneLogServicePortType">
+		<operation name="sceneLogImport">
+			<input message="y:SceneLogImportRequestMessage"/>
+			<output message="y:SceneLogImportResponseMessage"/>
+		</operation>
+	</portType>
+	<binding name="SceneLogServiceBinding" type="y:SceneLogServicePortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="sceneLogImport">
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="SceneLogService">
+		<port name="SceneLogServicePort" binding="y:SceneLogServiceBinding">
+			<soap:address location="No Target Adress"/>
+		</port>
+	</service>
+</definitions>

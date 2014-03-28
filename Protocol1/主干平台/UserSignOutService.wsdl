@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by any (Ru-Board) -->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:y="http://JSTV/PlatfromService/UserSignInService" xmlns:ns="http://JSTV/MediaEntityDefinition/" xmlns:ns1="http://JSTV/PlatformService/Parameter/" targetNamespace="http://JSTV/PlatfromService/UserSignInService">
+	<types>
+		<xs:schema xmlns:tns="http://JSTV/PlatformService/Parameter/">
+			<xs:import namespace="http://JSTV/PlatformService/Parameter/" schemaLocation="PlatformServiceParameter.xsd"/>
+		</xs:schema>
+	</types>
+	<message name="UserSignOutRequestMessage">
+		<part name="UserSignOutRequest" element="ns1:UserSignOutRequest"/>
+	</message>
+	<message name="UserSignOutResponseMessage">
+		<part name="UserSignOutResponse" element="ns1:UserSignOutResponse"/>
+	</message>
+	<portType name="UserSignOutPortType">
+		<operation name="signout">
+			<input message="y:UserSignOutRequestMessage"/>
+			<output message="y:UserSignOutResponseMessage"/>
+		</operation>
+	</portType>
+	<binding name="UserSignOutBinding" type="y:UserSignOutPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="signout">
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="UserSignOutService">
+		<port name="UserSignOutPort" binding="y:UserSignOutBinding">
+			<soap:address location="http://Platform/UserSignOutService"/>
+		</port>
+	</service>
+</definitions>

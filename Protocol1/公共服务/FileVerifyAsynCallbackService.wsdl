@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by  () -->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:y="http://JSTV/PublicService/FileVerifyAsynCallbackService/" xmlns:ns="http://JSTV/MediaEntityDefinition/" xmlns:ns1="http://JSTV/PaySystem/Parameter" xmlns:ns2="http://JSTV/PublicService/Parameter/" targetNamespace="http://JSTV/PublicService/FileVerifyAsynCallbackService/">
+	<types>
+		<xs:schema xmlns:tns="http://JSTV/PublicService/Parameter/">
+			<xs:import namespace="http://JSTV/PublicService/Parameter/" schemaLocation="PublicServiceParameter.xsd"/>
+		</xs:schema>
+	</types>
+	<message name="FileVerifyCallbackInputMessage">
+		<part name="FileVerifyCallbackInput" element="ns2:FileVerifyAsynRequest"/>
+	</message>
+	<portType name="FileVerifyCallbackType">
+		<operation name="callback">
+			<input message="y:FileVerifyCallbackInputMessage"/>
+		</operation>
+	</portType>
+	<binding name="FileVerifyCallbackBinding" type="y:FileVerifyCallbackType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="callback">
+			<soap:operation/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+		</operation>
+	</binding>
+	<service name="FileVerifyAsynCallbackService">
+		<port name="FileVerifyAsynCallbackPort" binding="y:FileVerifyCallbackBinding">
+			<soap:address location="No Target Adress"/>
+		</port>
+	</service>
+</definitions>

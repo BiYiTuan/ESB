@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by  () -->
+<xs:schema xmlns:tns="http://JSTV/PlatformService/Parameter/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:MED="http://JSTV/MediaEntityDefinition/" targetNamespace="http://JSTV/PlatformService/Parameter/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://JSTV/MediaEntityDefinition/" schemaLocation="../媒体对象\EntityDefinition.xsd"/>
+	<xs:complexType name="CommonOption">
+		<xs:sequence>
+			<xs:element name="DeleteSource" type="xs:boolean" default="false">
+				<xs:annotation>
+					<xs:documentation>是否删除原文件</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OnTargetExist" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>当部分目标存在时：
+
+1：重命名输出
+2：失败返回
+
+3：试图覆盖，失败则重命名
+4：试图覆盖，失败则返回
+
+
+当全部目标文件存在时：
+
+8：成功返回</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AnalyzeTarget" type="xs:boolean" default="1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>分析是否生成文件格式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MediaVerify" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>媒体效验方式</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="none"/>
+						<xs:enumeration value="createmd5only"/>
+						<xs:enumeration value="checkmd5code"/>
+						<xs:enumeration value="CRCmodel"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="SpeedLimit" type="xs:long" default="0" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>迁移限速</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CodecTemplate">
+		<xs:sequence>
+			<xs:element name="FileInfo">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="QualityType">
+							<xs:annotation>
+								<xs:documentation>素材质量</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:long">
+									<xs:enumeration value="0"/>
+									<xs:enumeration value="1"/>
+									<xs:enumeration value="2"/>
+									<xs:enumeration value="3"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="FileTypeID">
+							<xs:annotation>
+								<xs:documentation>文件类型</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="FILETYPE_LOWAVI"/>
+									<xs:enumeration value="FILETYPE_HIGHAVI"/>
+									<xs:enumeration value="FILETYPE_LOWWAV"/>
+									<xs:enumeration value="FILETYPE_HIGHWAV"/>
+									<xs:enumeration value="FILETYPE_WMV"/>
+									<xs:enumeration value="FILETYPE_MXF"/>
+									<xs:enumeration value="FILETYPE_HIGHFULL"/>
+									<xs:enumeration value="FILETYPE_LOWFULL"/>
+									<xs:enumeration value="FILETYPE_PICTURE"/>
+									<xs:enumeration value="FILETYPE_DOCUMENT"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CodecInfo">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:choice>
+							<xs:sequence>
+								<xs:element name="VideoCodec"/>
+								<xs:element name="AudioCodec" minOccurs="0"/>
+							</xs:sequence>
+							<xs:element name="AudioCodec"/>
+						</xs:choice>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Requesthead">
+		<xs:annotation>
+			<xs:documentation>核心服务调用请求数据头</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Version" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>版本标识：MSBUS2。0。0。1</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Requestid" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Requestid由调用方生成请求ID，规则调用的系统ID-SERVIDEID8位-唯一值32位。之间用“-”连接，在注册服务的调用中无SERVICEID，再加上调用者IP,因此，该值为8个0表示，例：DCMP-00000000-00000000000000000000000000000001-127.0.0.1</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Requesttime" type="xs:string"/>
+				<xs:element name="Sourcesystemid" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>注册时，为服务所在系统的系统ID标识。目前系统标识由系统在集成时协商，并统一定义分配。</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Username" type="xs:string"/>
+				<xs:element name="Userpass" type="xs:string"/>
+				<xs:element name="TaskInstID" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Responsehead">
+		<xs:annotation>
+			<xs:documentation>核心服务调用后返回数据头</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Version" type="xs:string"/>
+				<xs:element name="time" type="xs:string"/>
+				<xs:element name="Responseid" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>通常等于Requestid</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Status" type="xs:string"/>
+				<xs:element name="Result" type="xs:string"/>
+				<xs:element name="Description" type="xs:string"/>
+				<xs:element name="TaskInstID" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EMBTranscodeResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ObjFiles" type="MED:FileItemType" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EMBTransferResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Target" type="MED:FileItemType" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EMBMediaVerifyResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ResultItem" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SrcFile" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>原文件名全路径</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="Operate">
+								<xs:annotation>
+									<xs:documentation>添加、删除、暂停、恢复</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="VerifyCode">
+								<xs:annotation>
+									<xs:documentation>文件效验码</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="Result">
+								<xs:annotation>
+									<xs:documentation>效验是否成功0000 成功 0001 失败</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="0000"/>
+										<xs:enumeration value="0001"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ou">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="entity" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="uid" type="xs:string"/>
+							<xs:element name="credential" type="xs:string"/>
+							<xs:element name="name" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="tns:ou" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="name" type="xs:string"/>
+				<xs:element name="classcode" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UnifyTime">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Zone" type="xs:string" maxOccurs="unbounded"/>
+				<xs:element name="time" type="xs:string" minOccurs="0"/>
+				<xs:element name="Date" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UserInfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="UserCode" type="xs:string"/>
+				<xs:element name="UserName" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EMBTransfer">
+		<xs:annotation>
+			<xs:documentation>迁移服务请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Operate">
+					<xs:annotation>
+						<xs:documentation>添加、删除、暂停、恢复迁移服务</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="add"/>
+							<xs:enumeration value="delete"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Options" type="tns:CommonOption"/>
+				<xs:element name="FileList" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>1、支持一组文件列表的迁移 2、其次支持一个原文件被迁移至多个目标文件的模式</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SourceFile" type="MED:FileItemType"/>
+							<xs:element name="TargetFile" type="MED:FileItemType" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EMBTransCode">
+		<xs:annotation>
+			<xs:documentation>转码服务请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Operate">
+					<xs:annotation>
+						<xs:documentation>添加、删除、暂停、恢复转码服务操作</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="add"/>
+							<xs:enumeration value="delete"/>
+							<xs:enumeration value="pause"/>
+							<xs:enumeration value="begin"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Src" type="MED:FileItemType">
+					<xs:annotation>
+						<xs:documentation>原文件</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Options" type="tns:CommonOption"/>
+				<xs:element name="Obj" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>目标文件</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="OutputFile" type="MED:FileItemType">
+								<xs:annotation>
+									<xs:documentation>目标文件与comtemplate一一对应</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="CodecTemplate" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>转码模板</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QueryIntegrationServiceRequest">
+		<xs:annotation>
+			<xs:documentation>业务系统查询集成服务列表请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SystemID" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>系统ID</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QueryIntegrationServiceResponse">
+		<xs:annotation>
+			<xs:documentation>查询集成服务列表返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ServiceInfo" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ServiceID">
+								<xs:annotation>
+									<xs:documentation>集成服务ID</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="ServiceDescription">
+								<xs:annotation>
+									<xs:documentation>服务描述</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SynUserToPLRequest">
+		<xs:annotation>
+			<xs:documentation>计费系统向主干同步人员请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="tns:ou" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SynUserToPLResponse">
+		<xs:annotation>
+			<xs:documentation>计费系统向主干同步人员后主干返回执行结果</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Result" type="xs:int">
+					<xs:annotation>
+						<xs:documentation>0表示成功 非0表示失败</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UnifyClockRequest">
+		<xs:annotation>
+			<xs:documentation>统一时钟请求</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="tns:UnifyTime"/>
+				<xs:element ref="tns:UserInfo"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UnifyClockResponse">
+		<xs:annotation>
+			<xs:documentation>统一时钟返回</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="tns:UnifyTime"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UserSignInRequest">
+		<xs:annotation>
+			<xs:documentation>用户登录验证请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="userID" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>用户ID</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="credential" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>用户密码</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="SystemID" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>源系统ID</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UserSignInResponse">
+		<xs:annotation>
+			<xs:documentation>用户登录验证返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="UserToken" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>验证令牌</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Result" type="xs:long">
+					<xs:annotation>
+						<xs:documentation>0表示成功 非0表示失败</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UserSignOutRequest">
+		<xs:annotation>
+			<xs:documentation>用户登出请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SystemID" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>源系统ID</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="UserToken" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>用户令牌</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UserSignOutResponse">
+		<xs:annotation>
+			<xs:documentation>用户登出返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Result" type="xs:int">
+					<xs:annotation>
+						<xs:documentation>0表示成功 非0表示失败</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UserTokenCheckRequest">
+		<xs:annotation>
+			<xs:documentation>用户令牌验证请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SystemID" type="xs:string"/>
+				<xs:element name="UserToken" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UserTokenCheckResponse">
+		<xs:annotation>
+			<xs:documentation>用户令牌验证返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="userID" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>用户ID</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Result" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>0表示成功 非0表示失败</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MSBusServiceInvoke">
+		<xs:annotation>
+			<xs:documentation>核心服务调用请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="tns:Requesthead"/>
+				<xs:element name="Serviceid" type="xs:string"/>
+				<xs:element name="Servicename">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string"/>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ServiceMethod">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string"/>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Param" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>服务提供者定义的服务参数，目前该参数先使用string在进行传递数据</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="ParamType">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:pattern value="|"/>
+											<xs:enumeration value="iFlow_Param"/>
+											<xs:enumeration value="Service_Param"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ParamAttributes" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>作为业务数据查询条件：比如媒资提交attribute=‘素材’ value='篮球'，其中attribute的值可以在注册时进行约定，在MSB中可根据该值对调用过程数据进行检索和分析</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Attribute" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>属性名称</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="Value" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>属性值</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MSBusInvokeResponse">
+		<xs:annotation>
+			<xs:documentation>核心服务调用后返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="tns:Responsehead"/>
+				<xs:element name="Serviceid" type="xs:string"/>
+				<xs:element name="Servicename" type="xs:string"/>
+				<xs:element name="ServiceMethod" type="xs:string"/>
+				<xs:element name="Param" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="ParamType" type="xs:string">
+									<xs:annotation>
+										<xs:documentation>枚举值同ivoke的参数一样</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

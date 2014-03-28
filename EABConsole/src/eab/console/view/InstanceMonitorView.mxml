@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditorNavigatorChild 
+	xmlns="eab.console.view.*" 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	xmlns:c="eab.control.controls.*"
+	xmlns:v="eab.console.view.*" 
+	width="100%" 
+	height="100%"
+	borderStyle="none" 
+	label="ESB流程"
+	type="{EditorNavigatorChild.INSTANCE_MONITOR_VIEW}" 	
+	creationComplete="instanceMonitorModel.refresh();">
+	<mx:Script>
+		<![CDATA[
+			import eab.console.model.InstanceMonitorModel;
+			import eab.console.viewhelper.InstanceMonitorViewVH;
+			
+			[Bindable]
+			public var instanceMonitorModel : InstanceMonitorModel;
+			
+			public var instanceMonitorViewVH : InstanceMonitorViewVH;
+			
+			public override function refresh():void{
+				super.refresh();	
+				instanceMonitorModel.refresh();			
+			}
+		]]>
+	</mx:Script>
+	<v:FigureCanvas id="figureCanvas" 
+		parameterData="{instanceMonitorModel.instanceData.rootScope.datas}" 
+		flowViewData="{XML(instanceMonitorModel.flowData.flowViewFile)}"/>
+</EditorNavigatorChild>

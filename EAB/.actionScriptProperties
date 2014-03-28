@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actionScriptProperties mainApplicationPath="EAB.mxml" version="6">
+  <compiler additionalCompilerArguments="-services &quot;D:\ESB Install\EAB1.0\EAB1.0\EAB/WebContent/WEB-INF/flex/services-config.xml&quot;" autoRSLOrdering="false" copyDependentFiles="true" flexSDK="Flex 3.5" fteInMXComponents="false" generateAccessible="false" htmlExpressInstall="true" htmlGenerate="true" htmlHistoryManagement="true" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="WebContent" rootURL="" sourceFolderPath="flex_src" strict="true" targetPlayerVersion="10.0.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
+    <compilerSourcePath/>
+    <libraryPath defaultLinkType="1">
+      <libraryPathEntry kind="4" path=""/>
+      <libraryPathEntry kind="3" linkType="1" path="/EABConsole/bin/EABConsole.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="/EABControl/bin/EABControl.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="/EABFramework/bin/EABFramework.swc" useDefaultLinkType="false"/>
+    </libraryPath>
+    <sourceAttachmentPath/>
+  </compiler>
+  <theme themeIsDefault="false" themeIsSDK="true" themeLocation="${SDK_THEMES_DIR}/frameworks/themes/Wooden"/>
+  <applications>
+    <application path="EAB.mxml"/>
+  </applications>
+  <modules/>
+  <buildCSSFiles/>
+</actionScriptProperties>

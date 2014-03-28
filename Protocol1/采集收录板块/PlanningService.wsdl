@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by any (Ru-Board) -->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:y="http://JSTV/RecordSystem/PlanningService/" xmlns:ns="http://JSTV/MediaEntityDefinition/" xmlns:ns1="http://JSTV/RecordSystem/Parameter/" targetNamespace="http://JSTV/RecordSystem/PlanningService/">
+	<types>
+		<xs:schema xmlns:tns="http://JSTV/RecordSystem/Parameter/">
+			<xs:import namespace="http://JSTV/RecordSystem/Parameter/" schemaLocation="RecordServiceParameter.xsd"/>
+		</xs:schema>
+	</types>
+	<message name="TaskAddRequestMessage">
+		<part name="TaskAddRequest" element="ns1:TaskAddRequest"/>
+	</message>
+	<message name="TaskAddResponseMessage">
+		<part name="TaskAddResponse" element="ns1:TaskAddResponse"/>
+	</message>
+	<message name="TaskQueryRequestMessage">
+		<part name="TaskQueryRequest" element="ns1:TaskQueryRequest"/>
+	</message>
+	<message name="TaskQueryResponseMessage">
+		<part name="TaskQueryResponse" element="ns1:TaskQueryResponse"/>
+	</message>
+	<message name="TaskCancelRequestMessage">
+		<part name="TaskCancelRequest" element="ns1:TaskCancelRequest"/>
+	</message>
+	<message name="TaskCancelResponseMessage">
+		<part name="TaskCancelResponse" element="ns1:TaskCancelResponse"/>
+	</message>
+	<portType name="PlanningServicePortType">
+		<operation name="taskCancel">
+			<input message="y:TaskCancelRequestMessage"/>
+			<output message="y:TaskCancelResponseMessage"/>
+		</operation>
+		<operation name="TaskQuery">
+			<input message="y:TaskQueryRequestMessage"/>
+			<output message="y:TaskQueryResponseMessage"/>
+		</operation>
+		<operation name="taskAdd">
+			<input message="y:TaskAddRequestMessage"/>
+			<output message="y:TaskAddResponseMessage"/>
+		</operation>
+	</portType>
+	<binding name="PlanningServiceBinding" type="y:PlanningServicePortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="taskCancel">
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="TaskQuery">
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="taskAdd">
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="PlanningService">
+		<port name="PlanningServicePort" binding="y:PlanningServiceBinding">
+			<soap:address location="No Target Adress"/>
+		</port>
+	</service>
+</definitions>

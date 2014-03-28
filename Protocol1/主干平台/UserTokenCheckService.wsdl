@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by any (Ru-Board) -->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:y="http://JSTV/PlatfromService/UserSignInService" xmlns:ns="http://JSTV/MediaEntityDefinition/" xmlns:ns1="http://JSTV/PlatformService/Parameter/" targetNamespace="http://JSTV/PlatfromService/UserSignInService">
+	<types>
+		<xs:schema xmlns:tns="http://JSTV/PlatformService/Parameter/">
+			<xs:import namespace="http://JSTV/PlatformService/Parameter/" schemaLocation="PlatformServiceParameter.xsd"/>
+		</xs:schema>
+	</types>
+	<message name="UserTokenCheckRequestMessage">
+		<part name="UserTokenCheckRequest" element="ns1:UserTokenCheckRequest"/>
+	</message>
+	<message name="UserTokenCheckResponseMessage">
+		<part name="UserTokenCheckResponse" element="ns1:UserTokenCheckResponse"/>
+	</message>
+	<portType name="UserTokenCheckPortType">
+		<operation name="check">
+			<input message="y:UserTokenCheckRequestMessage"/>
+			<output message="y:UserTokenCheckResponseMessage"/>
+		</operation>
+	</portType>
+	<binding name="UserTokenCheckBinding" type="y:UserTokenCheckPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="check">
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="UserTokenCheckService">
+		<port name="UserTokenCheckPort" binding="y:UserTokenCheckBinding">
+			<soap:address location="http://Platform/UserTokenCheckService"/>
+		</port>
+	</service>
+</definitions>

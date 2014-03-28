@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by any (Ru-Board) -->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:y="http://JSTV/PublicService/PlaylistService/" xmlns:ns="http://JSTV/MediaEntityDefinition/" xmlns:ns1="http://JSTV/RecordSystem/Parameter/" xmlns:ns2="http://JSTV/PublicService/Parameter/" targetNamespace="http://JSTV/PublicService/PlaylistService/">
+	<types>
+		<xs:schema xmlns:tns="http://JSTV/RecordSystem/Parameter/" xmlns:ns2="http://JSTV/PublicService/Parameter/">
+			<xs:import namespace="http://JSTV/PublicService/Parameter/" schemaLocation="PublicServiceParameter.xsd"/>
+		</xs:schema>
+	</types>
+	<message name="PlayListQueryRequestMessage">
+		<part name="PlayListQueryRequest" element="ns2:PlayListQueryRequest"/>
+	</message>
+	<message name="PlayListQueryResponseMessage">
+		<part name="PlayListQueryResponse" element="ns2:PlayListQueryRequest"/>
+	</message>
+	<message name="PlayListImportRequestMessage">
+		<part name="PlayListImportRequest" element="ns2:PlayListImportRequest"/>
+	</message>
+	<message name="PlayListImportResponseMessage">
+		<part name="PlayListImportResponse" element="ns2:PlayListImportResponse"/>
+	</message>
+	<message name="PlayListContentQueryRequestMessage">
+		<part name="PlayListContentQueryRequest" element="ns2:PlayListContentQueryRequest"/>
+	</message>
+	<message name="PlayListContentQueryResponseMessage">
+		<part name="PlayListContentQueryResponse" element="ns2:PlayListContentQueryResponse"/>
+	</message>
+	<portType name="PlayListServicePortType">
+		<operation name="playListContentQuery">
+			<input message="y:PlayListContentQueryRequestMessage"/>
+			<output message="y:PlayListContentQueryResponseMessage"/>
+		</operation>
+		<operation name="playListQuery">
+			<input message="y:PlayListQueryRequestMessage"/>
+			<output message="y:PlayListQueryResponseMessage"/>
+		</operation>
+		<operation name="playListImport">
+			<input message="y:PlayListImportRequestMessage"/>
+			<output message="y:PlayListImportResponseMessage"/>
+		</operation>
+	</portType>
+	<binding name="PlayListServiceBinding" type="y:PlayListServicePortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="playListContentQuery">
+			<soap:operation soapAction="urn:#playListContentQuery"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="playListQuery">
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="playListImport">
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="PlayListService">
+		<port name="PlayListSerivcePort" binding="y:PlayListServiceBinding">
+			<soap:address location="No Target Adress"/>
+		</port>
+	</service>
+</definitions>

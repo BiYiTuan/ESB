@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by any (Ru-Board) -->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:y="http://JSTV/PublicService/AuthentificationService/" xmlns:ns="http://JSTV/MediaEntityDefinition/" xmlns:ns1="http://JSTV/PublicService/Parameter/" targetNamespace="http://JSTV/PublicService/AuthentificationService/">
+	<types>
+		<xs:schema xmlns:tns="http://JSTV/PublicService/Parameter/">
+			<xs:import namespace="http://JSTV/PublicService/Parameter/" schemaLocation="PublicServiceParameter.xsd"/>
+		</xs:schema>
+	</types>
+	<message name="ReceiveSynUserRequestMessage">
+		<part name="ReceiveSynUserRequest" element="ns1:ReceiveSynUserRequest"/>
+	</message>
+	<message name="ReceiveSynUserResponseMessage">
+		<part name="ReceiveSynUserResponse" element="ns1:ReceiveSynUserResponse"/>
+	</message>
+	<portType name="ReceiveSynUserPortType">
+		<operation name="synUser">
+			<input message="y:ReceiveSynUserRequestMessage"/>
+			<output message="y:ReceiveSynUserResponseMessage"/>
+		</operation>
+	</portType>
+	<binding name="ReceiveSynUserBinding" type="y:ReceiveSynUserPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="synUser">
+			<soap:operation/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="AuthentificationService">
+		<port name="AuthentificationPort" binding="y:ReceiveSynUserBinding">
+			<soap:address location="No Target Adress"/>
+		</port>
+	</service>
+</definitions>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by any (Ru-Board) -->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns="http://JSTV/MediaEntityDefinition/" xmlns:ns1="http://JSTV/PlatformService/Parameter/" xmlns:ns2="http://JSTV/PlatfromService/QueryIntegerationService" targetNamespace="http://JSTV/PlatfromService/QueryIntegerationService">
+	<types>
+		<xs:schema xmlns:tns="http://JSTV/PlatformService/Parameter/">
+			<xs:import namespace="http://JSTV/PlatformService/Parameter/" schemaLocation="PlatformServiceParameter.xsd"/>
+		</xs:schema>
+	</types>
+	<message name="queryIntegerationServiceRequestMessage">
+		<part name="queryIntegerationServiceRequest" element="ns1:QueryIntegrationServiceRequest"/>
+	</message>
+	<message name="queryIntegerationServiceResponseMessage">
+		<part name="queryIntegerationServiceResponse" element="ns1:QueryIntegrationServiceResponse"/>
+	</message>
+	<portType name="queryIntegerationServicePortType">
+		<operation name="query">
+			<input message="ns2:queryIntegerationServiceRequestMessage"/>
+			<output message="ns2:queryIntegerationServiceResponseMessage"/>
+		</operation>
+	</portType>
+	<binding name="queryIntegerationServiceBinding" type="ns2:queryIntegerationServicePortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="query">
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="queryIntegerationService">
+		<port name="queryIntegerationServicePort" binding="ns2:queryIntegerationServiceBinding">
+			<soap:address location="http://Platform/QueryIntegerationService"/>
+		</port>
+	</service>
+</definitions>

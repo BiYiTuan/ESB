@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:HBox 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	width="100%" 
+	height="20" 
+	horizontalScrollPolicy="off" 
+	verticalScrollPolicy="off" 
+	initialize="init()">
+
+	<mx:Script>
+		<![CDATA[
+			import eab.console.figure.FigureFactory;
+			import eab.console.other.Resource; 
+			import eab.console.view.ToolPanel;
+
+		public var toolData : Object;        
+         
+        [Bindable]
+        private var iconClass :Class;
+        
+        [Bindable]
+        private var iconName :String;
+        
+        public function init() :void{
+        	toolData = lab.data;
+        	iconName = lab.text;
+        	
+        	if(toolData == null)
+        		return;
+        	
+        	iconClass = FigureFactory.id2icon(toolData.id);
+        }
+			
+		]]>
+	</mx:Script>
+
+	<mx:LinkButton id="btn" icon="{iconClass}" width="20" height="20" buttonMode="false" />
+
+    <mx:Label id="lab" data="{data.data}" text="{data.label}" textAlign="center" height="100%" buttonMode="true"/>
+    
+</mx:HBox>
+
+

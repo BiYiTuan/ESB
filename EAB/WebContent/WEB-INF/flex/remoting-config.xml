@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="remoting-service" 
+    class="flex.messaging.services.RemotingService">
+
+    <adapters>
+        <adapter-definition id="java-object" class="flex.messaging.services.remoting.adapters.JavaAdapter" default="true"/>
+    </adapters>
+
+    <default-channels>
+        <channel ref="my-amf"/>
+    </default-channels>
+    
+    <destination id="protocols">
+		<properties>
+			<source>eab.mananger.ProtocolManager</source>
+    	</properties>
+    </destination>
+    
+    <destination id="services">
+		<properties>
+			<source>eab.mananger.ServiceManager</source>
+    	</properties>
+    </destination>
+    
+    <destination id="processes">
+		<properties>
+			<source>eab.mananger.ProcessManager</source>
+    	</properties>
+    </destination>
+    
+    <destination id="instances">
+		<properties>
+			<source>eab.mananger.InstanceManager</source>
+    	</properties>
+    </destination>
+    
+    <destination id="edit">
+		<properties>
+			<source>eab.mananger.EditManager</source>
+    	</properties>
+    </destination>
+</service>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by any (Ru-Board) -->
+<xs:schema xmlns:PSP="http://JSTV/PaySystem/Parameter" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://JSTV/PaySystem/Parameter" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="ColumnType">
+		<xs:annotation>
+			<xs:documentation>栏目信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ColumnID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>栏目编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ColumnName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>栏目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UserInfo">
+		<xs:annotation>
+			<xs:documentation>用户信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="UserID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>人员编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LoginID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>登陆名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AdhereColumns">
+				<xs:annotation>
+					<xs:documentation>所属栏目</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Column" type="PSP:ColumnType" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="AccountList">
+				<xs:annotation>
+					<xs:documentation>帐户列表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="AccountID" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>帐号编号</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Password" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>用户密码计费系统同步过来的用户不需要这个字段</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AdhereDepartmentID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>所属部门ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Department">
+		<xs:annotation>
+			<xs:documentation>同步用户和部门信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="DepartmentID" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>部门编号</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="DepartmentName" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>部门名称</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="SubDepartments">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="PSP:Department" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SynUserRequest">
+		<xs:annotation>
+			<xs:documentation>计费系统向平台发起用户同步的请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PSP:Department" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="UserList" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="User" type="PSP:UserInfo" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Action" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>操作: New增加 Update更新 Delete 删除</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="OperationObject" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>操作对象：部门或者用户两者只能选择一个，该ELEMENT的枚举值为：Department和User</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="MessageID" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>消息ID</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SynUserResponse">
+		<xs:annotation>
+			<xs:documentation>计费系统同步用户后的返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="result" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>失败代码列举</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="MessageID" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>源消息ID</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by  () -->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:y="http://JSTV/PublicService/MaterialDetailQueryService/" xmlns:ns="http://JSTV/MediaEntityDefinition/" xmlns:ns1="http://JSTV/PaySystem/Parameter" xmlns:ns2="http://JSTV/PublicService/Parameter/" targetNamespace="http://JSTV/PublicService/MaterialDetailQueryService/">
+	<types>
+		<xs:schema xmlns:tns="http://JSTV/PublicService/Parameter/">
+			<xs:import namespace="http://JSTV/PublicService/Parameter/" schemaLocation="PublicServiceParameter.xsd"/>
+		</xs:schema>
+	</types>
+	<message name="MeterialDetailQueryInputMessage">
+		<part name="MeterialDetailQueryInputMessage" element="ns2:MaterialDetailQueryRequest"/>
+	</message>
+	<message name="MeterialDetailQueryOutputMessage">
+		<part name="MeterialDetailQueryOutputMessage" element="ns2:MaterialDetailQueryResponse"/>
+	</message>
+	<portType name="MaterialDetailQueryType">
+		<operation name="query">
+			<input message="y:MeterialDetailQueryInputMessage"/>
+			<output message="y:MeterialDetailQueryOutputMessage"/>
+		</operation>
+	</portType>
+	<binding name="MeterialDetailQueryBinding" type="y:MaterialDetailQueryType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="query">
+			<soap:operation/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="MeterialDetailQueryService">
+		<port name="MaterialDetailQueryPort" binding="y:MeterialDetailQueryBinding">
+			<soap:address location="No Target Adress"/>
+		</port>
+	</service>
+</definitions>

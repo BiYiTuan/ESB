@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by any (Ru-Board) -->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:y="http://JSTV/PlatfromService/UserSignInService" xmlns:ns="http://JSTV/MediaEntityDefinition/" xmlns:ns1="http://JSTV/PlatformService/Parameter/" targetNamespace="http://JSTV/PlatfromService/UserSignInService">
+	<types>
+		<xs:schema xmlns:tns="http://JSTV/PlatformService/Parameter/">
+			<xs:import namespace="http://JSTV/PlatformService/Parameter/" schemaLocation="PlatformServiceParameter.xsd"/>
+		</xs:schema>
+	</types>
+	<message name="UserSignInRequestMessage">
+		<part name="UserSignInRequest" element="ns1:UserSignInRequest"/>
+	</message>
+	<message name="UserSignInResponseMessage">
+		<part name="UserSignInResponse" element="ns1:UserSignInResponse"/>
+	</message>
+	<portType name="UserSignInPortType">
+		<operation name="signin">
+			<input message="y:UserSignInRequestMessage"/>
+			<output message="y:UserSignInResponseMessage"/>
+		</operation>
+	</portType>
+	<binding name="UserSignInBinding" type="y:UserSignInPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="signin">
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="UserSignInService">
+		<port name="UserSignInPort" binding="y:UserSignInBinding">
+			<soap:address location="http://Platform/UserSignInService"/>
+		</port>
+	</service>
+</definitions>

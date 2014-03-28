@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by  () -->
+<xs:schema xmlns:tns="http://JSTV/BroadCastSystem/Parameter/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:MED="http://JSTV/MediaEntityDefinition/" targetNamespace="http://JSTV/BroadCastSystem/Parameter/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://JSTV/MediaEntityDefinition/" schemaLocation="..\媒体对象\EntityDefinition.xsd"/>
+	<xs:element name="QueryProgramCodeRequest">
+		<xs:annotation>
+			<xs:documentation>节目代码查询请求</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PlanAirDate">
+					<xs:annotation>
+						<xs:documentation>计划播出时间</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="From" type="xs:string"/>
+							<xs:element name="To" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ChannelID" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>计划播出频道</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ColumnID" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>栏目ID</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ProgramNameKeyWord" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>节目名称关键字</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QueryProgramCodeResponse">
+		<xs:annotation>
+			<xs:documentation>节目代码查询结果响应</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ProgramBasicInfo" type="tns:ProgramBasicInfoType" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>节目基本信息</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QueryProgramCodeDetailRequest">
+		<xs:annotation>
+			<xs:documentation>节目代码详细信息查询请求</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ProgramCode" type="xs:string" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>节目代码</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QueryProgramCodeDetailResponse">
+		<xs:annotation>
+			<xs:documentation>节目代码详细信息查询结果响应</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ProgramDetailInfo" type="tns:ProgramDetailInfoType" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>节目详细信息</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QueryProgramCodeConfigRequest">
+		<xs:annotation>
+			<xs:documentation>节目代码配置查询请求</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="QueryType" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>查询类型：
+CHN:频道代码列表
+PGMTYPE：节目类型代码列表
+COLUMN:子栏目代码列表</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="PrgramType" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>指定的节目类型，只当QueryType为COLUMN时有效</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QueryProgramCodeConfigResponse">
+		<xs:annotation>
+			<xs:documentation>节目代码配置查询结果响应</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CodeList" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>被查询的代码列表</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Code" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>代码</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="Name" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>名称</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ProgramMetadataImportRequest">
+		<xs:annotation>
+			<xs:documentation>节目元数据导入请求</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ContentInfo" type="tns:ProgramEntityType"/>
+				<xs:element name="UserInfo">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="UserCode" type="xs:string"/>
+							<xs:element name="UserName" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ProgramMetadataImportResponse">
+		<xs:annotation>
+			<xs:documentation>节目元数据导入返回</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Result" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>元数据导入结果 0表示成功 非0表示失败</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Comment" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>结果说明</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ProgramBasicInfoType">
+		<xs:annotation>
+			<xs:documentation>节目代码基本信息定义</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ProgramCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>节目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProgramName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>节目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ProgramDetailInfoType">
+		<xs:annotation>
+			<xs:documentation>节目代码详细信息定义</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ProgramCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>节目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProgramName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>节目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Duration" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>节目时长</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProgramType" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>节目类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ChannelID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>频道ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PlanAirTime" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>计划播出时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SerialIndex" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>期数或集数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProgramStatus" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>当前状态</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Applicant" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>申请人员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Auditor" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>审核人员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProgramSource" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>节目来源</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Remark" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FileItemType">
+		<xs:annotation>
+			<xs:documentation>文件组类型定义</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FileName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>文件名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FileSize" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>文件大小</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FileVersion" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>文件版本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FileVerifyCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>文件验证码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ProgramEntityType">
+		<xs:annotation>
+			<xs:documentation>节目实体类型定义</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ProgramCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>节目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProgramName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>节目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PlanAirTime" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>计划播出时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ChannelID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>所属频道ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ChannelName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>所属频道名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SOM" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>节目入点</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Duration" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>节目有效时长</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TotalDuration" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>节目实际时长</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProgramType" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>节目类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ColumnID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>栏目ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ColumnName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>栏目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Remark" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Creator" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>创建人员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Editor" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>编辑人员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FileGroup">
+				<xs:annotation>
+					<xs:documentation>文件组</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="FileItem" type="tns:FileItemType" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

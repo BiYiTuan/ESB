@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by  () -->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:y="http://JSTV/BroadCastSystem/ProgramCodeService/" xmlns:ns="http://JSTV/BroadCastSystem/Parameter/" xmlns:ns1="http://JSTV/MediaEntityDefinition/" targetNamespace="http://JSTV/BroadCastSystem/ProgramCodeService/">
+	<types>
+		<xs:schema xmlns:ns1="http://JSTV/BroadCastSystem/Parameter/">
+			<xs:import namespace="http://JSTV/BroadCastSystem/Parameter/" schemaLocation="BroadcastServiceParameter.xsd"/>
+		</xs:schema>
+	</types>
+	<message name="QueryProgramCodeConfigRequestMessage">
+		<part name="QueryProgramCodeConfigInputParameter" element="ns:QueryProgramCodeConfigRequest"/>
+	</message>
+	<message name="QueryProgramCodeConfigResponse">
+		<part name="QueryProgramCodeConfigOutputParameter" element="ns:QueryProgramCodeConfigResponse"/>
+	</message>
+	<message name="QueryProgramCodeDetailRequest">
+		<part name="QueryProgramCodeDetailInputParameter" element="ns:QueryProgramCodeDetailRequest"/>
+	</message>
+	<message name="QueryProgramCodeDetailResponse">
+		<part name="QueryProgramCodeDetailOutputParameter" element="ns:QueryProgramCodeDetailResponse"/>
+	</message>
+	<message name="QueryProgramCodeRequest">
+		<part name="QueryProgramCodeInputParameter" element="ns:QueryProgramCodeRequest"/>
+	</message>
+	<message name="QueryProgramCodeResponse">
+		<part name="QueryProgramCodeOutputParameter" element="ns:QueryProgramCodeResponse"/>
+	</message>
+	<portType name="ProgramCodeType">
+		<operation name="QueryProgramCodeConfig">
+			<input message="y:QueryProgramCodeConfigRequestMessage"/>
+			<output message="y:QueryProgramCodeConfigResponse"/>
+		</operation>
+		<operation name="QueryProgramCodeDetail">
+			<input message="y:QueryProgramCodeDetailRequest"/>
+			<output message="y:QueryProgramCodeDetailResponse"/>
+		</operation>
+		<operation name="QueryProgramCode">
+			<input message="y:QueryProgramCodeRequest"/>
+			<output message="y:QueryProgramCodeResponse"/>
+		</operation>
+	</portType>
+	<binding name="ProgramCodeServiceBinding" type="y:ProgramCodeType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="QueryProgramCodeConfig">
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="QueryProgramCodeDetail">
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="QueryProgramCode">
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="ProgramCodeService">
+		<port name="ProgrameCodePort" binding="y:ProgramCodeServiceBinding">
+			<soap:address location="No Target Adress"/>
+		</port>
+	</service>
+</definitions>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by  () -->
+<xs:schema xmlns:tns="http://JSTV/NewsEditSystem/Parameter/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:MED="http://JSTV/MediaEntityDefinition/" targetNamespace="http://JSTV/NewsEditSystem/Parameter/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://JSTV/MediaEntityDefinition/" schemaLocation="..\媒体对象\EntityDefinition.xsd"/>
+	<xs:complexType name="GroupInfoType">
+		<xs:annotation>
+			<xs:documentation>归属组对象（包括：频道 栏目 版次等）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="GroupType" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>归属组类型，枚举值：频道；栏目；版次</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GroupCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>归属组编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ItemGroup" type="tns:GroupInfoType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="UserInfo">
+		<xs:annotation>
+			<xs:documentation>用户信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="UserCode" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>用户编码</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="UserName" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>用户名</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QueryAction">
+		<xs:annotation>
+			<xs:documentation>查询动作定义</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PageInfo" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PageSize" type="xs:long"/>
+							<xs:element name="CurrentPage" type="xs:long"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Operate" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>nextpage,prepage,lastpage,firstpage,default</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Options" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ResponseColumn" type="xs:string" maxOccurs="unbounded"/>
+							<xs:element name="OrderType" type="xs:string" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SceneLogImportRequest">
+		<xs:annotation>
+			<xs:documentation>场记入库请求数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ItemObject" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SceneLogID" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>场记唯一标识码</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="SceneLogName" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>场记名称</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="MaterialGUID" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>关联场记的素材GUID</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="BeginTime" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>场记开始时间</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="EndTime" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>场记结束时间</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="Classification" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>场记分类</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="ClassificationID" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>对应一个场记分类体系ID</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="ClassificationName" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>以字符串形式表示的分类体系 比如：体育->奥运会->篮球</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="SceneLog" type="MED:SceneMetaDataType">
+								<xs:annotation>
+									<xs:documentation>交换内容描述</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ControlAction" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>操作动作，枚举值：Insert、Update、Delete</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="tns:UserInfo"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SceneLogImportResponse">
+		<xs:annotation>
+			<xs:documentation>场记入库返回数据</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ImportResults" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SceneLogID" type="xs:long"/>
+							<xs:element name="Status" type="xs:long">
+								<xs:annotation>
+									<xs:documentation>0表示成功 非0表示失败</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="Message" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

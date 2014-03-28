@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Label xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" text="{dateObjectToString(dateObj)}">
+	<mx:Script>
+		<![CDATA[
+			import mx.formatters.DateFormatter;
+			
+			[Bindable]
+			public var dateObj : Object;
+			
+			private function dateObjectToString(obj:Object):String{
+				if(obj == null)
+					return "";
+				
+				var df : DateFormatter = new DateFormatter();
+				df.formatString = "YYYY-MM-DD JJ:NN:SS";			
+				return df.format(obj);					
+			}
+		]]>
+	</mx:Script>
+</mx:Label>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+	<Folder FolderName="媒体对象">
+		<File FilePath=".\媒体对象\EntityDefinition.xsd" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="播出分发板块">
+		<File FilePath=".\播出分发板块\BroadcastServiceParameter.xsd" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="主干平台">
+		<File FilePath=".\主干平台\PlatformServiceParameter.xsd" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="新闻制作板块">
+		<File FilePath=".\新闻制作板块\NewsEditServiceParameter.xsd" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="综合制作板块"/>
+	<Folder FolderName="采集收录板块">
+		<File FilePath=".\采集收录板块\RecordServiceParameter.xsd" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="媒资板块"/>
+	<Folder FolderName="公共服务">
+		<File FilePath=".\公共服务\PublicServiceParameter.xsd" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="计费系统">
+		<File FilePath=".\计费系统\PayServiceParameter.xsd" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="WSDL">
+		<Folder FolderName="播出分发板块">
+			<File FilePath=".\播出分发板块\ProgramCodeService.wsdl" HomeFolder="Yes"/>
+			<File FilePath=".\播出分发板块\ProgramMetadataImportService.wsdl" HomeFolder="Yes"/>
+		</Folder>
+		<Folder FolderName="主干平台">
+			<File FilePath=".\主干平台\QueryIntegrationService.wsdl" HomeFolder="Yes"/>
+			<File FilePath=".\主干平台\UnifyClockService.wsdl" HomeFolder="Yes"/>
+			<File FilePath=".\主干平台\UserSignInService.wsdl" HomeFolder="Yes"/>
+			<File FilePath=".\主干平台\UserSignOutService.wsdl" HomeFolder="Yes"/>
+			<File FilePath=".\主干平台\UserTokenCheckService.wsdl" HomeFolder="Yes"/>
+		</Folder>
+		<Folder FolderName="新闻制作板块"/>
+		<Folder FolderName="综合制作板块"/>
+		<Folder FolderName="采集收录板块">
+			<File FilePath=".\采集收录板块\PlanningService.wsdl" HomeFolder="Yes"/>
+		</Folder>
+		<Folder FolderName="媒资板块"/>
+		<Folder FolderName="公共服务">
+			<File FilePath=".\公共服务\AuthentificationService.wsdl" HomeFolder="Yes"/>
+			<File FilePath=".\公共服务\ExportAllowAsynCallbackService.wsdl" HomeFolder="Yes"/>
+			<File FilePath=".\公共服务\ExportAllowService.wsdl" HomeFolder="Yes"/>
+			<File FilePath=".\公共服务\FileVerifyAsynCallbackService.wsdl" HomeFolder="Yes"/>
+			<File FilePath=".\公共服务\FileVerifyService.wsdl" HomeFolder="Yes"/>
+			<File FilePath=".\公共服务\ImportAllowAsynCallbackService.wsdl" HomeFolder="Yes"/>
+			<File FilePath=".\公共服务\ImportAllowService.wsdl" HomeFolder="Yes"/>
+			<File FilePath=".\公共服务\MaterialDetailQueryService.wsdl" HomeFolder="Yes"/>
+			<File FilePath=".\公共服务\MetadataImportService.wsdl" HomeFolder="Yes"/>
+			<File FilePath=".\公共服务\MeterialQueryService.wsdl" HomeFolder="Yes"/>
+			<File FilePath=".\公共服务\PlayListService.wsdl" HomeFolder="Yes"/>
+			<File FilePath=".\公共服务\ScriptService.wsdl" HomeFolder="Yes"/>
+		</Folder>
+		<Folder FolderName="复合服务">
+			<File FilePath=".\公共服务\MaterialExportIntegrationAsynCallbackService.wsdl" HomeFolder="Yes"/>
+			<File FilePath=".\公共服务\MaterialExportIntegrationService.wsdl" HomeFolder="Yes"/>
+			<File FilePath=".\公共服务\MaterialImportIntegrationAsynCallbackService.wsdl" HomeFolder="Yes"/>
+			<File FilePath=".\公共服务\MaterialImportIntegrationService.wsdl" HomeFolder="Yes"/>
+		</Folder>
+	</Folder>
+</Project>

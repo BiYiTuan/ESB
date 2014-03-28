@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://JSTV/MediaEntityDefinition/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://JSTV/MediaEntityDefinition/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="GroupInfoType">
+		<xs:annotation>
+			<xs:documentation>归属组对象（包括：频道 栏目 版次等）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="GroupType" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>归属组类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GroupCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>归属组编码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GroupName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>归属组名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ItemGroup" type="GroupInfoType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ProcessInfoType">
+		<xs:annotation>
+			<xs:documentation>处理类型：创建处理、审查处理、修改处理、提交处理</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ProcessType" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>处理类型：创建处理、审查处理、修改处理、提交处理</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProcessDate" type="xs:string"/>
+			<xs:element name="UserCode" type="xs:string"/>
+			<xs:element name="UserName" type="xs:string"/>
+			<xs:element name="Description" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处理信息的描述</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ExtentionAttributeType">
+		<xs:annotation>
+			<xs:documentation>扩展属性类型</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ExtentionAttribute" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ItemCode" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>扩展项标识</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ItemName" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>扩展项名称</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Value" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>扩展项取值</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PlayListItemType">
+		<xs:annotation>
+			<xs:documentation>条目对象</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ItemID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>唯一标示</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ItemSerialNo" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PGMCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>节目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AVObjectCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>条目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ShowNum" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>条目标识</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ItemSource">
+				<xs:annotation>
+					<xs:documentation>节目源</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ItemType" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>播出类型：break（导语或编后语 口播）、视频、口播+画面、空条目</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ItemVideo" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>视频源</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ItemAudio" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>音频源</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ItemAnnouncerType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>男播、女播、混播</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ControlType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>控制类型</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="BeginType" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>定时、触发、顺序</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="EndType" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>定长结束、触发结束、定时结束</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="RefItemID" type="xs:long" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>关联条目ID</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="BeginTime" type="xs:string"/>
+						<xs:element name="EndTime" type="xs:string" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Length" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>串联单长度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ScriptEntity" type="ScriptEntity" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>关联的文稿信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SubItem" type="PlayListItemType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="memo" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtentionAttribute" type="ExtentionAttributeType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>扩展信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ClassificationType">
+		<xs:annotation>
+			<xs:documentation>分类类型</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Class" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ClassSystem" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>分类体系</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ClassCode" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>分类号</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SceneMetaDataType">
+		<xs:annotation>
+			<xs:documentation>场记元数据类型</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="SceneData" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="EventTime" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>场记时间</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="EventDescription" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>事件描述</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="EventType" type="xs:int">
+							<xs:annotation>
+								<xs:documentation>事件类型</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="MarkIn" type="xs:long" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>场记入点</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="MarkOut" type="xs:long" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>场记出点</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Place" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>地点或位置</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Actor" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>参与人</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Memo" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>场记备注信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AVMaterialEntityBasicType">
+		<xs:annotation>
+			<xs:documentation>视音频元数据类型</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="MaterialGuid" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>素材唯一标识</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProgramCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>节目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MaterialName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>素材名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="KeyWords" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>关键字</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MarkIn" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>素材入点</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MarkOut" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>素材出点</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TotalLength" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>素材长度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EntityType" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>实体类型 枚举值：素材；成品节目；播出节目；其他 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Classification" type="ClassificationType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>分类</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IconFrame" type="xs:long" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代表帧位置</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MaterialDescription" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>描述</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SignalSourceType" type="xs:long" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>信号源类型：SDI信号、蓝光盘、录像机</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Version" type="xs:long" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>版本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Memo" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProcessInfo" type="ProcessInfoType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>过程处理相关信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CopyrightInfo" type="CopyRightInfoType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>版权信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GroupInfoType" type="GroupInfoType" minOccurs="0"/>
+			<xs:element name="BreakPoints" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>标记点(广告插播点)</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="BreakPoint" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="PointLocation" type="xs:long">
+										<xs:annotation>
+											<xs:documentation>破口点位置</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="Description" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>破口点描述</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ExtentionAttributes" type="ExtentionAttributeType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>扩展信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CopyRightInfoType">
+		<xs:annotation>
+			<xs:documentation>版本信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Secret" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>秘级，枚举值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CopyrightInfo" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EssenceMetaDataType">
+		<xs:annotation>
+			<xs:documentation>实体标记点元信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="EssenceMarkData" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="EMType" type="xs:int">
+							<xs:annotation>
+								<xs:documentation>标记点类型：关键帧、一般标记点</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="EMFrame" type="xs:long">
+							<xs:annotation>
+								<xs:documentation>帧位置</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Keyword" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>关键词</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="EMDescription" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>标记点描述</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EntityFileFormat">
+		<xs:annotation>
+			<xs:documentation>文件格式</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="VideoFormat" type="VideoFormatType" minOccurs="0"/>
+			<xs:element name="AudioFormat" type="AudioFormatType" minOccurs="0"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="AudioFormatType">
+		<xs:annotation>
+			<xs:documentation>音频文件格式</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FileFormat" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>音频 文件格式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MediaType" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>音频 媒体格式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Channels" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>音频通道数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SamplesRate" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>音频采样率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BitsPerSample" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>音频量化位数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="VideoFormatType">
+		<xs:annotation>
+			<xs:documentation>视频文件格式</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FileFormat" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>视频 文件格式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MediaType" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>视频 媒体格式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ImageWidth" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>图像幅面宽度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ImageHeight" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>图像幅面高度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FrameRate" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>播放的帧率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BitsPerPixel" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>每像素位数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PixelFormat" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>像素格式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Compression" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>压缩格式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DataRate" type="xs:long" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>数据码率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ScanMode" type="xs:long" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>视频扫描模式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GopSize" type="xs:long" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>IBP素材的GOP长度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BFrameCount" type="xs:long" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>B帧个数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PFrameCount" type="xs:long" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>P帧个数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FileItemType">
+		<xs:annotation>
+			<xs:documentation>实体文件</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FileGroup" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="FileItem" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="FileGUID" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>文件唯一标识</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="FileName" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>文件绝对路径含文件名</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="FileTypeID" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>文件类型：FILETYPE_LOWAVI、FILETYPE_WMV、FILETYPE_WMV</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="FILETYPE_LOWAVI"/>
+												<xs:enumeration value="FILETYPE_HIGHAVI"/>
+												<xs:enumeration value="FILETYPE_LOWWAV"/>
+												<xs:enumeration value="FILETYPE_HIGHWAV"/>
+												<xs:enumeration value="FILETYPE_WMV"/>
+												<xs:enumeration value="FILETYPE_MXF"/>
+												<xs:enumeration value="FILETYPE_HIGHFULL"/>
+												<xs:enumeration value="FILETYPE_LOWFULL"/>
+												<xs:enumeration value="FILETYPE_PICTURE"/>
+												<xs:enumeration value="FILETYPE_DOCUMENT"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="FileMarkin" type="xs:long" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>文件入点</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="TrackID" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>轨道信息，（0：视频、1：A1轨音频、2：A2轨音频、3：A3轨音频、4：A4轨音频、5：A5轨音频、6：A6轨音频、7：A7轨音频、8：A8轨音频）</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="xs:long">
+												<xs:enumeration value="0"/>
+												<xs:enumeration value="1"/>
+												<xs:enumeration value="2"/>
+												<xs:enumeration value="3"/>
+												<xs:enumeration value="4"/>
+												<xs:enumeration value="5"/>
+												<xs:enumeration value="6"/>
+												<xs:enumeration value="7"/>
+												<xs:enumeration value="8"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="MediaChannel" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>使用的通道 0：视频、1：第1声道音频、2：第2声道音频、3：第3声道音频、4：第4声道音频、5：第5声道音频、6：第6声道音频、7：第7声道音频、8：第8声道音频</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="xs:long">
+												<xs:enumeration value="0"/>
+												<xs:enumeration value="1"/>
+												<xs:enumeration value="2"/>
+												<xs:enumeration value="3"/>
+												<xs:enumeration value="4"/>
+												<xs:enumeration value="5"/>
+												<xs:enumeration value="6"/>
+												<xs:enumeration value="7"/>
+												<xs:enumeration value="8"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="FileCreateTime" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>文件创建时间</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="FileSize" type="xs:decimal" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>文件大小</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="FileFormat" type="EntityFileFormat" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>文件格式描述</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="FileMarkOut" type="xs:long" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>文件出点</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="FileLength" type="xs:long" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>文件长度</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="VerifyCode" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>验证码</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="FormatTemplete" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>视音频格式模板名称，例如：标清：MPEG2 I30-50M 高清：MPEG2 HL，I FRAME 100M</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="ExtendAttributes" type="ExtentionAttributeType" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>文件可扩展属性</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="GroupType" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>组类型：0.高清视频
+1.标清视频
+2.低码流视频
+3.高清视音频
+4.标清视音频
+5.低码流视音频
+6.音频
+7.字幕文件
+8.附件类型</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="SubGroupType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>文件组子类型，只有当文件组类型为音频时才有效</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="GroupName" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>组名字</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="GroupHint" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>分组说明</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="FileFormat" type="EntityFileFormat" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>文件格式描述</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ExtendAttributes" type="ExtentionAttributeType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>文件组可扩展属性</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ClipListType">
+		<xs:annotation>
+			<xs:documentation>故事板</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Clip" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ClipID" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>素材ID</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ClipName" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>素材名称</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Description" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>素材描述</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="StoryMarkIn" type="xs:long">
+							<xs:annotation>
+								<xs:documentation>在故事板里面的入点</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="StoryMarkOut" type="xs:long">
+							<xs:annotation>
+								<xs:documentation>在故事板里面的出点</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ClipMarkIn" type="xs:long">
+							<xs:annotation>
+								<xs:documentation>在素材中的入点</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ClipMarkOut" type="xs:long">
+							<xs:annotation>
+								<xs:documentation>在素材中的出点</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PlayListEntity">
+		<xs:annotation>
+			<xs:documentation>串联单，播出单实体</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="PlayListID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>串联单ID，播出单唯一标识</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PlayListTitle" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>串联单或播出单标题</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PGMCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>节目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Version" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>版本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PlayListItems" type="PlayListItemType" maxOccurs="unbounded"/>
+			<xs:element name="ProcessInfo" type="ProcessInfoType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PlaylistDate" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>发布日期，预播日期，播出日期、最后修改日期、创建日期等</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="DateType" type="xs:string"/>
+						<xs:element name="DateTime" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="AssociateOperator" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>创建人</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="OreratorType" type="xs:string"/>
+						<xs:element name="OreratorCode" type="xs:string"/>
+						<xs:element name="OperatorName" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="PlayListStatus" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>串联单，播出单状态，审查状态，播出状态</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="StatusType" type="xs:string"/>
+						<xs:element name="StatusValue" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="AssociateObject" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>关联大播出单与演播室播出单</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ObjectType" type="xs:string"/>
+						<xs:element name="ObjectID" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GroupInfo" type="GroupInfoType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>归属信息包括：频道 栏目 版次或部门 科组 等</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Length" type="xs:long" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>播出单长度秒</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="memo" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExtentionAttribute" type="ExtentionAttributeType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>扩展信息：比如MOS对象，MOSID NCRSID 演播室ID </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ScriptEntity">
+		<xs:annotation>
+			<xs:documentation>文稿对象</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ScriptID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>文稿ID，稿件的唯一标识</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PgmCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>节目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ScriptTitle" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>稿件标题</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ScriptSubTitle" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>副标题</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="KeyWords" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>关键词</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Location" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发生地点</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ScriptContent" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>稿件内容</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Version" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>稿件版本</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CopyrightInfo" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>版权</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ScriptType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>稿件类型：选题稿件、通稿、栏目稿件</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="TypeID" type="xs:string"/>
+						<xs:element name="TypeName" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ScriptSource" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>稿件来源：地方台稿件、路透稿件</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="SourceCode" type="xs:string"/>
+						<xs:element name="SourceName" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ScriptLength" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>长度</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="PreGuideLength" type="xs:long"/>
+						<xs:element name="PgmLength" type="xs:long"/>
+						<xs:element name="PostGuideLength" type="xs:long"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Leadin" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>尾句</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="PreGuideLeadin" type="xs:string"/>
+						<xs:element name="PgmLeadin" type="xs:string"/>
+						<xs:element name="PostGuideLeadin" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SrciptDate" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>发布日期，预播日期，播出日期等</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="DateType" type="xs:string"/>
+						<xs:element name="DateTime" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Speed" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>语速</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AssociateOperator" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>相关人员</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="OperatorType" type="xs:string"/>
+						<xs:element name="OperatorCode" type="xs:string"/>
+						<xs:element name="OperatorName" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ScriptStatus" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>稿件状态，审查状态，播出状态</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="StatusType" type="xs:string"/>
+						<xs:element name="StatusValue" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ProcessInfo" type="ProcessInfoType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>处理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GroupInfo" type="GroupInfoType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>归属信息包括：频道 栏目 版次或部门 科组 等</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="memo" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AssociateObject" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>关联对象</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ObjectType" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>关联对象类型：ScriptEntity、AVMaterialEntity、PlayListEntity</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ObjectID" type="xs:string"/>
+						<xs:element name="StartPosition" type="xs:string" minOccurs="0"/>
+						<xs:element name="EndPosition" type="xs:string" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ExtentionAttribute" type="ExtentionAttributeType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>扩展信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AVMaterialEntity">
+		<xs:annotation>
+			<xs:documentation>视音频对象</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ContentFile" type="FileItemType">
+				<xs:annotation>
+					<xs:documentation>实体文件</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EntityData" type="AVMaterialEntityBasicType">
+				<xs:annotation>
+					<xs:documentation>实体属性</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EntityMetaData" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>实体元数据</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="SceneMetaData" type="SceneMetaDataType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>实体场记元信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="EssenceMarkMetaData" type="EssenceMetaDataType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>实体标记点元信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="CatalogueMetaData" type="ExtentionAttributeType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>国家音像资料编目规范</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ExtentionAttributes" type="ExtentionAttributeType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>可扩展的属性集</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ClipListInfo" type="ClipListType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>故事板对象</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="PlayListEntity" type="PlayListEntity" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>串联单对象</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ScriptEntity" type="ScriptEntity" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>文稿对象</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
