@@ -1,7 +1,0 @@
-INDEX VERSION 1.122+D:\ESB Install\EAB1.0\EAB1.0\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-4114464485.index
-2284975604.index
-2341495016.index
-2465759607.index
-3523654437.index
-2810085077.index

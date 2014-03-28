@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy 1 elements(s) to &apos;EABManager/src/eab.mananger&apos;&#x0D;&#x0A;- Original project: &apos;EABManager&apos;&#x0D;&#x0A;- Destination element: &apos;EABManager/src/eab.mananger&apos;&#x0D;&#x0A;- Original element: &apos;eab.mananger.InstanceManager.java&apos;" description="Copy compilation unit" destination="/src&lt;eab.mananger" element1="/src&lt;eab.mananger{InstanceManager.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1291087820746" units="1" version="1.0"/>
-</session>

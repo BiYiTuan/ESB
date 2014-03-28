@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<completion version="1.5.0" prefix="AC_OETags.js" extends="" parent="" >
-	<file path="D:/Depot/EAB1.0/EAB/WebContent/EAB.html" creation="33">
-		<item repl="EAB" display="EAB [object]" chrno="3537" />
-	</file>
-	<file path="D:/Depot/EAB1.0/EAB/html-template/index.template.html" creation="2">
-		<item repl="${application}" display="${application} [object]" chrno="3662" />
-	</file>
-</completion>

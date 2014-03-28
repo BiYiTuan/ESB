@@ -1,5 +1,0 @@
-package com.binildas.apache.axis.AxisEndToEnd;
-
-public class HelloWebServiceBindingStub {
-
-}

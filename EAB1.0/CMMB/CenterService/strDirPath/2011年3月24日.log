@@ -1,3 +1,0 @@
-/*************记录开始---2011/3/24 15:36:21*************/
-执行SQL语句失败,SQL: insert into eab_service_log(ID,InvokeTime,Type,InMessage,OutMessage,Result) values('3b83c2e1-23b3-4c16-b867-bda510ec87bb','2011/3/24 15:36:15','CenterService.GetDeviceTypes','0001/1/1 0:00:000','调用成功',200)
-/*************记录结束---2011/3/24 15:36:21*************/

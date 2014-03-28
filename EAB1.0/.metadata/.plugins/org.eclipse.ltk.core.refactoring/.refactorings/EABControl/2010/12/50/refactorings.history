@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring accessors="true" comment="Delete 9 element(s) from project &apos;EABControl&apos;&#x0D;&#x0A;- Original project: &apos;EABControl&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     assets&#x0D;&#x0A;     baseClasses&#x0D;&#x0A;     charts&#x0D;&#x0A;     containers&#x0D;&#x0A;     controls&#x0D;&#x0A;     events&#x0D;&#x0A;     mdi&#x0D;&#x0A;     scheduling&#x0D;&#x0A;     skins" description="Delete elements" element1="src/eab/control/charts" element2="src/eab/control/containers" element3="src/eab/control/controls" element4="src/eab/control/scheduling" element5="src/eab/control/events" element6="src/eab/control/mdi" element7="src/eab/control/baseClasses" element8="src/eab/control/skins" element9="src/eab/control/assets" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="9" stamp="1291966461341" subPackages="false" version="1.0"/>
-</session>

@@ -1,6 +1,0 @@
-#Tomcat publish data
-#Tue Dec 20 14:18:29 CST 2011
-org.eclipse.jst.j2ee.server\:EABUtil=WEB-INF/lib/EABUtil.jar
-org.eclipse.jst.j2ee.server\:EABEntity=WEB-INF/lib/EABEntity.jar
-org.eclipse.jst.j2ee.server\:EABManager=WEB-INF/lib/EABManager.jar
-org.eclipse.jst.j2ee.server\:EABProxy=WEB-INF/lib/EABProxy.jar

@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;EABFramework&apos;" deleteContents="true" description="Delete resource &apos;EABFramework&apos;" element1="/EABFramework" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1262764261839"/>&#x0A;<refactoring comment="Delete resource &apos;flexlib&apos;" deleteContents="true" description="Delete resource &apos;flexlib&apos;" element1="/flexlib" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1262765928219"/>
-</session>

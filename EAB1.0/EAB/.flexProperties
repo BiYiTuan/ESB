@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<flexProperties enableServiceManager="false" flexServerFeatures="4" flexServerType="2" flexWarLocation="C:/apache-tomcat-6.0.20/webapps/blazeds.war" serverContextRoot="WebContent" serverRoot="D:/ESB Install/EAB1.0/EAB1.0/EAB/WebContent" serverRootURL="http://localhost:808/EAB/" toolCompile="true" useServerFlexSDK="false" version="1"/>
